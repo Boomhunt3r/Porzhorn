@@ -25,7 +25,7 @@ void GPlayer::Init()
 	m_speed = 250.0f;
 
 	// set collision type
-	m_colType = ECollisionType::NONE;
+	m_colType = ECollisionType::MOVE;
 
 	// activate gravity
 	m_gravity = true;
