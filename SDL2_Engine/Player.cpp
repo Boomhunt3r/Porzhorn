@@ -65,12 +65,12 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
-<<<<<<< HEAD
+
 		if (m_pColTarget->GetTag() == "Gleiter")
 			m_glider = true;
-=======
+
 		// if target has tag water
->>>>>>> 10304c3a6addbcb2a5cfb13cc80d0d9267b67438
+
 		if (m_pColTarget->GetTag() == "Water")
 		{
 			// set swimming to true
@@ -79,11 +79,10 @@ void GPlayer::Update(float _deltaSeconds)
 			// set gravity
 			CPhysic::s_Gravity = WATER_GRAVITY * BLOCK_HEIGHT;
 		}
-<<<<<<< HEAD
-=======
+
 		// if target has tag gleiter, m_glider is true
 		if (m_pColTarget->GetTag() == "Gleiter") m_glider = true;
->>>>>>> 10304c3a6addbcb2a5cfb13cc80d0d9267b67438
+
 		if (m_pColTarget->GetTag() == "NoWater")
 			m_swimming = false;
 	}
