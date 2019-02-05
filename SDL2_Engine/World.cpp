@@ -35,6 +35,7 @@ void GWorld::Init()
 	// S = stone
 	// W = Water
 	// N = NoWater
+	// B = Barriere
 	world += "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000GSSSS\n";
 	world += "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000GSSSS\n";
 	world += "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000GSSSS\n";
@@ -149,6 +150,11 @@ void GWorld::Init()
 			pObj->SetTag("Gleiter");
 			pObj->SetColType(ECollisionType::COL);
 			break;
+		case 'B':
+			xPosTexture = 5 * BLOCK_SOURCE_WIDTH;
+			pObj->SetTag("Barrier");
+			pObj->SetColType(ECollisionType::COL);
+			break;
 		default:
 			break;
 		}
@@ -157,11 +163,11 @@ void GWorld::Init()
 		if (world[i] == 'P')
 		{
 			// load player, initialize and add to ctm
-			GPlayer* pPlayer = new GPlayer("Texture/Player/T_Player.png", 
+			GPlayer* pPlayer = new GPlayer("Texture/Player/T_Player.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(32, 54));
 			pPlayer->Init();
 			pPlayer->SetCameraMaxPosition(
-				SVector2(levelWidth * BLOCK_WIDTH - SCREEN_WIDTH / 2, 
+				SVector2(levelWidth * BLOCK_WIDTH - SCREEN_WIDTH / 2,
 					levelHeight * BLOCK_HEIGHT - SCREEN_HEIGHT / 2));
 			CTM->AddPersistantObject(pPlayer);
 		}
@@ -189,7 +195,7 @@ void GWorld::Init()
 
 		// set source rect
 		pObj->SetSrcRect(SRect(
-			SVector2(xPosTexture, 0.0f), 
+			SVector2(xPosTexture, 0.0f),
 			SVector2(BLOCK_SOURCE_WIDTH, BLOCK_SOURCE_HEIGHT)));
 
 		// increase width
