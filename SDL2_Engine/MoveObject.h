@@ -119,6 +119,11 @@ protected:
 	float m_speed;
 
 	/// <summary>
+	/// if glider is active
+	/// </summary>
+	bool m_glider;
+
+	/// <summary>
 	/// time that object is in air
 	/// </summary>
 	float m_fallTime;

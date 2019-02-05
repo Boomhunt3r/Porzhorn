@@ -5,6 +5,7 @@
 #include "Font.h"
 #include "Texture.h"
 #include "WinScene.h"
+#include "CreditScene.h"
 #pragma endregion
 
 #pragma region public function
@@ -39,6 +40,11 @@ void GGame::Update(float _deltaSeconds)
 		m_state = EGameState::WINMENU;
 		break;
 	case WINMENU:
+		break;
+	case CREDIT:
+		ENGINE->ChangeScene(new GCreditScene());
+		break;
+	case CREDITSCENE:
 		break;
 	default:
 		break;

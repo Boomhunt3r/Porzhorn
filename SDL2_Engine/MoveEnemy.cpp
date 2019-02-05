@@ -9,26 +9,34 @@
 // update every frame
 void GMoveEnemy::Update(float _deltaSeconds)
 {
+	// if Target is nullpointer
 	if (m_pColTarget == nullptr)
 	{
-
+		// do nothing and continue
+		// until targes is not nullptr anymore
 	}
 	else
 	{
+		// if movement is to the right, and target hits a Wall
 		if (m_movement.X == 1.0f && m_pColTarget->GetColType() == ECollisionType::WALL)
 		{
+			// move left
 			m_movement = -1.0f;
 		}
+		// if movement is to the left and target hits a wall
 		else if (m_movement.X == -1.0f && m_pColTarget->GetColType() == ECollisionType::WALL)
 		{
+			// move right
 			m_movement.X = 1.0f;
 		}
 	}
-
+	// if Target is true
 	if (m_pColTarget)
 	{
+		// if target is Player
 		if (m_pColTarget->GetTag() == "Player")
 		{
+			// Game Over
 			GAME->GameOver();
 		}
 	}

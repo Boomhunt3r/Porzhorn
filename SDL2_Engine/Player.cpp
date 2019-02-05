@@ -10,6 +10,8 @@
 #include "MenuScene.h"
 #include "Game.h"
 #include "Text.h"
+#include "MainScene.h"
+#include "Physic.h"
 #pragma endregion
 
 #pragma region public override function
@@ -20,10 +22,13 @@ void GPlayer::Init()
 	m_pTag = "Player";
 
 	// set speed
-	m_speed = 500.0f;
+	m_speed = 250.0f;
 
 	// set collision type
 	m_colType = ECollisionType::MOVE;
+
+	// activate gravity
+	m_gravity = true;
 
 	// activate gravity
 	m_gravity = true;
@@ -41,11 +46,45 @@ void GPlayer::Update(float _deltaSeconds)
 			GAME->GameOver();
 		if (m_pColTarget->GetTag() == "Goal")
 			GAME->Win();
+		if (m_pColTarget->GetTag() == "NPC1")
+		{
+			SVector2 position = m_pColTarget->GetPosition();
+			CText* pNPCText = new CText("Hier kommt eine Story 1 hin !", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 150, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
+			pNPCText->SetInWorld(true);
+			CTM->AddUIObject(pNPCText);
+		}
+	if (m_pColTarget->GetTag() == "Gleiter")
+		m_glider = true;
+	}
+
+
+	// if target has nullptr, do nothing
+	if (m_pColTarget == nullptr)
+	{
+
+	}
+	// if the target has tag water
+	else if (m_pColTarget->GetTag() == "Water")
+	{
+		// set grounded to always true
+		m_grounded = true;
+
+		// set gravity
+		CPhysic::s_Gravity = WATER_GRAVITY * BLOCK_HEIGHT;
+	}
+	// if target has tag ___ 
+	else if (m_pColTarget->GetTag() == "NoWater")
+	{
+		// set gravity to normal again
+		CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
 	}
 
 	// if key d pressed
 	if (CInput::GetKey(SDL_SCANCODE_D))
 	{
+		// set Game Gravity when play is grounded
+		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
 		// set movement right and mirror not
 		if (m_movement.X < 1.0f)
 		{
@@ -64,6 +103,8 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key a pressed
 	else if (CInput::GetKey(SDL_SCANCODE_A))
 	{
+		// set Game Gravity when play is grounded
+		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
 		// set movement left and mirror horizontal
 		if (m_movement.X > -1.0f)
 		{
@@ -100,9 +141,27 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key space pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_SPACE))
 	{
-		if(m_grounded)
+		if (m_grounded)
 			// jump
 			m_fallTime = PLAYER_JUMP_FORCE;
+	}
+
+	// if key shift, more speed
+	if (CInput::GetKeyDown(SDL_SCANCODE_LSHIFT))
+	{
+		m_speed = 355;
+	}
+	if (CInput::GetKeyUp(SDL_SCANCODE_LSHIFT))
+	{
+		m_speed = 255;
+	}
+
+	// if key y pressed down
+	if (CInput::GetKeyDown(SDL_SCANCODE_F) && m_glider == true)
+	{
+		if (!m_grounded)
+			// glide
+			CPhysic::s_Gravity = GLIDE_GRAVITY * BLOCK_HEIGHT;
 	}
 
 	if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
@@ -112,7 +171,7 @@ void GPlayer::Update(float _deltaSeconds)
 		pBullet->SetSpeed(BULLET_SPEED);
 		pBullet->SetColType(ECollisionType::MOVE);
 		pBullet->SetTag("Bullet");
-		
+
 		if (m_mirror.X)
 		{
 			pBullet->SetMovement(SVector2(-1.0f, 0.0f));
@@ -127,7 +186,7 @@ void GPlayer::Update(float _deltaSeconds)
 
 	// update move object parent
 	CMoveObject::Update(_deltaSeconds);
-	
+
 	// set camera position
 	SVector2 pos = m_position;
 	pos.X *= RENDERER->GetZoom();
@@ -138,7 +197,7 @@ void GPlayer::Update(float _deltaSeconds)
 		m_position.X * RENDERER->GetZoom() <= m_cameraMaxValue.X)
 	{
 		// if camera y in range
-		if (m_position.Y<= m_cameraMaxValue.Y  * RENDERER->GetZoom())
+		if (m_position.Y <= m_cameraMaxValue.Y  * RENDERER->GetZoom())
 			RENDERER->SetCamera(SVector2(pos.X, pos.Y));
 
 		// if camera y not in range

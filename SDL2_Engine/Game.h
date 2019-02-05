@@ -17,7 +17,9 @@ enum EGameState
 	MAIN,
 	GAMEOVER,
 	WIN,
-	WINMENU
+	WINMENU,
+	CREDIT,
+	CREDITSCENE
 };
 
 /// <summary>
