@@ -27,7 +27,7 @@ void GCreditScene::Load()
 	pMenuGame->SetInWorld(false);
 	CTM->AddUIObject(pMenuGame);
 
-	// create win text
+	// create win text and add to ctm
 	CText* pCreditText = new CText("Hier kommen die Credits hin", GAME->m_PGaramond, SRect(SVector2(SCREEN_WIDTH / 2 - 200, 200), SVector2(350, 50)), SColor(255, 255, 255));
 	pCreditText->SetInWorld(false);
 	CTM->AddUIObject(pCreditText);
