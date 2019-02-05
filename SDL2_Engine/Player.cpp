@@ -54,30 +54,20 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
-	if (m_pColTarget->GetTag() == "Gleiter")
-		m_glider = true;
-	}
+		if (m_pColTarget->GetTag() == "Water")
+		{
+			// set grounded to always true
+			m_grounded = true;
 
-
-	// if target has nullptr, do nothing
-	if (m_pColTarget == nullptr)
-	{
-
-	}
-	// if the target has tag water
-	else if (m_pColTarget->GetTag() == "Water")
-	{
-		// set grounded to always true
-		m_grounded = true;
-
-		// set gravity
-		CPhysic::s_Gravity = WATER_GRAVITY * BLOCK_HEIGHT;
-	}
-	// if target has tag ___ 
-	else if (m_pColTarget->GetTag() == "NoWater")
-	{
-		// set gravity to normal again
-		CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
+			// set gravity
+			CPhysic::s_Gravity = WATER_GRAVITY * BLOCK_HEIGHT;
+		}
+		if (m_pColTarget->GetTag() == "Gleiter") m_glider = true;
+		if (m_pColTarget->GetTag() == "NoWater")
+		{
+			// set gravity to normal again
+			CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
+		}
 	}
 
 	// if key d pressed
