@@ -22,7 +22,7 @@ void GPlayer::Init()
 	m_pTag = "Player";
 
 	// set speed
-	m_speed = 2500.0f;
+	m_speed = 250.0f;
 
 	// set collision type
 	m_colType = ECollisionType::MOVE;
