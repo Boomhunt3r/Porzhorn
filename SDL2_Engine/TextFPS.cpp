@@ -21,10 +21,10 @@ void GTextFPS::Update(float _deltaTime)
 
 	// random color
 	m_color = SColor(
-		rand() % 255,
-		rand() % 255,
-		rand() % 255,
-		rand() % 255
+		255,
+		255,
+		255,
+		255
 	);
 
 	// load text
