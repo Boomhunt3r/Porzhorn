@@ -1,0 +1,180 @@
+#pragma region system include
+#include <string>
+#pragma endregion
+
+#pragma region project include
+#include "World.h"
+#include "Config.h"
+#include "Macro.h"
+#include "Engine.h"
+#include "ContentManagement.h"
+#include "Player.h"
+#include "MoveEnemy.h"
+#pragma endregion
+
+#pragma region using
+using namespace std;
+#pragma endregion
+
+#pragma region public function
+// initlialize world
+void GWorld::Init()
+{
+	// string to display world
+	string world;
+
+	// initialize world
+	// 110 w x 25 h
+	// X = dirt
+	// W = way
+	// 0 = background
+	// F = fire
+	// S = player
+	// E = enemy
+	// G = goal
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX000000000000000000S0000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX00000000000000000000000000000000F00000000000000000000000000000000000000000000000000000000000XXXXXXXXX\n";
+	world += "XXXXXXXXX0000000000000000WWWWW000000000000000000000000000000000000WWWWW000000000000000000000000000G00XXXXXXXXX\n";
+	world += "XXXXXXXXX0000000000000WWWXXXXXWWW0000000000E0000000000000000WWWWWWXXXXXWWWWW000000000000000E00000WWWWXXXXXXXXX\n";
+	world += "XXXXXXXXXWWWWWWWWWWWWWXXXXXXXXXXXWWWWWW0000000F000FFF000WWWWXXXXXXXXXXXXXXXXWWWWWW0000FF0FF000WWWXXXXXXXXXXXXX\n";
+	world += "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXWWWWWWWWWWWWWWWWWXXXXXXXXXXXXXXXXXXXXXXXXXXWWWWWWWWWWWWXXXXXXXXXXXXXXXX\n";
+	world += "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n";
+	world += "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n";
+	world += "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n";
+	world += "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
+	// width and height
+	int width = 0, height = 1;
+
+	// width of level
+	int levelWidth = 0;
+
+	// height of level
+	int levelHeight = 1;
+
+	// check all chars of world
+	for (int i = 0; i < world.length(); i++)
+	{
+		// increase level width
+		levelWidth++;
+
+		// if new line
+		if (world[i] == '\n')
+		{
+			// increase level height
+			levelHeight++;
+
+			// reset level width
+			levelWidth = 0;
+		}
+	}
+
+	// check all chars of world
+	for (int i = 0; i < world.length(); i++)
+	{
+		// create new textured object
+		CTexturedObject* pObj = new CTexturedObject("Texture/World/T_WorldSide.png",
+			SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT),
+			SVector2(BLOCK_WIDTH, BLOCK_HEIGHT));
+
+		// x position of texture in source
+		int xPosTexture = 0;
+
+		// check current char
+		// X = dirt
+		// W = way
+		// 0 = background
+		// F = fire
+		// S = player
+		// G = goal
+		switch (world[i])
+		{
+		case 'X':
+			xPosTexture = BLOCK_SOURCE_WIDTH;
+			pObj->SetColType(ECollisionType::WALL);
+			break;
+		case 'W':
+			xPosTexture = 2 * BLOCK_SOURCE_WIDTH;
+			pObj->SetColType(ECollisionType::WALL);
+			break;
+		case 'F':
+			xPosTexture = 3 * BLOCK_SOURCE_WIDTH;
+			pObj->SetTag("Fire");
+			pObj->SetColType(ECollisionType::COL);
+			break;
+		case 'G':
+			xPosTexture = 4 * BLOCK_SOURCE_WIDTH;
+			pObj->SetTag("Goal");
+			pObj->SetColType(ECollisionType::COL);
+			break;
+		default:
+			break;
+		}
+
+		// if player
+		if (world[i] == 'S')
+		{
+			// load player, initialize and add to ctm
+			GPlayer* pPlayer = new GPlayer("Texture/Player/T_Player.png", 
+				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(32, 54));
+			pPlayer->Init();
+			pPlayer->SetCameraMaxPosition(
+				SVector2(levelWidth * BLOCK_WIDTH - SCREEN_WIDTH / 2, 
+					levelHeight * BLOCK_HEIGHT - SCREEN_HEIGHT / 2));
+			CTM->AddPersistantObject(pPlayer);
+		}
+
+		// if enemy
+		else if (world[i] == 'E')
+		{
+			// load enemy, initialize and add to ctm
+			GMoveEnemy* pEnemy = new GMoveEnemy("Texture/Enemy/T_MoveEnemy.png",
+				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(MOVE_ENEMY_WIDTH, MOVE_ENEMY_HEIGHT));
+			pEnemy->Init();
+			CTM->AddPersistantObject(pEnemy);
+		}
+
+		// set source rect
+		pObj->SetSrcRect(SRect(
+			SVector2(xPosTexture, 0.0f), 
+			SVector2(BLOCK_SOURCE_WIDTH, BLOCK_SOURCE_HEIGHT)));
+
+		// increase width
+		width++;
+
+		// if new line
+		if (world[i] == '\n')
+		{
+			// increase height and reset width
+			height++;
+			width = 0;
+
+			/// TODO:
+			// delete object
+			//delete pObj;
+		}
+
+		// if not new line
+		else
+		{
+			// add object to ctm
+			CTM->AddSceneObject(pObj);
+		}
+	}
+}
+#pragma endregion
