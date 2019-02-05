@@ -1,0 +1,48 @@
+﻿  Bullet.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  ContentManagement.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  CreditScene.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Font.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\font.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_ttf.h": No such file or directory
+  Game.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\font.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_ttf.h": No such file or directory
+  Helper.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\helper.cpp(2): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  Engine.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\engine.cpp(2): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  Input.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\input.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  main.cpp
+  MainScene.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  MenuScene.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Mouse.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\mouse.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  MoveEnemy.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  MoveObject.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Physic.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Player.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Renderer.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\renderer.cpp(2): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  Text.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\text.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_ttf.h": No such file or directory
+  TextFPS.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\text.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_ttf.h": No such file or directory
+  Texture.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\texture.cpp(2): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_image.h": No such file or directory
+  Code wird generiert...
+  Kompilieren...
+  TexturedObject.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  WinScene.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  World.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Code wird generiert...

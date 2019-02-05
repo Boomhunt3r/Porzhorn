@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  World.cpp
 d:\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 d:\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
@@ -34,4 +35,46 @@ d:\porzhorn\sdl2_engine\world.cpp(192): warning C4244: "Argument": Konvertierung
   D:\Porzhorn\Library\SDL2_mixer\lib\x86\libvorbis-0.dll
   D:\Porzhorn\Library\SDL2_mixer\lib\x86\libvorbisfile-3.dll
   D:\Porzhorn\Library\SDL2_mixer\lib\x86\SDL2_mixer.dll
+=======
+﻿  Player.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\engine.h(8): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\engine.h(9): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\renderer.h(8): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(14): note: Siehe Deklaration von "SRect"
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\renderer.h(10): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\renderer.h(11): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\library\sdl2\include\sdl_render.h(122): note: Siehe Deklaration von "SDL_Renderer"
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\renderer.h(8): note: Siehe Deklaration von "SRect"
+  LINK : C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe wurde nicht gefunden oder beim letzten inkrementellen Linkvorgang nicht erstellt; vollständiger Link wird durchgeführt.
+  SDL2_Engine.vcxproj -> C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2\lib\x86\SDL2.dll
+  1 Datei(en) kopiert
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\libjpeg-9.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\libpng16-16.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\libtiff-5.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\libwebp-7.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\SDL2_image.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\zlib1.dll
+  6 Datei(en) kopiert
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_ttf\lib\x86\libfreetype-6.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_ttf\lib\x86\SDL2_ttf.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_ttf\lib\x86\zlib1.dll
+  3 Datei(en) kopiert
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libFLAC-8.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libmodplug-1.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libmpg123-0.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libogg-0.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libvorbis-0.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libvorbisfile-3.dll
+  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\SDL2_mixer.dll
+>>>>>>> 76744ab4ee8bb96b102eb9026e297243afdd79f0
   7 Datei(en) kopiert
