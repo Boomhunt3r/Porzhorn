@@ -46,20 +46,31 @@ void GPlayer::Update(float _deltaSeconds)
 	
 	if (m_pColTarget)
 	{
+		// if Targete has tag Enemy of Fire
 		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire")
+			// You die and game is over
 			GAME->GameOver();
+		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal")
+			// you win
 			GAME->Win();
+		// if target has tag NPC1
 		if (m_pColTarget->GetTag() == "NPC1")
 		{
+			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
+			// set text of npc and add to ctm
 			CText* pNPCText = new CText("Hier kommt eine Story 1 hin !", GAME->m_PGaramond,
 				SRect(SVector2(position.X - 150, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
+<<<<<<< HEAD
 		if (m_pColTarget->GetTag() == "Gleiter")
 			m_glider = true;
+=======
+		// if target has tag water
+>>>>>>> 10304c3a6addbcb2a5cfb13cc80d0d9267b67438
 		if (m_pColTarget->GetTag() == "Water")
 		{
 			// set swimming to true
@@ -68,6 +79,11 @@ void GPlayer::Update(float _deltaSeconds)
 			// set gravity
 			CPhysic::s_Gravity = WATER_GRAVITY * BLOCK_HEIGHT;
 		}
+<<<<<<< HEAD
+=======
+		// if target has tag gleiter, m_glider is true
+		if (m_pColTarget->GetTag() == "Gleiter") m_glider = true;
+>>>>>>> 10304c3a6addbcb2a5cfb13cc80d0d9267b67438
 		if (m_pColTarget->GetTag() == "NoWater")
 			m_swimming = false;
 	}
