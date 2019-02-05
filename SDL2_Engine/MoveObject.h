@@ -124,6 +124,11 @@ protected:
 	bool m_glider;
 
 	/// <summary>
+	/// if player is swimming
+	/// </summary>
+	bool m_swimming;
+
+	/// <summary>
 	/// time that object is in air
 	/// </summary>
 	float m_fallTime;

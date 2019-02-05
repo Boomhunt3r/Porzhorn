@@ -27,8 +27,11 @@ void GPlayer::Init()
 	// set collision type
 	m_colType = ECollisionType::MOVE;
 
-	// activate gravity
-	m_gravity = true;
+	// deactivate Glider
+	m_glider = false;
+
+	// set swimming
+	m_swimming = false;
 
 	// activate gravity
 	m_gravity = true;
@@ -40,6 +43,7 @@ void GPlayer::Init()
 // update every frame
 void GPlayer::Update(float _deltaSeconds)
 {
+	
 	if (m_pColTarget)
 	{
 		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire")
@@ -54,27 +58,26 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
+		if (m_pColTarget->GetTag() == "Gleiter")
+			m_glider = true;
 		if (m_pColTarget->GetTag() == "Water")
 		{
-			// set grounded to always true
-			m_grounded = true;
+			// set swimming to true
+			m_swimming = true;
 
 			// set gravity
 			CPhysic::s_Gravity = WATER_GRAVITY * BLOCK_HEIGHT;
 		}
-		if (m_pColTarget->GetTag() == "Gleiter") m_glider = true;
 		if (m_pColTarget->GetTag() == "NoWater")
-		{
-			// set gravity to normal again
-			CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
-		}
+			m_swimming = false;
 	}
 
 	// if key d pressed
 	if (CInput::GetKey(SDL_SCANCODE_D))
 	{
-		// set Game Gravity when play is grounded
+		// reset gravity when player is grounded and not swimming
 		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
+
 		// set movement right and mirror not
 		if (m_movement.X < 1.0f)
 		{
@@ -93,8 +96,9 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key a pressed
 	else if (CInput::GetKey(SDL_SCANCODE_A))
 	{
-		// set Game Gravity when play is grounded
+		// reset gravity when player is grounded and not swimming
 		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
+
 		// set movement left and mirror horizontal
 		if (m_movement.X > -1.0f)
 		{
@@ -113,6 +117,8 @@ void GPlayer::Update(float _deltaSeconds)
 	// if not key d or a pressed
 	else if (!CInput::GetKey(SDL_SCANCODE_D) && !CInput::GetKey(SDL_SCANCODE_A))
 	{
+		// reset gravity when player is grounded and not swimming
+		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
 		// reset movement left right
 		if (m_movement.X > 0)
 		{
@@ -130,8 +136,8 @@ void GPlayer::Update(float _deltaSeconds)
 
 	// if key space pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_SPACE))
-	{
-		if (m_grounded)
+	{		
+		if (m_grounded || m_swimming)
 			// jump
 			m_fallTime = PLAYER_JUMP_FORCE;
 	}
@@ -146,7 +152,7 @@ void GPlayer::Update(float _deltaSeconds)
 		m_speed = 255;
 	}
 
-	// if key y pressed down
+	// if key f pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_F) && m_glider == true)
 	{
 		if (!m_grounded)
