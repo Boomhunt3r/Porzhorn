@@ -1,5 +1,5 @@
 #pragma region project include
-#include "MoveEnemy.h"
+#include "Boss.h"
 #include "Config.h"
 #include "Macro.h"
 #include "Game.h"
@@ -8,7 +8,7 @@
 
 #pragma region public override function
 // update every frame
-void GMoveEnemy::Update(float _deltaSeconds)
+void GBoss::Update(float _deltaSeconds)
 {
 	// if Target is nullpointer
 	if (m_pColTarget == nullptr)
@@ -48,7 +48,7 @@ void GMoveEnemy::Update(float _deltaSeconds)
 }
 
 // render every frame
-void GMoveEnemy::Render()
+void GBoss::Render()
 {
 	// render parent
 	CMoveObject::Render();
@@ -57,22 +57,22 @@ void GMoveEnemy::Render()
 
 #pragma region public function
 // initialize move enemy
-void GMoveEnemy::Init()
+void GBoss::Init()
 {
 	// set tag
-	m_pTag = "Enemy";
+	m_pTag = "Boss";
 
 	// activate gravity
 	m_gravity = true;
 
 	// set speed
-	m_speed = MOVE_ENEMY_SPEED;
+	m_speed = BOSS_SPEED;
 
 	// set collision type
 	m_colType = ECollisionType::ENEMY;
 
 	// set health
-	m_health = MOVE_ENEMY_HEALTH;
+	m_health = BOSS_HEALTH;
 
 	// random between 0 and 1
 

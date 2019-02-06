@@ -10,6 +10,7 @@
 #include "ContentManagement.h"
 #include "Player.h"
 #include "MoveEnemy.h"
+#include "Boss.h"
 #pragma endregion
 
 #pragma region using
@@ -228,6 +229,16 @@ void GWorld::Init()
 				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(MOVE_ENEMY_WIDTH, MOVE_ENEMY_HEIGHT));
 			pEnemy->Init();
 			CTM->AddPersistantObject(pEnemy);
+		}
+
+		// if Boss
+		else if (world[i] == 'K')
+		{
+			// load Boss, initialize and add to ctm
+			GBoss* pBoss = new GBoss("Texture/Enemy/T_Pengking.png",
+				SVector2(width * BLOCK_WIDTH, (height - 4.5) * BLOCK_HEIGHT), SVector2(BOSS_WIDTH, BOSS_HEIGHT));
+			pBoss->Init();
+			CTM->AddPersistantObject(pBoss);
 		}
 
 		// if NPC 1

@@ -74,6 +74,9 @@
     <ClCompile Include="DeathScene.cpp">
       <Filter>Game\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Boss.cpp">
+      <Filter>Game\Object\Boss</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -147,6 +150,9 @@
     </Filter>
     <Filter Include="Game\Object\Bullet">
       <UniqueIdentifier>{12b9b611-fb19-4c36-b27a-12c924e7c577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\Boss">
+      <UniqueIdentifier>{dbfc61a2-3d9d-4f41-a9c5-c87afeb13793}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -248,6 +254,9 @@
     </ClInclude>
     <ClInclude Include="DeathScene.h">
       <Filter>Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss.h">
+      <Filter>Game\Object\Boss</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

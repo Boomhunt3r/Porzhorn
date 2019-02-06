@@ -51,7 +51,7 @@ void GPlayer::Update(float _deltaSeconds)
 	if (m_pColTarget)
 	{
 		// if Targete has tag Enemy of Fire
-		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire")
+		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire" || m_pColTarget->GetTag() == "Boss")
 		{			
 				// You die and game is over
 				GAME->GameOver();

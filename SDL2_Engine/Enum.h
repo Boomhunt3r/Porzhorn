@@ -8,5 +8,6 @@ enum ECollisionType
 	NONE,
 	MOVE,
 	WALL,
-	COL
+	COL,
+	ENEMY
 };
