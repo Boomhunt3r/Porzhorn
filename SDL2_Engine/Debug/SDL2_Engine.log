@@ -1,131 +1,20 @@
-<<<<<<< HEAD
-﻿  Bullet.cpp
+﻿  World.cpp
 d:\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 d:\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 d:\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 d:\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\porzhorn\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-d:\porzhorn\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\porzhorn\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-  MainScene.cpp
-d:\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\porzhorn\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-d:\porzhorn\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\porzhorn\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-d:\porzhorn\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\porzhorn\sdl2_engine\rect.h(14): note: Siehe Deklaration von "SRect"
-  MoveEnemy.cpp
-d:\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-  Player.cpp
-d:\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\engine.h(8): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\porzhorn\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
-d:\porzhorn\sdl2_engine\engine.h(9): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\porzhorn\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-d:\porzhorn\sdl2_engine\renderer.h(8): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\porzhorn\sdl2_engine\rect.h(14): note: Siehe Deklaration von "SRect"
-d:\porzhorn\sdl2_engine\renderer.h(10): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\porzhorn\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-d:\porzhorn\sdl2_engine\renderer.h(11): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\porzhorn\library\sdl2\include\sdl_render.h(122): note: Siehe Deklaration von "SDL_Renderer"
-d:\porzhorn\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\porzhorn\sdl2_engine\renderer.h(8): note: Siehe Deklaration von "SRect"
-  World.cpp
-d:\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\config.h(6): warning C4005: "GLIDE_GRAVITY": Makro-Neudefinition
+  d:\porzhorn\sdl2_engine\config.h(5): note: Siehe vorherige Definition von "GLIDE_GRAVITY"
 d:\porzhorn\sdl2_engine\world.cpp(116): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
 d:\porzhorn\sdl2_engine\world.cpp(133): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\porzhorn\sdl2_engine\world.cpp(153): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(157): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(161): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(166): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(171): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(175): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(185): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(190): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(234): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
-  Code wird generiert...
-  LINK : D:\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe wurde nicht gefunden oder beim letzten inkrementellen Linkvorgang nicht erstellt; vollstõndiger Link wird durchgef³hrt.
-  SDL2_Engine.vcxproj -> D:\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe
-  D:\Porzhorn\Library\SDL2\lib\x86\SDL2.dll
-=======
-<<<<<<< HEAD
-﻿  Player.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(8): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(9): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(8): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(14): note: Siehe Deklaration von "SRect"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(10): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(11): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_render.h(122): note: Siehe Deklaration von "SDL_Renderer"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(8): note: Siehe Deklaration von "SRect"
-  SDL2_Engine.vcxproj -> D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Build\bin\x86\Debug\SDL2_Engine.exe
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2\lib\x86\SDL2.dll
-  1 Datei(en) kopiert
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libjpeg-9.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libpng16-16.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libtiff-5.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libwebp-7.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\SDL2_image.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\zlib1.dll
-  6 Datei(en) kopiert
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_ttf\lib\x86\libfreetype-6.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_ttf\lib\x86\SDL2_ttf.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_ttf\lib\x86\zlib1.dll
-  3 Datei(en) kopiert
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libFLAC-8.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libmodplug-1.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libmpg123-0.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libogg-0.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libvorbis-0.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libvorbisfile-3.dll
-  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\SDL2_mixer.dll
-=======
-﻿  SDL2_Engine.vcxproj -> C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2\lib\x86\SDL2.dll
->>>>>>> f56f935650a4d5b80ba58f25a1b59f1a75b4b32b
-  1 Datei(en) kopiert
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\libjpeg-9.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\libpng16-16.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\libtiff-5.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\libwebp-7.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\SDL2_image.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\zlib1.dll
-  6 Datei(en) kopiert
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_ttf\lib\x86\libfreetype-6.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_ttf\lib\x86\SDL2_ttf.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_ttf\lib\x86\zlib1.dll
-  3 Datei(en) kopiert
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libFLAC-8.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libmodplug-1.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libmpg123-0.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libogg-0.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libvorbis-0.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libvorbisfile-3.dll
-  C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\SDL2_mixer.dll
->>>>>>> a56beb8ee107b6f21b54878cb1c7721765cb150c
-  7 Datei(en) kopiert
+d:\porzhorn\sdl2_engine\world.cpp(154): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(158): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(162): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(167): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(172): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(176): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(186): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(191): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(242): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(199): error C2361: Initialisierung von "pWorld01" durch "default"-Bezeichnung übersprungen
+  d:\porzhorn\sdl2_engine\world.cpp(196): note: Siehe Deklaration von "pWorld01"
