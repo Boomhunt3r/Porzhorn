@@ -7,6 +7,10 @@
 #define BLOCK_HEIGHT 48.0f
 #define BLOCK_SOURCE_WIDTH 64.0f
 #define BLOCK_SOURCE_HEIGHT 64.0f
+<<<<<<< HEAD
+=======
+#define GLIDE_GRAVITY 2.00f
+>>>>>>> a09cea48b162c4f39580540007b804ad688dd5f1
 #define METER_TO_PIXEL 48.0f
 #define PLAYER_JUMP_FORCE -0.6f
 #define MOVE_ENEMY_WIDTH 48.0f

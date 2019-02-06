@@ -16,8 +16,6 @@ void GBullet::Update(float _deltaSeconds)
 {
 	timer += 1.0f;
 
-	LOG(timer);
-
 	if (m_pColTarget && (m_pColTarget->GetColType() != ECollisionType::COL))
 	{
 		CTM->RemoveObject(this);
