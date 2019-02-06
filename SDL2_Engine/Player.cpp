@@ -75,16 +75,12 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
-<<<<<<< HEAD
 		// if target has tag water
-=======
-
 		// if target collects glider
->>>>>>> 17591ad117aa87a62a7ed0360ae59c17d30fb817
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
 			m_glider = true;
-			m_pColTarget->SetPosition(SVector2(10000.0f,10000.0f));
+			m_pColTarget->SetPosition(SVector2(10001.0f,10000.0f));
 		}
 
 		// if target has tag water
