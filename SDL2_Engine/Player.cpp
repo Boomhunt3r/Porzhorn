@@ -12,6 +12,7 @@
 #include "Text.h"
 #include "MainScene.h"
 #include "Physic.h"
+#include "World.h"
 #pragma endregion
 
 #pragma region public override function
@@ -56,13 +57,11 @@ void GPlayer::Update(float _deltaSeconds)
 				GAME->GameOver();
 		}
 			
-		
-
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal")
 			// you win
 			GAME->Win();
-
+		
 		// if target has tag NPC1
 		if (m_pColTarget->GetTag() == "NPC1")
 		{
@@ -74,12 +73,16 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
+<<<<<<< HEAD
 
+=======
+		// if target has tag water
+>>>>>>> a56beb8ee107b6f21b54878cb1c7721765cb150c
 		// if target collects glider
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
 			m_glider = true;
-			m_pColTarget->SetPosition(SVector2(10000.0f,10000.0f));
+			m_pColTarget->SetPosition(SVector2(10001.0f,10000.0f));
 		}
 
 		// if target has tag water
@@ -120,6 +123,7 @@ void GPlayer::Update(float _deltaSeconds)
 		{
 			m_movement.X = 1.0f;
 		}
+
 	}
 
 	// if key a pressed
@@ -245,6 +249,8 @@ void GPlayer::Update(float _deltaSeconds)
 // render every frame
 void GPlayer::Render()
 {
+	
+
 	// render parent
 	CMoveObject::Render();
 }
