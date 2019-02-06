@@ -10,8 +10,14 @@
 
 #pragma region public override function
 // update every frame
+float timer = 0.0f;
+
 void GBullet::Update(float _deltaSeconds)
 {
+	timer += 1.0f;
+
+	LOG(timer);
+
 	if (m_pColTarget && (m_pColTarget->GetColType() != ECollisionType::COL))
 	{
 		CTM->RemoveObject(this);
@@ -20,13 +26,14 @@ void GBullet::Update(float _deltaSeconds)
 			((GMoveEnemy*)m_pColTarget)->TakeDamage(BULLET_DAMAGE);
 	}
 
-
-	if (CInput::GetKeyDown(SDL_SCANCODE_O))
+	if (timer >= 3)
 	{
 		CTM->RemoveObject(this);
+		timer = 0.0f;
 	}
 
 	CMoveObject::Update(_deltaSeconds);
+
 }
 
 // render every frame

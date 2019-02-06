@@ -189,12 +189,12 @@ void GPlayer::Update(float _deltaSeconds)
 		if (m_mirror.X)
 		{
 			pBullet->SetMovement(SVector2(-1.0f, 0.0f));
-			pBullet->SetPosition(m_position + SVector2(-m_rect.w * 0.5f, 16.0f));
+			pBullet->SetPosition(m_position + SVector2(-m_rect.w * 0.0f, 30.0f));
 		}
 		else
 		{
 			pBullet->SetMovement(SVector2(1.0f, 0.0f));
-			pBullet->SetPosition(m_position + SVector2(m_rect.w * 1.5f, 16.0f));
+			pBullet->SetPosition(m_position + SVector2(m_rect.w * 1.0f, 30.0f));
 		}
 	}
 	
