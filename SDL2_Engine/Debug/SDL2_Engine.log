@@ -1,4 +1,20 @@
-﻿  SDL2_Engine.vcxproj -> C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe
+﻿  World.cpp
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(116): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(133): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(153): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(157): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(161): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(166): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(171): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(175): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(185): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(190): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(237): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
+  SDL2_Engine.vcxproj -> C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe
   C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2\lib\x86\SDL2.dll
   1 Datei(en) kopiert
   C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_image\lib\x86\libjpeg-9.dll
