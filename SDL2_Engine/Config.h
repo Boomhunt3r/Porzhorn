@@ -1,7 +1,7 @@
 #pragma once
 
 #define EARTH_GRAVITY 20.81f
-#define WATER_GRAVITY 9.62f
+#define WATER_GRAVITY 6.62f
 #define GLIDE_GRAVITY 1.00f
 #define BLOCK_WIDTH 32.0f
 #define BLOCK_HEIGHT 32.0f
