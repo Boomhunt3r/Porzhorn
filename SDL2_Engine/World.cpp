@@ -209,7 +209,7 @@ void GWorld::Init()
 		{
 			// load player, initialize and add to ctm
 			GPlayer* pPlayer = new GPlayer("Texture/Player/T_Jurgo.png",
-				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(80, 80));
+				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(64, 64));
 			pPlayer->SetSrcRect(SRect(202, 225, 0, 225));
 			pPlayer->Init();
 			pPlayer->SetCameraMaxPosition(
@@ -217,6 +217,8 @@ void GWorld::Init()
 					levelHeight * BLOCK_HEIGHT - SCREEN_HEIGHT / 2));
 			CTM->AddPersistantObject(pPlayer);
 		}
+		// 
+		// 
 
 		// if enemy
 		else if (world[i] == 'E')

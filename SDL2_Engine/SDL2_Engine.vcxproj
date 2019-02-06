@@ -157,6 +157,7 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Config.h" />
