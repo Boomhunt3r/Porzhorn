@@ -87,11 +87,11 @@ void CRenderer::RenderTexture(CTexture * _pTexture, SRect* _pDestRect, SRect* _p
 	}
 
 	// if destination rect not in screen space return
-	if (rect.x < -32.0f
+	/*if (rect.x < -32.0f
 		|| rect.x > SCREEN_WIDTH
 		|| rect.y < -32.0f
 		|| rect.y > SCREEN_HEIGHT)
-		return;
+		return;*/
 
 	// render texture
 	SDL_RenderCopyEx(

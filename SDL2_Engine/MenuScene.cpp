@@ -15,6 +15,9 @@
 // load scene
 void GMenuScene::Load()
 {
+	CTexturedObject* pBackgroundTexture = new CTexturedObject("Texture/Background/T_Main_Slim.png", SVector2(-SCREEN_WIDTH / 2, -SCREEN_HEIGHT / 2), SVector2(1280, 720));
+	CTM->AddUIObject(pBackgroundTexture);
+
 	// create mouse texture
 	CTexture* pMouseTexture = new CTexture("Texture/Mouse/T_Mouse.png");
 
@@ -23,15 +26,6 @@ void GMenuScene::Load()
 	ENGINE->SetMouseVisible(true);
 	ENGINE->SetMouseCenter(SVector2());
 
-	// create text and add to ctm
-	CText* pStartGame = new CText("Start", GAME->m_PGaramond, SRect(SVector2(SCREEN_WIDTH / 2 - 55, 300), SVector2(100, 50)), SColor(255, 255, 255));
-	pStartGame->SetInWorld(false);
-	CTM->AddUIObject(pStartGame);
-
-	// create text and add to ctm
-	CText* pCredit = new CText("Credits", GAME->m_PGaramond, SRect(SVector2(SCREEN_WIDTH / 2 - 55, 400), SVector2(100, 50)), SColor(255, 255, 255));
-	pCredit->SetInWorld(false);
-	CTM->AddUIObject(pCredit);
 }
 
 // clean scene
@@ -46,15 +40,15 @@ void GMenuScene::Update(float _deltaSeconds)
 {
 	// if mouse position in start game button
 	if (CInput::GetMouseButtonDown(0) &&
-		CInput::GetMousePos().X >= (SCREEN_WIDTH / 2 - 50) && CInput::GetMousePos().X <= (SCREEN_WIDTH / 2 - 50) + 100 &&
-		CInput::GetMousePos().Y >= 300 && CInput::GetMousePos().Y <= 350)
+		CInput::GetMousePos().X >= (SCREEN_WIDTH / 2 - 560) && CInput::GetMousePos().X <= (SCREEN_WIDTH / 2 - 380) &&
+		CInput::GetMousePos().Y >= 300 && CInput::GetMousePos().Y <= 415)
 	{
 		ENGINE->ChangeScene(new GMainScene());
 	}
 	// if mouse position in start game button
 	if (CInput::GetMouseButtonDown(0) &&
-		CInput::GetMousePos().X >= (SCREEN_WIDTH / 2 - 50) && CInput::GetMousePos().X <= (SCREEN_WIDTH / 2 - 50) + 100 &&
-		CInput::GetMousePos().Y >= 400 && CInput::GetMousePos().Y <= 450)
+		CInput::GetMousePos().X >= (SCREEN_WIDTH / 2 - 610) && CInput::GetMousePos().X <= (SCREEN_WIDTH / 2 - 415) &&
+		CInput::GetMousePos().Y >= 540 && CInput::GetMousePos().Y <= 700)
 	{
 		ENGINE->ChangeScene(new GCreditScene());
 	}
@@ -63,6 +57,6 @@ void GMenuScene::Update(float _deltaSeconds)
 // render every frame
 void GMenuScene::Render()
 {
-	
+
 }
 #pragma endregion
