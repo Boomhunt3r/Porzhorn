@@ -174,7 +174,7 @@ void GWorld::Init()
 		else if (world[i] == 'E')
 		{
 			// load enemy, initialize and add to ctm
-			GMoveEnemy* pEnemy = new GMoveEnemy("Texture/Enemy/T_MoveEnemy.png",
+			GMoveEnemy* pEnemy = new GMoveEnemy("Texture/Enemy/T_Panda.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(MOVE_ENEMY_WIDTH, MOVE_ENEMY_HEIGHT));
 			pEnemy->Init();
 			CTM->AddPersistantObject(pEnemy);

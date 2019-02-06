@@ -50,10 +50,12 @@ void GPlayer::Update(float _deltaSeconds)
 		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire")
 			// You die and game is over
 			GAME->GameOver();
+
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal")
 			// you win
 			GAME->Win();
+
 		// if target has tag NPC1
 		if (m_pColTarget->GetTag() == "NPC1")
 		{
@@ -65,12 +67,14 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
-		if (m_pColTarget->GetTag() == "Gleiter")
-			m_glider = true;
 
-		// if target has tag water
+		// if target collects glider
 		if (m_pColTarget->GetTag() == "Gleiter")
+		{
 			m_glider = true;
+			m_pColTarget->SetPosition(SVector2(10000.0f,10000.0f));
+		}
+
 		// if target has tag water
 		if (m_pColTarget->GetTag() == "Water")
 		{
@@ -161,7 +165,7 @@ void GPlayer::Update(float _deltaSeconds)
 	}
 
 	// if key shift, more speed
-	if (CInput::GetKeyDown(SDL_SCANCODE_LSHIFT))
+	if (CInput::GetKeyDown(SDL_SCANCODE_LSHIFT) && m_grounded)
 	{
 		m_speed = 355;
 	}
@@ -189,12 +193,12 @@ void GPlayer::Update(float _deltaSeconds)
 		if (m_mirror.X)
 		{
 			pBullet->SetMovement(SVector2(-1.0f, 0.0f));
-			pBullet->SetPosition(m_position + SVector2(-m_rect.w * 0.0f, 30.0f));
+			pBullet->SetPosition(m_position + SVector2(-m_rect.w * -0.2f, 30.0f));
 		}
 		else
 		{
 			pBullet->SetMovement(SVector2(1.0f, 0.0f));
-			pBullet->SetPosition(m_position + SVector2(m_rect.w * 1.0f, 30.0f));
+			pBullet->SetPosition(m_position + SVector2(m_rect.w * 0.8f, 30.0f));
 		}
 	}
 	

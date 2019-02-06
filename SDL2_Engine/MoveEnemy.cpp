@@ -22,12 +22,14 @@ void GMoveEnemy::Update(float _deltaSeconds)
 		{
 			// move left
 			m_movement = -1.0f;
+			m_mirror.X = 0.0f;
 		}
 		// if movement is to the left and target hits a wall
 		else if (m_movement.X == -1.0f && m_pColTarget->GetColType() == ECollisionType::WALL || m_movement.X == -1.0f && m_pColTarget->GetTag() == "Barrier")
 		{
 			// move right
 			m_movement.X = 1.0f;
+			m_mirror.X = 1.0f;
 		}
 	}
 	// if Target is true
