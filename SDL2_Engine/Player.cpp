@@ -65,18 +65,13 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
-<<<<<<< HEAD
-
 		if (m_pColTarget->GetTag() == "Gleiter")
 			m_glider = true;
 
 		// if target has tag water
-
-=======
 		if (m_pColTarget->GetTag() == "Gleiter")
 			m_glider = true;
 		// if target has tag water
->>>>>>> c54f8f6932b4b077fb9ad70db22af924eb70a683
 		if (m_pColTarget->GetTag() == "Water")
 		{
 			// set swimming to true
@@ -85,15 +80,12 @@ void GPlayer::Update(float _deltaSeconds)
 			// set gravity
 			CPhysic::s_Gravity = WATER_GRAVITY * BLOCK_HEIGHT;
 		}
-<<<<<<< HEAD
 
 		// if target has tag gleiter, m_glider is true
 		if (m_pColTarget->GetTag() == "Gleiter") m_glider = true;
 
-=======
 		// if target has tag gleiter, m_glider is true
 		if (m_pColTarget->GetTag() == "Gleiter") m_glider = true;
->>>>>>> c54f8f6932b4b077fb9ad70db22af924eb70a683
 		if (m_pColTarget->GetTag() == "NoWater")
 			m_swimming = false;
 	}
@@ -202,7 +194,7 @@ void GPlayer::Update(float _deltaSeconds)
 		else
 		{
 			pBullet->SetMovement(SVector2(1.0f, 0.0f));
-			pBullet->SetPosition(m_position + SVector2(m_rect.w * 1.5f, 16.0f));
+			pBullet->SetPosition(m_position + SVector2(m_rect.w * 100.5f, 16.0f));
 		}
 	}
 
