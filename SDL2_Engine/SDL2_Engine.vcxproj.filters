@@ -249,5 +249,8 @@
     <ClInclude Include="DeathScene.h">
       <Filter>Game\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

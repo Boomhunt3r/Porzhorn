@@ -7,7 +7,7 @@
 
 #pragma region macro value
 #define SCREEN_WIDTH 1280
-#define SCREEN_HEIGHT 720 
+#define SCREEN_HEIGHT 720
 #define COLLISION_CHECK_TIME 0.00001f
 #pragma endregion
 
