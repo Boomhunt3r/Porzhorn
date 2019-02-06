@@ -19,7 +19,9 @@ enum EGameState
 	WIN,
 	WINMENU,
 	CREDIT,
-	CREDITSCENE
+	CREDITSCENE,
+	DEAD,
+	DEATHSCENE
 };
 
 /// <summary>

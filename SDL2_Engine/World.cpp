@@ -161,8 +161,8 @@ void GWorld::Init()
 		if (world[i] == 'P')
 		{
 			// load player, initialize and add to ctm
-			GPlayer* pPlayer = new GPlayer("Texture/Player/T_Player.png",
-				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(32, 54));
+			GPlayer* pPlayer = new GPlayer("Texture/Player/T_Jurgo.png",
+				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(64, 64));
 			pPlayer->Init();
 			pPlayer->SetCameraMaxPosition(
 				SVector2(levelWidth * BLOCK_WIDTH - SCREEN_WIDTH / 2,

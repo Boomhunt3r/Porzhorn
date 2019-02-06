@@ -67,6 +67,10 @@ void GPlayer::Update(float _deltaSeconds)
 		}
 		if (m_pColTarget->GetTag() == "Gleiter")
 			m_glider = true;
+
+		// if target has tag water
+		if (m_pColTarget->GetTag() == "Gleiter")
+			m_glider = true;
 		// if target has tag water
 		if (m_pColTarget->GetTag() == "Water")
 		{
@@ -76,6 +80,10 @@ void GPlayer::Update(float _deltaSeconds)
 			// set gravity
 			CPhysic::s_Gravity = WATER_GRAVITY * BLOCK_HEIGHT;
 		}
+
+		// if target has tag gleiter, m_glider is true
+		if (m_pColTarget->GetTag() == "Gleiter") m_glider = true;
+
 		// if target has tag gleiter, m_glider is true
 		if (m_pColTarget->GetTag() == "Gleiter") m_glider = true;
 		if (m_pColTarget->GetTag() == "NoWater")
@@ -189,6 +197,7 @@ void GPlayer::Update(float _deltaSeconds)
 			pBullet->SetPosition(m_position + SVector2(m_rect.w * 1.5f, 16.0f));
 		}
 	}
+	
 
 	// update move object parent
 	CMoveObject::Update(_deltaSeconds);
@@ -220,15 +229,6 @@ void GPlayer::Update(float _deltaSeconds)
 	// if camera x and y not in range
 	else
 		RENDERER->SetCamera(SVector2(RENDERER->GetCamera().X, RENDERER->GetCamera().Y));
-
-	// if player hits NPC
-	if (m_position.X >= 256 - m_rect.w && m_position.X <= 350 + 32 && m_position.Y <= 550 + 54 && m_position.Y >= 468 - m_rect.h)
-	{
-		// create text and add to ctm
-		CText* pNPCText = new CText("Hier kommt eine Story hin !", GAME->m_PGaramond, SRect(SVector2(300, 400), SVector2(500, 50)), SColor(255, 255, 255));
-		pNPCText->SetInWorld(true);
-		CTM->AddUIObject(pNPCText);
-	}
 }
 
 // render every frame

@@ -4,6 +4,8 @@
 #include "ContentManagement.h"
 #include "MoveEnemy.h"
 #include "Config.h"
+#include "Macro.h"
+#include "Input.h"
 #pragma endregion
 
 #pragma region public override function
@@ -16,6 +18,12 @@ void GBullet::Update(float _deltaSeconds)
 
 		if (m_pColTarget->GetTag() == "Enemy")
 			((GMoveEnemy*)m_pColTarget)->TakeDamage(BULLET_DAMAGE);
+	}
+
+
+	if (CInput::GetKeyDown(SDL_SCANCODE_O))
+	{
+		CTM->RemoveObject(this);
 	}
 
 	CMoveObject::Update(_deltaSeconds);
