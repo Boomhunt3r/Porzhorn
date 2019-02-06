@@ -57,13 +57,11 @@ void GPlayer::Update(float _deltaSeconds)
 				GAME->GameOver();
 		}
 			
-		
-
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal")
 			// you win
 			GAME->Win();
-
+		
 		// if target has tag NPC1
 		if (m_pColTarget->GetTag() == "NPC1")
 		{
@@ -75,12 +73,8 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
-<<<<<<< HEAD
-		// if target has tag water
-=======
 
 		// if target collects glider
->>>>>>> 17591ad117aa87a62a7ed0360ae59c17d30fb817
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
 			m_glider = true;
