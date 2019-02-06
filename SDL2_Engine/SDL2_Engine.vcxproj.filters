@@ -71,6 +71,9 @@
     <ClCompile Include="CreditScene.cpp">
       <Filter>Game\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="DeathScene.cpp">
+      <Filter>Game\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -241,6 +244,9 @@
       <Filter>Game\Scene</Filter>
     </ClInclude>
     <ClInclude Include="CreditScene.h">
+      <Filter>Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="DeathScene.h">
       <Filter>Game\Scene</Filter>
     </ClInclude>
   </ItemGroup>

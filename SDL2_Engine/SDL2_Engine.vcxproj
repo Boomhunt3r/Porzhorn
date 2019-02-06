@@ -133,6 +133,7 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="ContentManagement.cpp" />
     <ClCompile Include="CreditScene.cpp" />
+    <ClCompile Include="DeathScene.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Helper.cpp" />
@@ -161,6 +162,7 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClInclude Include="Config.h" />
     <ClInclude Include="ContentManagement.h" />
     <ClInclude Include="CreditScene.h" />
+    <ClInclude Include="DeathScene.h" />
     <ClInclude Include="Enum.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="Game.h" />

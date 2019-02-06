@@ -6,6 +6,8 @@
 #include "Texture.h"
 #include "WinScene.h"
 #include "CreditScene.h"
+#include "DeathScene.h"
+#include "MainScene.h"
 #pragma endregion
 
 #pragma region public function
@@ -32,8 +34,8 @@ void GGame::Update(float _deltaSeconds)
 	case MAIN:
 		break;
 	case GAMEOVER:
-		ENGINE->ChangeScene(new GMenuScene());
-		m_state = EGameState::MENU;
+		ENGINE->ChangeScene(new GDeathScene());
+		m_state = EGameState::DEATHSCENE;
 		break;
 	case WIN:
 		ENGINE->ChangeScene(new GWinScene());
@@ -45,6 +47,8 @@ void GGame::Update(float _deltaSeconds)
 		ENGINE->ChangeScene(new GCreditScene());
 		break;
 	case CREDITSCENE:
+		break;
+	case DEATHSCENE:
 		break;
 	default:
 		break;
