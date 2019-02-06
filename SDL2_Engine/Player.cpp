@@ -24,6 +24,9 @@ void GPlayer::Init()
 	// set speed
 	m_speed = 250.0f;
 
+	//set lifes
+	m_life = 10000.0f;
+
 	// set collision type
 	m_colType = ECollisionType::MOVE;
 
@@ -48,8 +51,12 @@ void GPlayer::Update(float _deltaSeconds)
 	{
 		// if Targete has tag Enemy of Fire
 		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire")
-			// You die and game is over
-			GAME->GameOver();
+		{			
+				// You die and game is over
+				GAME->GameOver();
+		}
+			
+		
 
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal")

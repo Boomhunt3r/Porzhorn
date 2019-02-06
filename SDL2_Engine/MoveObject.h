@@ -124,6 +124,11 @@ protected:
 	bool m_glider;
 
 	/// <summary>
+	/// Life of Player
+	/// </summary>
+	float m_life;
+
+	/// <summary>
 	/// if player is swimming
 	/// </summary>
 	bool m_swimming;

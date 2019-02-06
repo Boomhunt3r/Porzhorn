@@ -3,6 +3,7 @@
 #include "Config.h"
 #include "Macro.h"
 #include "Game.h"
+#include "Player.h"
 #pragma endregion
 
 #pragma region public override function
