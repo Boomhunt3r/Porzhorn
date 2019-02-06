@@ -74,7 +74,6 @@
     <ClCompile Include="DeathScene.cpp">
       <Filter>Game\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Animation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -250,6 +249,5 @@
     <ClInclude Include="DeathScene.h">
       <Filter>Game\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Animation.h" />
   </ItemGroup>
 </Project>

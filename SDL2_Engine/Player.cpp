@@ -12,6 +12,7 @@
 #include "Text.h"
 #include "MainScene.h"
 #include "Physic.h"
+#include "World.h"
 #pragma endregion
 
 #pragma region public override function
@@ -65,9 +66,6 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
-		if (m_pColTarget->GetTag() == "Gleiter")
-			m_glider = true;
-
 		// if target has tag water
 		if (m_pColTarget->GetTag() == "Gleiter")
 			m_glider = true;
@@ -109,6 +107,7 @@ void GPlayer::Update(float _deltaSeconds)
 		{
 			m_movement.X = 1.0f;
 		}
+
 	}
 
 	// if key a pressed
@@ -234,6 +233,8 @@ void GPlayer::Update(float _deltaSeconds)
 // render every frame
 void GPlayer::Render()
 {
+	
+
 	// render parent
 	CMoveObject::Render();
 }
