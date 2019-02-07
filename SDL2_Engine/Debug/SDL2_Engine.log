@@ -1,4 +1,56 @@
+<<<<<<< HEAD
 ﻿  World.cpp
+=======
+﻿  Boss.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\boss.cpp(70): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
+  World.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(123): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(140): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(160): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(164): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(168): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(173): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(178): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(182): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(192): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(197): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(246): warning C4244: "Argument": Konvertierung von "double" in "float", möglicher Datenverlust
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(265): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
+  Code wird generiert...
+  SDL2_Engine.vcxproj -> D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Build\bin\x86\Debug\SDL2_Engine.exe
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2\lib\x86\SDL2.dll
+  1 Datei(en) kopiert
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libjpeg-9.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libpng16-16.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libtiff-5.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libwebp-7.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\SDL2_image.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\zlib1.dll
+  6 Datei(en) kopiert
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_ttf\lib\x86\libfreetype-6.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_ttf\lib\x86\SDL2_ttf.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_ttf\lib\x86\zlib1.dll
+  3 Datei(en) kopiert
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libFLAC-8.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libmodplug-1.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libmpg123-0.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libogg-0.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libvorbis-0.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libvorbisfile-3.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\SDL2_mixer.dll
+<<<<<<< HEAD
+=======
+=======
+﻿  Boss.cpp
+>>>>>>> a95a09bb6962d187b11f9f6876fa69ea7752b1e1
 c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
@@ -36,4 +88,9 @@ c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\world.cpp(265
   C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libvorbis-0.dll
   C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\libvorbisfile-3.dll
   C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2_mixer\lib\x86\SDL2_mixer.dll
+<<<<<<< HEAD
+=======
+>>>>>>> 5a3efc4f684c0261ea48c2210284f5b0e20900e1
+>>>>>>> 98fd6e5e763f63a92773a459766d009cd0f8bbf1
+>>>>>>> a95a09bb6962d187b11f9f6876fa69ea7752b1e1
   7 Datei(en) kopiert
