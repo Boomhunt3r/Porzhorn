@@ -26,9 +26,6 @@ void GPlayer::Init()
 	// set speed
 	m_speed = 250.0f;
 
-	//set lifes
-	m_life = 10000.0f;
-
 	// set collision type
 	m_colType = ECollisionType::MOVE;
 
@@ -48,21 +45,21 @@ void GPlayer::Init()
 // update every frame
 void GPlayer::Update(float _deltaSeconds)
 {
-
+	
 	if (m_pColTarget)
 	{
 		// if Targete has tag Enemy of Fire
-		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire")
-		{
-			// You die and game is over
-			GAME->GameOver();
+		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire" || m_pColTarget->GetTag() == "Boss")
+		{			
+				// You die and game is over
+				GAME->GameOver();
 		}
-
+			
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal")
 			// you win
 			GAME->Win();
-
+		
 		// if target has tag NPC1
 		if (m_pColTarget->GetTag() == "NPC1")
 		{
@@ -74,16 +71,12 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
-		if (m_pColTarget->GetTag() != "NPC1")
-		{
-		}
-
 		// if target has tag water
 		// if target collects glider
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
 			m_glider = true;
-			m_pColTarget->SetPosition(SVector2(10001.0f, 10000.0f));
+			m_pColTarget->SetPosition(SVector2(10001.0f,10000.0f));
 		}
 
 		// if target has tag water
@@ -139,6 +132,10 @@ void GPlayer::Update(float _deltaSeconds)
 		{
 			m_movement.X += 0.2f;
 		}
+		/*if (m_movement.X > 0)
+		{
+			m_mirror.X = 0.0f;
+		}*/
 		if (m_movement.X > 1.0f)
 		{
 			m_movement.X = 1.0f;
@@ -179,6 +176,10 @@ void GPlayer::Update(float _deltaSeconds)
 		{
 			m_movement.X -= 0.2f;
 		}
+		/*if (m_movement.X < 0)
+		{
+			m_mirror.X = 1.0f;
+		}*/
 		if (m_movement.X < -1.0f)
 		{
 			m_movement.X = -1.0f;
