@@ -1,2 +1,10 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.17134.0
+<<<<<<< HEAD
 Debug|Win32|C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\|
+=======
+<<<<<<< HEAD
+Debug|Win32|D:\Porzhorn\|
+=======
+Debug|Win32|D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\|
+>>>>>>> ef387c117e4fbcff3b0aee421a5b09daf5fb7034
+>>>>>>> 14ec2902d0a63676416e60080ca7710a1b782232
