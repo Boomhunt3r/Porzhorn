@@ -19,3 +19,5 @@
 #define BOSS_HEIGHT 128.0f
 #define BOSS_SPEED 20.0f
 #define BOSS_HEALTH 300.0f
+#define BOSS_EVENT_TIMER 10.0f
+#define BULLET_LENGTH 0.08f

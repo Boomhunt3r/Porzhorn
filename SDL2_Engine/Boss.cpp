@@ -4,12 +4,18 @@
 #include "Macro.h"
 #include "Game.h"
 #include "Player.h"
+#include "Bullet.h"
 #pragma endregion
 
 #pragma region public override function
 // update every frame
+
+float bossTimer = 0.0f;
+int random = 0;
 void GBoss::Update(float _deltaSeconds)
 {
+	bossTimer += 1.0f;
+
 	// if Target is nullpointer
 	if (m_pColTarget == nullptr)
 	{
@@ -33,6 +39,16 @@ void GBoss::Update(float _deltaSeconds)
 			m_mirror.X = 1.0f;
 		}
 	}
+
+	if (bossTimer * _deltaSeconds >= BOSS_EVENT_TIMER)
+	{
+		random = rand() % 6;
+		//LOG(random);
+
+		// reset timer
+		bossTimer = 0.0f;
+	}
+
 	// if Target is true
 	if (m_pColTarget)
 	{

@@ -29,8 +29,9 @@ void GBullet::Update(float _deltaSeconds)
 	}
 
 
-	if (timer >= 3)
+	if (timer * _deltaSeconds >= BULLET_LENGTH)
 	{
+		LOG(timer * _deltaSeconds);
 		CTM->RemoveObject(this);
 		timer = 0.0f;
 	}
