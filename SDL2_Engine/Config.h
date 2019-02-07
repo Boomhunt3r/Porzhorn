@@ -15,3 +15,7 @@
 #define MOVE_ENEMY_HEALTH 100.0f
 #define BULLET_SPEED 1000.0f
 #define BULLET_DAMAGE 100.0f
+#define BOSS_WIDTH 10.0f
+#define BOSS_HEIGHT 10.0f
+#define BOSS_SPEED 10.0f
+#define BOSS_HEALTH 10.0f

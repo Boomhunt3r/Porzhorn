@@ -1,20 +1,20 @@
-<<<<<<< HEAD
 ﻿  World.cpp
 d:\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 d:\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 d:\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 d:\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(121): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\porzhorn\sdl2_engine\world.cpp(138): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\porzhorn\sdl2_engine\world.cpp(158): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(162): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(166): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(171): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(176): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(180): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(190): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(195): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\porzhorn\sdl2_engine\world.cpp(252): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(182): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+d:\porzhorn\sdl2_engine\world.cpp(199): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+d:\porzhorn\sdl2_engine\world.cpp(219): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(223): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(227): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(232): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(237): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(241): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(251): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(256): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(315): warning C4244: "Argument": Konvertierung von "double" in "float", möglicher Datenverlust
+d:\porzhorn\sdl2_engine\world.cpp(334): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
   SDL2_Engine.vcxproj -> D:\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe
   D:\Porzhorn\Library\SDL2\lib\x86\SDL2.dll
   1 Datei(en) kopiert
@@ -37,78 +37,3 @@ d:\porzhorn\sdl2_engine\world.cpp(252): warning C4244: "Argument": Konvertierung
   D:\Porzhorn\Library\SDL2_mixer\lib\x86\libvorbisfile-3.dll
   D:\Porzhorn\Library\SDL2_mixer\lib\x86\SDL2_mixer.dll
   7 Datei(en) kopiert
-=======
-﻿  Boss.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\boss.cpp(69): error C2065: "BOSS_SPEED": nichtdeklarierter Bezeichner
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\boss.cpp(75): error C2065: "BOSS_HEALTH": nichtdeklarierter Bezeichner
-  Bullet.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-  MainScene.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(14): note: Siehe Deklaration von "SRect"
-  MoveEnemy.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-  Player.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(8): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(9): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(8): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(14): note: Siehe Deklaration von "SRect"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(10): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(11): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_render.h(122): note: Siehe Deklaration von "SDL_Renderer"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(8): note: Siehe Deklaration von "SRect"
-  World.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(122): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(139): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(159): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(163): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(167): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(172): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(177): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(181): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(191): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(196): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(246): warning C4244: "Argument": Konvertierung von "double" in "float", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(246): error C2065: "BOSS_WIDTH": nichtdeklarierter Bezeichner
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(246): error C2065: "BOSS_HEIGHT": nichtdeklarierter Bezeichner
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(245): error C2664: "GBoss::GBoss(const GBoss &)" : Konvertierung von Argument 1 von "const char [29]" in "SVector2" nicht möglich
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(246): note: Quelltyp konnte von keinem Konstruktor angenommen werden, oder die Überladungsauflösung des Konstruktors ist mehrdeutig
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(265): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
-  Code wird generiert...
->>>>>>> ef387c117e4fbcff3b0aee421a5b09daf5fb7034

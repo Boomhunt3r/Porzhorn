@@ -31,4 +31,16 @@ public:
 	/// </summary>
 	void Init() override;
 #pragma endregion
+
+	inline void SetLevel(int _level) { m_level = _level; }
+
+	inline int GetLevel() { return m_level; }
+
+#pragma region protected variable
+	/// <summary>
+	/// level
+	/// </summary>
+protected:
+	int m_level = 4;
+#pragma endregion
 };
