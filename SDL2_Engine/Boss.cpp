@@ -6,6 +6,8 @@
 #include "Player.h"
 #include "Bullet.h"
 #include "BossBullet.h"
+#include "Animation.h"  
+#pragma endregion
 
 #include <ctime>
 #pragma endregion
@@ -17,6 +19,31 @@ float bossTimer = 0.0f;
 // update every frame
 void GBoss::Update(float _deltaSeconds)
 {
+	m_BossAnimation.SetAnimationRect(SRect(297, 382, 0, 382));
+	_i = 1485 / 990;
+
+	_l += _i;
+
+	if (_l >= 6 && _l <= 12)
+	{
+		m_BossAnimation.SetAnimationRect(SRect(297, 382, 297, 382));
+	}
+	if (_l >= 15 && _l <= 21)
+	{
+		m_BossAnimation.SetAnimationRect(SRect(297, 382, 594, 382));
+	}
+	if (_l >= 24 && _l <= 30)
+	{
+		m_BossAnimation.SetAnimationRect(SRect(297, 382, 891, 382));
+	}
+	if (_l >= 33 && _l <= 39)
+	{
+		m_BossAnimation.SetAnimationRect(SRect(297, 382, 1188, 382));
+	}
+	if (_l >= 42)
+	{
+		_l = 0;
+	}
 	bossTimer += 1.0f;
 
 	// if Target is nullpointer
@@ -93,27 +120,29 @@ void GBoss::REvent()
 
 void GBoss::Shoot()
 {
-		GBossBullet* pBullet = new GBossBullet("Texture/Bullet/T_Bullet.png", m_position, SVector2(8, 8));
-		CTM->AddPersistantObject(pBullet);
-		pBullet->SetSpeed(BULLET_SPEED);
-		pBullet->SetColType(ECollisionType::MOVE);
-		pBullet->SetTag("Bullet");
+	GBossBullet* pBullet = new GBossBullet("Texture/Bullet/T_Bullet.png", m_position, SVector2(8, 8));
+	CTM->AddPersistantObject(pBullet);
+	pBullet->SetSpeed(BULLET_SPEED);
+	pBullet->SetColType(ECollisionType::MOVE);
+	pBullet->SetTag("Bullet");
 
-		if (m_mirror.X)
-		{
-			pBullet->SetMovement(SVector2(1.0f, 0.0f));
-			pBullet->SetPosition(m_position + SVector2(m_rect.w * 0.8f, 30.0f));
-		}
-		else
-		{
-			pBullet->SetMovement(SVector2(-1.0f, 0.0f));
-			pBullet->SetPosition(m_position + SVector2(-m_rect.w * -0.2f, 30.0f));
-		}
+	if (m_mirror.X)
+	{
+		pBullet->SetMovement(SVector2(1.0f, 0.0f));
+		pBullet->SetPosition(m_position + SVector2(m_rect.w * 0.8f, 30.0f));
+	}
+	else
+	{
+		pBullet->SetMovement(SVector2(-1.0f, 0.0f));
+		pBullet->SetPosition(m_position + SVector2(-m_rect.w * -0.2f, 30.0f));
+	}
 }
 
 // render every frame
 void GBoss::Render()
 {
+	SetSrcRect(m_BossAnimation.GetAnimationRect());
+
 	// render parent
 	CMoveObject::Render();
 }
@@ -123,6 +152,8 @@ void GBoss::Render()
 // initialize move enemy
 void GBoss::Init()
 {
+	
+
 	// set tag
 	m_pTag = "Boss";
 

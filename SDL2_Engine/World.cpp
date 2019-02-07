@@ -244,8 +244,10 @@ void GWorld::Init()
 		else if (world[i] == 'K')
 		{
 			// load Boss, initialize and add to ctm
-			GBoss* pBoss = new GBoss("Texture/Enemy/T_Pengking.png",
+			GBoss* pBoss = new GBoss("Texture/Enemy/T_King.png",
 				SVector2(width * BLOCK_WIDTH, (height - 4.5) * BLOCK_HEIGHT), SVector2(BOSS_WIDTH, BOSS_HEIGHT));
+			pBoss->m_BossAnimation.SetAnimationRect(SRect(297, 382, 0, 0));
+			pBoss->m_BossAnimation.SetAnimationObject(pBoss);
 			pBoss->Init();
 			CTM->AddPersistantObject(pBoss);
 		}
@@ -254,7 +256,7 @@ void GWorld::Init()
 		else if (world[i] == '1')
 		{
 			// load NPC and add to ctm
-			CTexturedObject* pNpc = new CTexturedObject("Texture/NPC/T_Npc.png",
+			CTexturedObject* pNpc = new CTexturedObject("Texture/NPC/T_NPC.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(55, 64));
 			pNpc->SetTag("NPC1");
 			pNpc->SetColType(COL);

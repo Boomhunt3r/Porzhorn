@@ -4,6 +4,7 @@
 #include "MoveObject.h"
 #include "Engine.h"
 #include "ContentManagement.h"
+#include "Animation.h"
 #pragma endregion
 
 /// <summary>
@@ -90,4 +91,11 @@ private:
 	/// </summary>
 	float m_health;
 #pragma endregion
+
+public:
+	int _l;
+
+	int _i;
+
+	CAnimation m_BossAnimation;
 };
