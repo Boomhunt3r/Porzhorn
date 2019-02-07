@@ -17,7 +17,7 @@ void GMenuScene::Load()
 {
 	CTexturedObject* pBackgroundTexture = new CTexturedObject("Texture/Background/T_Main_Slim.png", SVector2(-SCREEN_WIDTH / 2, -SCREEN_HEIGHT / 2), SVector2(1280, 720));
 	CTM->AddUIObject(pBackgroundTexture);
-
+	
 	// create mouse texture
 	CTexture* pMouseTexture = new CTexture("Texture/Mouse/T_Mouse.png");
 
