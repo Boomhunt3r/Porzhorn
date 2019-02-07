@@ -242,10 +242,10 @@ void GWorld::Init()
 		else if (world[i] == 'K')
 		{
 			//	// load Boss, initialize and add to ctm
-			//	GBoss* pBoss = new GBoss("Texture/Enemy/T_Pengking.png",
-			//		SVector2(width * BLOCK_WIDTH, (height - 4.5) * BLOCK_HEIGHT), SVector2(BOSS_WIDTH, BOSS_HEIGHT));
-			//	pBoss->Init();
-			//	CTM->AddPersistantObject(pBoss);
+			GBoss* pBoss = new GBoss("Texture/Enemy/T_Pengking.png",
+				SVector2(width * BLOCK_WIDTH, (height - 4.5) * BLOCK_HEIGHT), SVector2(BOSS_WIDTH, BOSS_HEIGHT));
+			pBoss->Init();
+			CTM->AddPersistantObject(pBoss);
 		}
 
 		// if NPC 1

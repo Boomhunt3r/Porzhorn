@@ -129,13 +129,13 @@ void GBoss::Init()
 	m_gravity = true;
 
 	// set speed
-	//m_speed = BOSS_SPEED;
+	m_speed = BOSS_SPEED;
 
 	// set collision type
 	m_colType = ECollisionType::ENEMY;
 
 	// set health
-	//m_health = BOSS_HEALTH;
+	m_health = BOSS_HEALTH;
 
 	// random between 0 and 1
 
