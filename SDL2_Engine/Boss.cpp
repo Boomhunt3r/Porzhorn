@@ -82,6 +82,7 @@ void GBoss::REvent()
 		LOG("1");
 		break;
 	case 2:
+		Shoot();
 		m_speed = BOSS_SPEED;
 		LOG("2");
 		break;
@@ -92,22 +93,22 @@ void GBoss::REvent()
 
 void GBoss::Shoot()
 {
-	GBossBullet* pBullet = new GBossBullet("Texture/Bullet/T_Bullet.png", m_position, SVector2(8, 8));
-	CTM->AddPersistantObject(pBullet);
-	pBullet->SetSpeed(BULLET_SPEED);
-	pBullet->SetColType(ECollisionType::MOVE);
-	pBullet->SetTag("Bullet");
+		GBossBullet* pBullet = new GBossBullet("Texture/Bullet/T_Bullet.png", m_position, SVector2(8, 8));
+		CTM->AddPersistantObject(pBullet);
+		pBullet->SetSpeed(BULLET_SPEED);
+		pBullet->SetColType(ECollisionType::MOVE);
+		pBullet->SetTag("Bullet");
 
-	if (m_mirror.X)
-	{
-		pBullet->SetMovement(SVector2(-1.0f, 0.0f));
-		pBullet->SetPosition(m_position + SVector2(-m_rect.w * -0.2f, 30.0f));
-	}
-	else
-	{
-		pBullet->SetMovement(SVector2(1.0f, 0.0f));
-		pBullet->SetPosition(m_position + SVector2(m_rect.w * 0.8f, 30.0f));
-	}
+		if (m_mirror.X)
+		{
+			pBullet->SetMovement(SVector2(1.0f, 0.0f));
+			pBullet->SetPosition(m_position + SVector2(m_rect.w * 0.8f, 30.0f));
+		}
+		else
+		{
+			pBullet->SetMovement(SVector2(-1.0f, 0.0f));
+			pBullet->SetPosition(m_position + SVector2(-m_rect.w * -0.2f, 30.0f));
+		}
 }
 
 // render every frame
