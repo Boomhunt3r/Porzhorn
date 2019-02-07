@@ -185,6 +185,9 @@ void CMoveObject::CheckCollision(float _deltaSeconds, SVector2 _movement, float 
 			if (pObj->GetColType() == ECollisionType::COL)
 				continue;
 
+			if (pObj->GetColType() == ECollisionType::ENEMY)
+				continue;
+
 			// if not moveable cancel collision check
 			if (!m_moveable)
 				break;
