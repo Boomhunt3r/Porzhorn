@@ -1,14 +1,4 @@
-﻿  NPC.cpp
-c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
-  Player.cpp
+﻿  Player.cpp
 c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
@@ -26,7 +16,6 @@ c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\renderer.h(11
 c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
 c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
   c:\users\sappokys\desktop\ordner\uni\projekte\porzhorn\sdl2_engine\renderer.h(8): note: Siehe Deklaration von "SRect"
-  Code wird generiert...
   SDL2_Engine.vcxproj -> C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe
   C:\Users\SappoKys\Desktop\Ordner\Uni\Projekte\Porzhorn\Library\SDL2\lib\x86\SDL2.dll
   1 Datei(en) kopiert
