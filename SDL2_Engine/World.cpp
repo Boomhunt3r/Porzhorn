@@ -257,11 +257,7 @@ void GWorld::Init()
 		else if (world[i] == '1')
 		{
 			// load NPC and add to ctm
-<<<<<<< HEAD
-			CTexturedObject* pNpc = new CTexturedObject("Texture/NPC/T_NPC.png",
-=======
 			GNPC* pNpc = new GNPC("Texture/NPC/T_Npc.png",
->>>>>>> 78fcbe834be52f57c459abb31f1d740794e60b8e
 				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(55, 64));
 			pNpc->SetTag("NPC1");
 			pNpc->SetColType(COL);

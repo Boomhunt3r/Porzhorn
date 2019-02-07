@@ -77,8 +77,12 @@
     <ClCompile Include="Boss.cpp">
       <Filter>Game\Object\Boss</Filter>
     </ClCompile>
-    <ClCompile Include="BossBullet.cpp" />
-    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="NPC.cpp">
+      <Filter>Game\Object\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="BossBullet.cpp">
+      <Filter>Game\Object\Bullet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -266,7 +270,11 @@
     <ClInclude Include="Animation.h">
       <Filter>Engine\Object</Filter>
     </ClInclude>
-    <ClInclude Include="BossBullet.h" />
-    <ClInclude Include="NPC.h" />
+    <ClInclude Include="NPC.h">
+      <Filter>Game\Object\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="BossBullet.h">
+      <Filter>Game\Object\Bullet</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

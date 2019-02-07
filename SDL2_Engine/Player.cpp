@@ -101,7 +101,7 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key d pressed
 	if (CInput::GetKey(SDL_SCANCODE_D))
 	{
-		m_animation.SetAnimationRect(SRect(202, 225, 0, 225));
+		m_animation.SetAnimationRect(SRect(202, 225, 0, 687));
 
 		_i = 606 / 404;
 
@@ -109,16 +109,16 @@ void GPlayer::Update(float _deltaSeconds)
 
 		if (_l >= 6 && _l <= 12)
 		{
-			m_animation.SetAnimationRect(SRect(202, 225, 202, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 202, 687));
 		}
 
 		if (_l >= 15 && _l <= 21)
 		{
-			m_animation.SetAnimationRect(SRect(202, 225, 404, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 404, 687));
 		}
 		if (_l >= 24 && _l <= 30)
 		{
-			m_animation.SetAnimationRect(SRect(202, 225, 606, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 606, 687));
 		}
 		if (_l >= 33)
 		{
@@ -145,7 +145,7 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key a pressed
 	else if (CInput::GetKey(SDL_SCANCODE_A))
 	{
-		m_animation.SetAnimationRect(SRect(202, 225, 0, 225));
+		m_animation.SetAnimationRect(SRect(202, 225, 0, 687));
 
 		_i = 606 / 404;
 
@@ -153,16 +153,16 @@ void GPlayer::Update(float _deltaSeconds)
 
 		if (_l >= 6 && _l <= 12)
 		{
-			m_animation.SetAnimationRect(SRect(202, 225, 202, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 202, 687));
 		}
 
 		if (_l >= 15 && _l <= 21)
 		{
-			m_animation.SetAnimationRect(SRect(202, 225, 404, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 404, 687));
 		}
 		if (_l >= 24 && _l <= 30)
 		{
-			m_animation.SetAnimationRect(SRect(202, 225, 606, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 606, 687));
 		}
 		if (_l >= 33)
 		{
@@ -190,6 +190,34 @@ void GPlayer::Update(float _deltaSeconds)
 	// if not key d or a pressed
 	else if (!CInput::GetKey(SDL_SCANCODE_D) && !CInput::GetKey(SDL_SCANCODE_A))
 	{
+		m_animation.SetAnimationRect(SRect(197, 227, 0, 227));
+		
+		_i = 606 / 404;
+		
+		_l += _i;
+		
+		if (_l >= 18 && _l <= 36)
+		{
+			m_animation.SetAnimationRect(SRect(197, 227, 197, 227));
+		}
+		
+		if (_l >= 54 && _l <= 72)
+		{
+			m_animation.SetAnimationRect(SRect(197, 227, 394, 227));
+		}
+		if (_l >= 90 && _l <= 108)
+		{
+			m_animation.SetAnimationRect(SRect(197, 227, 591, 227));
+		}
+		if (_l >= 126 && _l <= 144)
+		{
+			m_animation.SetAnimationRect(SRect(197, 227, 788, 227));
+		}
+		if (_l >= 162)
+		{
+			_l = 0;
+		}
+		
 		// reset gravity when player is grounded and not swimming
 		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
 		// reset movement left right
