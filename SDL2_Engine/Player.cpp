@@ -54,11 +54,9 @@ void GPlayer::Update(float _deltaSeconds)
 				// You die and game is over
 				GAME->GameOver();
 		}
-<<<<<<< HEAD
 
 		// if target has tag NPC1
 		if (m_pColTarget->GetTag() == "NPC1")
-=======
 			
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal")
@@ -67,7 +65,6 @@ void GPlayer::Update(float _deltaSeconds)
 		
 		// if target has tag NPC
 		if (m_pColTarget->GetTag() == "NPC")
->>>>>>> 0f4d540419026f05d0a42a6c15c71ac020e578a6
 		{
 			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
@@ -77,13 +74,9 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
-<<<<<<< HEAD
 		if (m_pColTarget->GetTag() != "NPC1")
 		{
 		}
-=======
-		// if target has tag water
->>>>>>> 0f4d540419026f05d0a42a6c15c71ac020e578a6
 		// if target collects glider
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
