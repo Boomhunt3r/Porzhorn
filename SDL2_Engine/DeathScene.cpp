@@ -15,6 +15,7 @@
 
 void GDeathScene::Load()
 {
+
 	// create mouse texture
 	CTexture* pMouseTexture = new CTexture("Texture/Mouse/T_Mouse.png");
 
@@ -22,6 +23,12 @@ void GDeathScene::Load()
 	ENGINE->SetMouseTexture(pMouseTexture);
 	ENGINE->SetMouseVisible(true);
 	ENGINE->SetMouseCenter(SVector2());
+
+	CTexturedObject* pBackground = new CTexturedObject("Texture/Background/T_ded.png", 
+		SVector2(-SCREEN_WIDTH / 2, -SCREEN_HEIGHT / 2), SVector2(1280, 720));
+	// m_MenuAnimation.SetAnimationObject(pBackgroundTexture);
+	// m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 0, 0));
+	CTM->AddUIObject(pBackground);
 
 	// create text and add to ctm
 	CText* pStartGame = new CText("Restart", GAME->m_PGaramond, SRect(SVector2(SCREEN_WIDTH / 2 - 55, 300), SVector2(100, 50)), SColor(255, 255, 255));

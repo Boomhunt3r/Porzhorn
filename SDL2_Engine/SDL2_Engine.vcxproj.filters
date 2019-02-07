@@ -258,5 +258,8 @@
     <ClInclude Include="Boss.h">
       <Filter>Game\Object\Boss</Filter>
     </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Engine\Object</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
