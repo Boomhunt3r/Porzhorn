@@ -132,10 +132,10 @@ void GPlayer::Update(float _deltaSeconds)
 		{
 			m_movement.X += 0.2f;
 		}
-		/*if (m_movement.X > 0)
+		if (m_movement.X > 0)
 		{
 			m_mirror.X = 0.0f;
-		}*/
+		}
 		if (m_movement.X > 1.0f)
 		{
 			m_movement.X = 1.0f;
@@ -145,23 +145,24 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key a pressed
 	else if (CInput::GetKey(SDL_SCANCODE_A))
 	{
-		m_animation.SetAnimationRect(SRect(202, 225, 0, 0));
+		m_animation.SetAnimationRect(SRect(202, 225, 0, 225));
+
 		_i = 606 / 404;
 
 		_l += _i;
 
 		if (_l >= 6 && _l <= 12)
 		{
-			m_animation.SetAnimationRect(SRect(202, 225, 202, 0));
+			m_animation.SetAnimationRect(SRect(202, 225, 202, 225));
 		}
 
 		if (_l >= 15 && _l <= 21)
 		{
-			m_animation.SetAnimationRect(SRect(202, 225, 404, 0));
+			m_animation.SetAnimationRect(SRect(202, 225, 404, 225));
 		}
 		if (_l >= 24 && _l <= 30)
 		{
-			m_animation.SetAnimationRect(SRect(202, 225, 606, 0));
+			m_animation.SetAnimationRect(SRect(202, 225, 606, 225));
 		}
 		if (_l >= 33)
 		{
@@ -176,10 +177,10 @@ void GPlayer::Update(float _deltaSeconds)
 		{
 			m_movement.X -= 0.2f;
 		}
-		/*if (m_movement.X < 0)
+		if (m_movement.X < 0)
 		{
 			m_mirror.X = 1.0f;
-		}*/
+		}
 		if (m_movement.X < -1.0f)
 		{
 			m_movement.X = -1.0f;

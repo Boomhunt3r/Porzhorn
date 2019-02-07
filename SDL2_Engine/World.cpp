@@ -234,6 +234,8 @@ void GWorld::Init()
 			// load enemy, initialize and add to ctm
 			GMoveEnemy* pEnemy = new GMoveEnemy("Texture/Enemy/T_Panda.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(MOVE_ENEMY_WIDTH, MOVE_ENEMY_HEIGHT));
+			pEnemy->m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 0, 0));
+			pEnemy->m_EnemyAnimation.SetAnimationObject(pEnemy);
 			pEnemy->Init();
 			CTM->AddPersistantObject(pEnemy);
 		}
