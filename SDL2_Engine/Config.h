@@ -15,17 +15,10 @@
 #define MOVE_ENEMY_HEALTH 100.0f
 #define BULLET_SPEED 1000.0f
 #define BULLET_DAMAGE 100.0f
-<<<<<<< HEAD
 #define BOSS_WIDTH 10.0f
 #define BOSS_HEIGHT 10.0f
 #define BOSS_SPEED 10.0f
 #define BOSS_HEALTH 10.0f
-=======
-#define BOSS_WIDTH 128.0f
-#define BOSS_HEIGHT 128.0f
-#define BOSS_SPEED 20.0f
-#define BOSS_HEALTH 300.0f
 #define BOSS_EVENT_TIMER 2.0f
 #define BOSS_ROLL_SPEED 50.0f
 #define BULLET_LENGTH 0.08f
->>>>>>> 0f4d540419026f05d0a42a6c15c71ac020e578a6
