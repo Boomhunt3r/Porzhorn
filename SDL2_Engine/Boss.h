@@ -70,6 +70,17 @@ public:
 	/// initialize move enemy
 	/// </summary>
 	void Init();
+
+	/// <summary>
+	/// Random Event
+	/// </summary>
+	void REvent();
+
+	/// <summary>
+	/// Random Event
+	/// </summary>
+	void Shoot();
+
 #pragma endregion
 
 private:

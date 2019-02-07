@@ -25,9 +25,6 @@ void GPlayer::Init()
 	// set speed
 	m_speed = 250.0f;
 
-	//set lifes
-	m_life = 10000.0f;
-
 	// set collision type
 	m_colType = ECollisionType::MOVE;
 
@@ -134,6 +131,10 @@ void GPlayer::Update(float _deltaSeconds)
 		{
 			m_movement.X += 0.2f;
 		}
+		/*if (m_movement.X > 0)
+		{
+			m_mirror.X = 0.0f;
+		}*/
 		if (m_movement.X > 1.0f)
 		{
 			m_movement.X = 1.0f;
@@ -174,6 +175,10 @@ void GPlayer::Update(float _deltaSeconds)
 		{
 			m_movement.X -= 0.2f;
 		}
+		/*if (m_movement.X < 0)
+		{
+			m_mirror.X = 1.0f;
+		}*/
 		if (m_movement.X < -1.0f)
 		{
 			m_movement.X = -1.0f;

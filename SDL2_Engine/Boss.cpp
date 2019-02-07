@@ -5,13 +5,16 @@
 #include "Game.h"
 #include "Player.h"
 #include "Bullet.h"
+#include "BossBullet.h"
+
+#include <ctime>
 #pragma endregion
 
 #pragma region public override function
-// update every frame
 
 float bossTimer = 0.0f;
-int random = 0;
+
+// update every frame
 void GBoss::Update(float _deltaSeconds)
 {
 	bossTimer += 1.0f;
@@ -42,9 +45,7 @@ void GBoss::Update(float _deltaSeconds)
 
 	if (bossTimer * _deltaSeconds >= BOSS_EVENT_TIMER)
 	{
-		random = rand() % 6;
-		//LOG(random);
-
+		REvent();
 		// reset timer
 		bossTimer = 0.0f;
 	}
@@ -61,6 +62,52 @@ void GBoss::Update(float _deltaSeconds)
 	}
 	// update parent
 	CMoveObject::Update(_deltaSeconds);
+}
+
+void GBoss::REvent()
+{
+	int random;
+	srand(time(0));
+	random = rand() % 3;
+
+	switch (random)
+	{
+	case 0:
+		m_speed = BOSS_SPEED;
+		Shoot();
+		LOG("0");
+		break;
+	case 1:
+		m_speed = BOSS_ROLL_SPEED;
+		LOG("1");
+		break;
+	case 2:
+		m_speed = BOSS_SPEED;
+		LOG("2");
+		break;
+	default:
+		break;
+	}
+}
+
+void GBoss::Shoot()
+{
+	GBossBullet* pBullet = new GBossBullet("Texture/Bullet/T_Bullet.png", m_position, SVector2(8, 8));
+	CTM->AddPersistantObject(pBullet);
+	pBullet->SetSpeed(BULLET_SPEED);
+	pBullet->SetColType(ECollisionType::MOVE);
+	pBullet->SetTag("Bullet");
+
+	if (m_mirror.X)
+	{
+		pBullet->SetMovement(SVector2(-1.0f, 0.0f));
+		pBullet->SetPosition(m_position + SVector2(-m_rect.w * -0.2f, 30.0f));
+	}
+	else
+	{
+		pBullet->SetMovement(SVector2(1.0f, 0.0f));
+		pBullet->SetPosition(m_position + SVector2(m_rect.w * 0.8f, 30.0f));
+	}
 }
 
 // render every frame
