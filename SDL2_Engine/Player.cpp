@@ -54,7 +54,7 @@ void GPlayer::Update(float _deltaSeconds)
 				// You die and game is over
 				GAME->GameOver();
 		}
-			
+
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal")
 			// you win
@@ -71,7 +71,6 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
-		// if target has tag water
 		// if target collects glider
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
