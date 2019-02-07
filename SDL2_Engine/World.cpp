@@ -10,6 +10,7 @@
 #include "ContentManagement.h"
 #include "Player.h"
 #include "MoveEnemy.h"
+#include "Boss.h"
 #pragma endregion
 
 #pragma region using
@@ -216,6 +217,8 @@ void GWorld::Init()
 			GPlayer* pPlayer = new GPlayer("Texture/Player/T_Jurgo.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(64, 64));
 			pPlayer->SetSrcRect(SRect(202, 225, 0, 225));
+			pPlayer->SetAnimationObject(pPlayer);
+			pPlayer->SetAnimationRect(SRect(202, 225, 0, 225));
 			pPlayer->Init();
 			pPlayer->SetCameraMaxPosition(
 				SVector2(levelWidth * BLOCK_WIDTH - SCREEN_WIDTH / 2,
@@ -233,6 +236,16 @@ void GWorld::Init()
 				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(MOVE_ENEMY_WIDTH, MOVE_ENEMY_HEIGHT));
 			pEnemy->Init();
 			CTM->AddPersistantObject(pEnemy);
+		}
+
+		// if Boss
+		else if (world[i] == 'K')
+		{
+			// load Boss, initialize and add to ctm
+			GBoss* pBoss = new GBoss("Texture/Enemy/T_Pengking.png",
+				SVector2(width * BLOCK_WIDTH, (height - 4.5) * BLOCK_HEIGHT), SVector2(BOSS_WIDTH, BOSS_HEIGHT));
+			pBoss->Init();
+			CTM->AddPersistantObject(pBoss);
 		}
 
 		// if NPC 1

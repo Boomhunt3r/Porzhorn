@@ -6,6 +6,7 @@
 #include "Config.h"
 #include "Macro.h"
 #include "Input.h"
+#include "Boss.h"
 #pragma endregion
 
 #pragma region public override function
@@ -16,13 +17,17 @@ void GBullet::Update(float _deltaSeconds)
 {
 	timer += 1.0f;
 
-	if (m_pColTarget && (m_pColTarget->GetColType() != ECollisionType::COL))
+	if (m_pColTarget)
 	{
 		CTM->RemoveObject(this);
 
 		if (m_pColTarget->GetTag() == "Enemy")
 			((GMoveEnemy*)m_pColTarget)->TakeDamage(BULLET_DAMAGE);
+
+		if (m_pColTarget->GetTag() == "Boss")
+			((GBoss*)m_pColTarget)->TakeDamage(BULLET_DAMAGE);
 	}
+
 
 	if (timer >= 3)
 	{
