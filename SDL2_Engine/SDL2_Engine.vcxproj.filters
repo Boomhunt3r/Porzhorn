@@ -77,6 +77,8 @@
     <ClCompile Include="Boss.cpp">
       <Filter>Game\Object\Boss</Filter>
     </ClCompile>
+    <ClCompile Include="BossBullet.cpp" />
+    <ClCompile Include="NPC.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -153,6 +155,9 @@
     </Filter>
     <Filter Include="Game\Object\Boss">
       <UniqueIdentifier>{dbfc61a2-3d9d-4f41-a9c5-c87afeb13793}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Object\NPC">
+      <UniqueIdentifier>{a42e0c85-46de-485c-a241-ac18097ca074}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -261,5 +266,7 @@
     <ClInclude Include="Animation.h">
       <Filter>Engine\Object</Filter>
     </ClInclude>
+    <ClInclude Include="BossBullet.h" />
+    <ClInclude Include="NPC.h" />
   </ItemGroup>
 </Project>

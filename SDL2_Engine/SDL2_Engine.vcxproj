@@ -147,6 +147,7 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="MoveEnemy.cpp" />
     <ClCompile Include="MoveObject.cpp" />
+    <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Physic.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Renderer.cpp" />
@@ -180,6 +181,7 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="MoveEnemy.h" />
     <ClInclude Include="MoveObject.h" />
+    <ClInclude Include="NPC.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Physic.h" />
     <ClInclude Include="Player.h" />
