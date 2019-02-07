@@ -60,8 +60,8 @@ void GPlayer::Update(float _deltaSeconds)
 			// you win
 			GAME->Win();
 		
-		// if target has tag NPC1
-		if (m_pColTarget->GetTag() == "NPC1")
+		// if target has tag NPC
+		if (m_pColTarget->GetTag() == "NPC")
 		{
 			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
