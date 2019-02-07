@@ -78,6 +78,8 @@ public:
 	/// y = down
 	/// </summary>
 	SVector2 m_cameraMaxValue;
+
+	bool m_isGliding;
 #pragma endregion
 	int _i;
 

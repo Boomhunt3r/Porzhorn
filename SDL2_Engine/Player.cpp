@@ -251,13 +251,43 @@ void GPlayer::Update(float _deltaSeconds)
 	{
 		m_speed = 255;
 	}
+	if (!m_grounded)
+	{
+		if (m_isGliding == true)
+		{
+			m_animation.SetAnimationRect(SRect(196, 227, 0, 1164));
+
+			_i = 606 / 404;
+
+			_l += _i;
+
+			if (_l >= 18 && _l <= 36)
+			{
+				m_animation.SetAnimationRect(SRect(196, 227, 196, 1164));
+			}
+
+			if (_l >= 54)
+			{
+				_l = 0;
+			}
+		}
+	}
+	else
+	{
+		m_isGliding = false;
+	}
+	LOG(m_isGliding);
 
 	// if key f pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_F) && m_glider == true)
 	{
+		m_isGliding = true;
+
 		if (!m_grounded)
+		{
 			// glide
 			CPhysic::s_Gravity = GLIDE_GRAVITY * BLOCK_HEIGHT;
+		}
 	}
 
 	if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
