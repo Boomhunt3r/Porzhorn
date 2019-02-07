@@ -13,6 +13,7 @@
 #include "MainScene.h"
 #include "Physic.h"
 #include "World.h"
+#include "Animation.h"
 #pragma endregion
 
 #pragma region public override function
@@ -24,9 +25,6 @@ void GPlayer::Init()
 
 	// set speed
 	m_speed = 250.0f;
-
-	//set lifes
-	m_life = 10000.0f;
 
 	// set collision type
 	m_colType = ECollisionType::MOVE;
@@ -47,18 +45,29 @@ void GPlayer::Init()
 // update every frame
 void GPlayer::Update(float _deltaSeconds)
 {
-
+	
 	if (m_pColTarget)
 	{
 		// if Targete has tag Enemy of Fire
-		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire")
-		{
-			// You die and game is over
-			GAME->GameOver();
+		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire" || m_pColTarget->GetTag() == "Boss")
+		{			
+				// You die and game is over
+				GAME->GameOver();
 		}
+<<<<<<< HEAD
 
 		// if target has tag NPC1
 		if (m_pColTarget->GetTag() == "NPC1")
+=======
+			
+		// if Target has tag Goal
+		if (m_pColTarget->GetTag() == "Goal")
+			// you win
+			GAME->Win();
+		
+		// if target has tag NPC
+		if (m_pColTarget->GetTag() == "NPC")
+>>>>>>> 0f4d540419026f05d0a42a6c15c71ac020e578a6
 		{
 			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
@@ -68,14 +77,18 @@ void GPlayer::Update(float _deltaSeconds)
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
+<<<<<<< HEAD
 		if (m_pColTarget->GetTag() != "NPC1")
 		{
 		}
+=======
+		// if target has tag water
+>>>>>>> 0f4d540419026f05d0a42a6c15c71ac020e578a6
 		// if target collects glider
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
 			m_glider = true;
-			m_pColTarget->SetPosition(SVector2(10001.0f, 10000.0f));
+			m_pColTarget->SetPosition(SVector2(10001.0f,10000.0f));
 		}
 
 		// if target has tag water
@@ -100,28 +113,28 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key d pressed
 	if (CInput::GetKey(SDL_SCANCODE_D))
 	{
-		m_pAnimationObject->SetSrcRect(SRect(202, 225, 0, 225));
+		m_animation.SetAnimationRect(SRect(202, 225, 0, 225));
 
-		m_i = 606 / 404;
+		_i = 606 / 404;
 
-		m_l += m_i;
+		_l += _i;
 
-		if (m_l >= 6 && m_l <= 12)
+		if (_l >= 6 && _l <= 12)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 202, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 202, 225));
 		}
 
-		if (m_l >= 15 && m_l <= 21)
+		if (_l >= 15 && _l <= 21)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 404, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 404, 225));
 		}
-		if (m_l >= 24 && m_l <= 30)
+		if (_l >= 24 && _l <= 30)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 606, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 606, 225));
 		}
-		if (m_l >= 33)
+		if (_l >= 33)
 		{
-			m_l = 0;
+			_l = 0;
 		}
 		// reset gravity when player is grounded and not swimming
 		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
@@ -130,6 +143,10 @@ void GPlayer::Update(float _deltaSeconds)
 		if (m_movement.X < 1.0f)
 		{
 			m_movement.X += 0.2f;
+		}
+		if (m_movement.X > 0)
+		{
+			m_mirror.X = 0.0f;
 		}
 		if (m_movement.X > 1.0f)
 		{
@@ -140,27 +157,28 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key a pressed
 	else if (CInput::GetKey(SDL_SCANCODE_A))
 	{
-		m_pAnimationObject->SetSrcRect(SRect(202, 225, 0, 0));
-		m_i = 606 / 404;
+		m_animation.SetAnimationRect(SRect(202, 225, 0, 225));
 
-		m_l += m_i;
+		_i = 606 / 404;
 
-		if (m_l >= 6 && m_l <= 12)
+		_l += _i;
+
+		if (_l >= 6 && _l <= 12)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 202, 0));
+			m_animation.SetAnimationRect(SRect(202, 225, 202, 225));
 		}
 
-		if (m_l >= 15 && m_l <= 21)
+		if (_l >= 15 && _l <= 21)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 404, 0));
+			m_animation.SetAnimationRect(SRect(202, 225, 404, 225));
 		}
-		if (m_l >= 24 && m_l <= 30)
+		if (_l >= 24 && _l <= 30)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 606, 0));
+			m_animation.SetAnimationRect(SRect(202, 225, 606, 225));
 		}
-		if (m_l >= 33)
+		if (_l >= 33)
 		{
-			m_l = 0;
+			_l = 0;
 		}
 
 		// reset gravity when player is grounded and not swimming
@@ -170,6 +188,10 @@ void GPlayer::Update(float _deltaSeconds)
 		if (m_movement.X > -1.0f)
 		{
 			m_movement.X -= 0.2f;
+		}
+		if (m_movement.X < 0)
+		{
+			m_mirror.X = 1.0f;
 		}
 		if (m_movement.X < -1.0f)
 		{
@@ -279,6 +301,8 @@ void GPlayer::Update(float _deltaSeconds)
 // render every frame
 void GPlayer::Render()
 {
+	SetSrcRect(m_animation.GetAnimationRect());
+
 	// render parent
 	CMoveObject::Render();
 };

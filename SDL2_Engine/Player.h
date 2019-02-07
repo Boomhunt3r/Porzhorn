@@ -1,7 +1,8 @@
 #pragma once
 
 #pragma region project include
-#include "MoveObject.h" 
+#include "MoveObject.h"
+#include "Animation.h"
 #pragma endregion
 
 /// <summary>
@@ -78,22 +79,9 @@ public:
 	/// </summary>
 	SVector2 m_cameraMaxValue;
 #pragma endregion
+	int _i;
 
-public:
-	inline void SetAnimationObject(CTexturedObject* _object) { m_pAnimationObject = _object; }
+	int _l;
 
-	inline CTexturedObject* GetAnimationObject(CTexturedObject* _object) { return m_pAnimationObject; }
-
-	inline void SetAnimationRect(SRect _rect) { m_pAnimationRect = _rect; }
-
-	inline SRect GetAnimationRect(SRect _rect) { return m_pAnimationRect; }
-
-protected:
-	CTexturedObject* m_pAnimationObject;
-
-	SRect m_pAnimationRect;
-
-	int m_i;
-
-	int m_l;
+	CAnimation m_animation;
 };

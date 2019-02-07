@@ -4,6 +4,7 @@
 #include "MoveObject.h"
 #include "Engine.h"
 #include "ContentManagement.h"
+#include "Animation.h"
 #pragma endregion
 
 /// <summary>
@@ -70,6 +71,17 @@ public:
 	/// initialize move enemy
 	/// </summary>
 	void Init();
+
+	/// <summary>
+	/// Random Event
+	/// </summary>
+	void REvent();
+
+	/// <summary>
+	/// Random Event
+	/// </summary>
+	void Shoot();
+
 #pragma endregion
 
 private:
@@ -79,4 +91,11 @@ private:
 	/// </summary>
 	float m_health;
 #pragma endregion
+
+public:
+	int _l;
+
+	int _i;
+
+	CAnimation m_BossAnimation;
 };
