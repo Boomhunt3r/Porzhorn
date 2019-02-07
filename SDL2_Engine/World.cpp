@@ -337,7 +337,7 @@ void GWorld::Init()
 			// load NPC and add to ctm
 			GNPC* pNpc = new GNPC("Texture/NPC/T_Npc.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(55, 64));
-			pNpc->SetTag("NPC1");
+			pNpc->SetTag("NPC");
 			pNpc->SetColType(COL);
 			CTM->AddPersistantObject(pNpc);
 		}

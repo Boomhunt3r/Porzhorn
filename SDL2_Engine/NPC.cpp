@@ -34,11 +34,5 @@ void GNPC::Render()
 // initialize move enemy
 void GNPC::Init()
 {
-	// set tag
-	m_pTag = "NPC";
-
-	// set collision type
-	m_colType = ECollisionType::COL;
-
 }
 #pragma endregion
