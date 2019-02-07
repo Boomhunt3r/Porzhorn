@@ -13,6 +13,7 @@
 #include "MainScene.h"
 #include "Physic.h"
 #include "World.h"
+#include "Animation.h"
 #pragma endregion
 
 #pragma region public override function
@@ -100,28 +101,28 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key d pressed
 	if (CInput::GetKey(SDL_SCANCODE_D))
 	{
-		m_pAnimationObject->SetSrcRect(SRect(202, 225, 0, 225));
+		m_animation.SetAnimationRect(SRect(202, 225, 0, 225));
 
-		m_i = 606 / 404;
+		_i = 606 / 404;
 
-		m_l += m_i;
+		_l += _i;
 
-		if (m_l >= 6 && m_l <= 12)
+		if (_l >= 6 && _l <= 12)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 202, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 202, 225));
 		}
 
-		if (m_l >= 15 && m_l <= 21)
+		if (_l >= 15 && _l <= 21)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 404, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 404, 225));
 		}
-		if (m_l >= 24 && m_l <= 30)
+		if (_l >= 24 && _l <= 30)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 606, 225));
+			m_animation.SetAnimationRect(SRect(202, 225, 606, 225));
 		}
-		if (m_l >= 33)
+		if (_l >= 33)
 		{
-			m_l = 0;
+			_l = 0;
 		}
 		// reset gravity when player is grounded and not swimming
 		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
@@ -144,27 +145,27 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key a pressed
 	else if (CInput::GetKey(SDL_SCANCODE_A))
 	{
-		m_pAnimationObject->SetSrcRect(SRect(202, 225, 0, 0));
-		m_i = 606 / 404;
+		m_animation.SetAnimationRect(SRect(202, 225, 0, 0));
+		_i = 606 / 404;
 
-		m_l += m_i;
+		_l += _i;
 
-		if (m_l >= 6 && m_l <= 12)
+		if (_l >= 6 && _l <= 12)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 202, 0));
+			m_animation.SetAnimationRect(SRect(202, 225, 202, 0));
 		}
 
-		if (m_l >= 15 && m_l <= 21)
+		if (_l >= 15 && _l <= 21)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 404, 0));
+			m_animation.SetAnimationRect(SRect(202, 225, 404, 0));
 		}
-		if (m_l >= 24 && m_l <= 30)
+		if (_l >= 24 && _l <= 30)
 		{
-			m_pAnimationObject->SetSrcRect(SRect(202, 225, 606, 0));
+			m_animation.SetAnimationRect(SRect(202, 225, 606, 0));
 		}
-		if (m_l >= 33)
+		if (_l >= 33)
 		{
-			m_l = 0;
+			_l = 0;
 		}
 
 		// reset gravity when player is grounded and not swimming
@@ -287,6 +288,8 @@ void GPlayer::Update(float _deltaSeconds)
 // render every frame
 void GPlayer::Render()
 {
+	SetSrcRect(m_animation.GetAnimationRect());
+
 	// render parent
 	CMoveObject::Render();
 };
