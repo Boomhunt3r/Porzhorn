@@ -238,8 +238,29 @@ void GPlayer::Update(float _deltaSeconds)
 	if (CInput::GetKeyDown(SDL_SCANCODE_SPACE))
 	{
 		if (m_grounded || m_swimming)
+		{
 			// jump
 			m_fallTime = PLAYER_JUMP_FORCE;
+			// Set Animation and Play
+			m_animation.SetAnimationRect(SRect(195, 221, 0, 3004));
+
+			_i = 606 / 404;
+
+			_l += _i;
+
+			if (_l >= 3 && _l <= 63)
+			{
+				m_animation.SetAnimationRect(SRect(195, 221, 390, 3004));
+			}
+			if (_l >= 123 && _l <= 183)
+			{
+				m_animation.SetAnimationRect(SRect(195, 221, 585, 3004));
+			}
+			if (_l >= 243)
+			{
+				_l = 0;
+			}
+		}
 	}
 
 	// if key shift, more speed
