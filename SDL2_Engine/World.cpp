@@ -339,6 +339,8 @@ void GWorld::Init()
 				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(55, 64));
 			pNpc->SetTag("NPC");
 			pNpc->SetColType(COL);
+			pNpc->m_NPC.SetAnimationRect(SRect(154, 245, 0, 0));
+			pNpc->m_NPC.SetAnimationObject(pNpc);
 			CTM->AddPersistantObject(pNpc);
 		}
 

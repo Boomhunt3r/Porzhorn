@@ -251,10 +251,13 @@ void GPlayer::Update(float _deltaSeconds)
 	{
 		m_speed = 255;
 	}
+	// if not grounded
 	if (!m_grounded)
 	{
+		// if is Gliding
 		if (m_isGliding == true)
 		{
+			// Set Animation and Play
 			m_animation.SetAnimationRect(SRect(196, 227, 0, 1164));
 
 			_i = 606 / 404;
@@ -276,11 +279,12 @@ void GPlayer::Update(float _deltaSeconds)
 	{
 		m_isGliding = false;
 	}
-	LOG(m_isGliding);
 
 	// if key f pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_F) && m_glider == true)
 	{
+		// if gliding key is pressed
+		// isGliding true
 		m_isGliding = true;
 
 		if (!m_grounded)
@@ -292,6 +296,29 @@ void GPlayer::Update(float _deltaSeconds)
 
 	if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
 	{
+
+		// Set Animation and Play
+		m_animation.SetAnimationRect(SRect(190, 223, 0, 1628));
+
+		_i = 606 / 404;
+
+		_l += _i;
+
+		if (_l >= 3 && _l <= 33)
+		{
+			m_animation.SetAnimationRect(SRect(190, 223, 211, 1628));
+		}
+		if (_l >= 63 && _l <= 93)
+		{
+			m_animation.SetAnimationRect(SRect(190, 223, 411, 1628));
+		}
+
+		if (_l >= 123)
+		{
+			_l = 0;
+		}
+		LOG(_l);
+
 		GBullet* pBullet = new GBullet("Texture/Bullet/T_Bullet.png", m_position, SVector2(8, 8));
 		CTM->AddPersistantObject(pBullet);
 		pBullet->SetSpeed(BULLET_SPEED);
@@ -309,7 +336,6 @@ void GPlayer::Update(float _deltaSeconds)
 			pBullet->SetPosition(m_position + SVector2(m_rect.w * 0.8f, 30.0f));
 		}
 	}
-
 
 	// update move object parent
 	CMoveObject::Update(_deltaSeconds);

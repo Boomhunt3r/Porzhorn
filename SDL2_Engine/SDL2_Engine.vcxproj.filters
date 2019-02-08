@@ -81,11 +81,8 @@
       <Filter>Game\Object\NPC</Filter>
     </ClCompile>
     <ClCompile Include="BossBullet.cpp">
-<<<<<<< HEAD
       <Filter>Game\Object\Bullet</Filter>
-=======
       <Filter>Game\Object\Boss</Filter>
->>>>>>> 1cda8f03b498ad0ee1b8feb9e05085a456750134
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -278,11 +275,8 @@
       <Filter>Game\Object\NPC</Filter>
     </ClInclude>
     <ClInclude Include="BossBullet.h">
-<<<<<<< HEAD
       <Filter>Game\Object\Bullet</Filter>
-=======
       <Filter>Game\Object\Boss</Filter>
->>>>>>> 1cda8f03b498ad0ee1b8feb9e05085a456750134
     </ClInclude>
   </ItemGroup>
 </Project>
