@@ -16,7 +16,7 @@
 // load scene
 void GMenuScene::Load()
 {
-	CTexturedObject* pBackgroundTexture = new CTexturedObject("Texture/Background/T_Main_Slim.png",
+	CTexturedObject* pBackgroundTexture = new CTexturedObject("Texture/Background/T_Menu.png",
 		SVector2(0, 0), SVector2(1280, 720));
 		pBackgroundTexture->SetSrcRect(SRect(1280, 720, 0, 0));
 		m_MenuAnimation.SetAnimationObject(pBackgroundTexture);
@@ -44,45 +44,45 @@ void GMenuScene::Clean()
 // update every frame
 void GMenuScene::Update(float _deltaSeconds)
 {
-	//m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 0, 0));
-	//
-	//_i = 606 / 404;
-	//
-	//_l += _i;
-	//
-	//if (_l >= 6 && _l <= 12)
-	//{
-	//	m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 1280, 0));
-	//}
-	//if (_l >= 15 && _l <= 21)
-	//{
-	//	m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 2560, 0));
-	//}
-	//if (_l >= 24 && _l <= 30)
-	//{
-	//	m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 3840, 0));
-	//}
-	//if (_l >= 33 && _l <= 39)
-	//{
-	//	m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 5120, 0));
-	//}
-	//if (_l >= 42 && _l <= 48)
-	//{
-	//	m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 6400, 0));
-	//}
-	//if (_l >= 51 && _l <= 57)
-	//{
-	//	m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 7680, 0));
-	//}
-	//if (_l >= 60 && _l <= 66)
-	//{
-	//	m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 8960, 0));
-	//}
-	//
-	//if (_l >= 69)
-	//{
-	//	_l = 0;
-	//}
+	m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 0, 0));
+	
+	_i = 606 / 404;
+	
+	_l += _i;
+	
+	if (_l >= 0 && _l <= 12)
+	{
+		m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 1280, 0));
+	}
+	if (_l >= 24 && _l <= 36)
+	{
+		m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 2560, 0));
+	}
+	if (_l >= 48 && _l <= 60)
+	{
+		m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 0, 720));
+	}
+	if (_l >= 72 && _l <= 84)
+	{
+		m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 1280, 720));
+	}
+	if (_l >= 96 && _l <= 108)
+	{
+		m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 2560, 720));
+	}
+	if (_l >= 120 && _l <= 134)
+	{
+		m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 0, 1440));
+	}
+	if (_l >= 146 && _l <= 158)
+	{
+		m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 1280, 1440));
+	}
+	
+	if (_l >= 170)
+	{
+		_l = 0;
+	}
 	// if mouse position in start game button
 	if (CInput::GetMouseButtonDown(0) &&
 		CInput::GetMousePos().X >= (SCREEN_WIDTH / 2 - 560) && CInput::GetMousePos().X <= (SCREEN_WIDTH / 2 - 380) &&
