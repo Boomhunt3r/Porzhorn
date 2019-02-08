@@ -110,16 +110,13 @@ void GBoss::REvent()
 	case 0:
 		m_speed = BOSS_SPEED;
 		Shoot();
-		LOG("0");
 		break;
 	case 1:
 		m_speed = BOSS_ROLL_SPEED;
-		LOG("1");
 		break;
 	case 2:
 		Shoot();
 		m_speed = BOSS_SPEED;
-		LOG("2");
 		break;
 	default:
 		break;
