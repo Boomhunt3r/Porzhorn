@@ -341,7 +341,7 @@ void GWorld::Init()
 		else if (world[i] == 'V')
 		{
 			// load Glider and add to ctm
-			GItem* pGlider = new GItem("Texture/World/T_Leaf.png",
+			CTexturedObject* pGlider = new CTexturedObject("Texture/World/T_Leaf.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(64, 64));
 			pGlider->SetTag("Gleiter");
 			pGlider->SetColType(COL);
