@@ -20,36 +20,32 @@ float bossTimer = 0.0f;
 // update every frame
 void GBoss::Update(float _deltaSeconds)
 {
-	m_BossAnimation.SetAnimationRect(SRect(357, 373, 0, 373));
+	m_BossAnimation.SetAnimationRect(SRect(342, 391, 0, 787));
 	_i = 1485 / 990;
 
 	_l += _i;
 
-	if (_l >= 0 && _l <= 20)
+	if (_l >= 0 && _l <= 15)
 	{
-		m_BossAnimation.SetAnimationRect(SRect(357, 382, 357, 373));
+		m_BossAnimation.SetAnimationRect(SRect(292, 411, 336, 745));
 	}
-	if (_l >= 40 && _l <= 60)
+	if (_l >= 30 && _l <= 45)
 	{
-		m_BossAnimation.SetAnimationRect(SRect(344, 361, 783, 373));
+		m_BossAnimation.SetAnimationRect(SRect(273, 416, 630, 730));
 	}
-	if (_l >= 80 && _l <= 100)
+	if (_l >= 60 && _l <= 75)
 	{
-		m_BossAnimation.SetAnimationRect(SRect(388, 364, 1144, 373));
+		m_BossAnimation.SetAnimationRect(SRect(246, 413, 918, 752));
 	}
-	if (_l >= 120 && _l <= 140)
+	if (_l >= 90 && _l <= 105)
 	{
-		m_BossAnimation.SetAnimationRect(SRect(345, 340, 1548, 406));
+		m_BossAnimation.SetAnimationRect(SRect(283, 385, 1201, 795));
 	}
-	if (_l >= 160 && _l <= 180)
+	if (_l >= 120 && _l <= 135)
 	{
-		m_BossAnimation.SetAnimationRect(SRect(318, 375, 1921, 373));
+		m_BossAnimation.SetAnimationRect(SRect(300, 365, 1488, 822));
 	}
-	if (_l >= 200 && _l <= 220)
-	{
-		m_BossAnimation.SetAnimationRect(SRect(298, 375, 2239, 373));
-	}
-	if (_l >= 240)
+	if (_l >= 150)
 	{
 		_l = 0;
 	}

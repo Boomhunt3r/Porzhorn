@@ -1,7 +1,8 @@
 #pragma once
 
 #pragma region project include
-#include "Scene.h"  
+#include "Scene.h"
+#include "Animation.h"
 #pragma endregion
 
 /// <summary>
@@ -46,4 +47,9 @@ public:
 	/// </summary>
 	virtual void Render() override;
 #pragma endregion
+	int _l;
+
+	int _i;
+
+	CAnimation m_WinAnimation;
 };
