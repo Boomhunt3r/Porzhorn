@@ -406,9 +406,6 @@ void GPlayer::Update(float _deltaSeconds)
 	pos.X *= RENDERER->GetZoom();
 	pos.Y *= RENDERER->GetZoom();
 
-	LOG(m_position.Y);
-	LOG(m_cameraMaxValue.Y  * RENDERER->GetZoom());
-
 	// if camera x in range
 	if (m_position.X * RENDERER->GetZoom() >= SCREEN_WIDTH / 2 &&
 		m_position.X * RENDERER->GetZoom() <= m_cameraMaxValue.X)
