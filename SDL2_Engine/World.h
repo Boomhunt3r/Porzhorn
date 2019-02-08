@@ -41,6 +41,6 @@ public:
 	/// level
 	/// </summary>
 protected:
-	int m_level = 1;
+	int m_level = 4;
 #pragma endregion
 };
