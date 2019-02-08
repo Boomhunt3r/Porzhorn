@@ -15,8 +15,8 @@
 void GMainScene::Load()
 {
 	// create and initialize world
-	m_pLevel01 = new GLevel01(nullptr);
-	m_pLevel01->Init();
+	m_pWorld = new GWorld(nullptr);
+	m_pWorld->Init();
 
 	// load NPC and add to ctm
 	//CTexturedObject* pNpc = new CTexturedObject("Texture/Player/T_Player.png", SVector2(350, 550), SVector2(32, 54));
@@ -43,7 +43,7 @@ void GMainScene::Clean()
 	CTM->CleanPersistantObjects();
 
 	// delete world
-	delete m_pLevel01;
+	delete m_pWorld;
 }
 
 // update every frame
