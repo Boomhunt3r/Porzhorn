@@ -71,7 +71,7 @@ void GPlayer::Update(float _deltaSeconds)
 		}
 
 		// if target has tag NPC
-		if (m_pColTarget->GetTag() == "NPC1")
+		if (m_pColTarget->GetTag() == "NPC1" && m_NPC1 == false)
 		{
 			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
@@ -80,10 +80,11 @@ void GPlayer::Update(float _deltaSeconds)
 				SRect(SVector2(position.X - 200, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
+			m_NPC1 = true;
 		}
 
 		// if target has tag NPC
-		if (m_pColTarget->GetTag() == "NPC2")
+		if (m_pColTarget->GetTag() == "NPC2" && m_NPC2 == false)
 		{
 			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
@@ -92,10 +93,11 @@ void GPlayer::Update(float _deltaSeconds)
 				SRect(SVector2(position.X - 200, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
+			m_NPC2 = true;
 		}
 
 		// if target has tag Schild
-		if (m_pColTarget->GetTag() == "Tutorial")
+		if (m_pColTarget->GetTag() == "Tutorial" && m_Tutorial == false)
 		{
 			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
@@ -104,6 +106,7 @@ void GPlayer::Update(float _deltaSeconds)
 				SRect(SVector2(position.X - 180, position.Y - 60), SVector2(440, 50)), SColor(255, 255, 255));
 			pSchildText->SetInWorld(true);
 			CTM->AddUIObject(pSchildText);
+			m_Tutorial = true;
 		}
 
 		// if target collects glider
