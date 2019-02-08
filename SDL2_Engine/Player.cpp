@@ -352,7 +352,7 @@ void GPlayer::Update(float _deltaSeconds)
 		{
 			m_animation.SetAnimationRect(SRect(211, 223, 211, 2094));
 		}
-		if (_l >= 400 && _l <= 600)
+		if (_l >= 400 && _l <= 800)
 		{
 			m_animation.SetAnimationRect(SRect(211, 223, 422, 2094));
 		}
