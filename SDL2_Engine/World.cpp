@@ -249,11 +249,6 @@ void GWorld::Init()
 			pObj->SetTag("NoWater");
 			pObj->SetColType(ECollisionType::COL);
 			break;
-		case 'V':
-			xPosTexture = 4 * BLOCK_SOURCE_WIDTH;
-			pObj->SetTag("Gleiter");
-			pObj->SetColType(ECollisionType::COL);
-			break;
 		case 'B':
 			xPosTexture = 5 * BLOCK_SOURCE_WIDTH;
 			pObj->SetTag("Barrier");
@@ -304,9 +299,6 @@ void GWorld::Init()
 					levelHeight * BLOCK_HEIGHT - SCREEN_HEIGHT / 2));
 			CTM->AddPersistantObject(pPlayer);
 		}
-		// 
-		// 
-
 		// if enemy
 		else if (world[i] == 'E')
 		{
@@ -342,6 +334,17 @@ void GWorld::Init()
 			pNpc->m_NPC.SetAnimationRect(SRect(154, 245, 0, 0));
 			pNpc->m_NPC.SetAnimationObject(pNpc);
 			CTM->AddPersistantObject(pNpc);
+		}
+
+		// if Glider
+		else if (world[i] == 'V')
+		{
+			// load Glider and add to ctm
+			GNPC* pGlider = new GNPC("Texture/World/T_Leaf.png",
+				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(64, 64));
+			pGlider->SetTag("Gleiter");
+			pGlider->SetColType(COL);
+			CTM->AddPersistantObject(pGlider);
 		}
 
 

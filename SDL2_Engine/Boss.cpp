@@ -120,7 +120,7 @@ void GBoss::REvent()
 
 void GBoss::Shoot()
 {
-	GBossBullet* pBullet = new GBossBullet("Texture/Bullet/T_Bullet.png", m_position, SVector2(8, 8));
+	GBossBullet* pBullet = new GBossBullet("Texture/Bullet/T_Horn.png", m_position, SVector2(16, 16));
 	CTM->AddPersistantObject(pBullet);
 	pBullet->SetSpeed(BULLET_SPEED);
 	pBullet->SetColType(ECollisionType::MOVE);
