@@ -281,6 +281,28 @@ void GWorld::Init()
 			CTM->AddPersistantObject(pWorld01);
 		}
 
+		// if Z (goal)
+		else if (world[i] == 'Z')
+		{
+			// load goal and add to ctm
+			CTexturedObject* pGoal = new CTexturedObject("Texture/World/Door.png",
+				SVector2(width * BLOCK_WIDTH, (height - 1.4f) * BLOCK_HEIGHT), SVector2(213, 157));
+			pGoal->SetTag("Goal");
+			pGoal->SetColType(COL);
+			CTM->AddPersistantObject(pGoal);
+		}
+
+		// if Schild I
+		else if (world[i] == 'I')
+		{
+			// load NPC and add to ctm
+			CTexturedObject* pSchild = new CTexturedObject("Texture/World/Schild.png",
+				SVector2(width * BLOCK_WIDTH, (height - 1.3f)* BLOCK_HEIGHT), SVector2(55, 64));
+			pSchild->SetTag("Tutorial");
+			pSchild->SetColType(COL);
+			CTM->AddPersistantObject(pSchild);
+		}
+
 		// if player
 		else if (world[i] == 'P')
 		{
@@ -324,24 +346,40 @@ void GWorld::Init()
 		else if (world[i] == '1')
 		{
 			// load NPC and add to ctm
-			GNPC* pNpc = new GNPC("Texture/NPC/T_Npc.png",
+			GNPC* pNpc1 = new GNPC("Texture/NPC/T_Npc.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(55, 64));
-			pNpc->SetTag("NPC");
-			pNpc->SetColType(COL);
-			pNpc->m_NPC.SetAnimationRect(SRect(154, 245, 0, 0));
-			pNpc->m_NPC.SetAnimationObject(pNpc);
-			CTM->AddPersistantObject(pNpc);
+			pNpc1->SetTag("NPC1");
+			pNpc1->SetColType(COL);
+			pNpc1->m_NPC.SetAnimationRect(SRect(154, 245, 0, 0));
+			pNpc1->m_NPC.SetAnimationObject(pNpc1);
+			CTM->AddPersistantObject(pNpc1);
 		}
-		// if Z (goal)
-		else if (world[i] == 'Z')
+
+		// if NPC 1
+		else if (world[i] == '2')
 		{
-			// load goal and add to ctm
-			CTexturedObject* pGoal = new GNPC("Texture/Enemy/T_Panda.png",
-				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(MOVE_ENEMY_WIDTH, MOVE_ENEMY_HEIGHT));
-			pGoal->SetTag("Goal");
-			pGoal->SetColType(COL);
-			CTM->AddPersistantObject(pGoal);
+			// load NPC and add to ctm
+			GNPC* pNpc2 = new GNPC("Texture/NPC/T_Npc.png",
+				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(55, 64));
+			pNpc2->SetTag("NPC2");
+			pNpc2->SetColType(COL);
+			pNpc2->m_NPC.SetAnimationRect(SRect(154, 245, 0, 0));
+			pNpc2->m_NPC.SetAnimationObject(pNpc2);
+			CTM->AddPersistantObject(pNpc2);
 		}
+
+
+		// if R (key)
+		else if (world[i] == 'R')
+		{
+			// load key and add to ctm
+			CTexturedObject* pKey = new CTexturedObject("Texture/World/Schlussel.png",
+				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(44, 21));
+			pKey->SetTag("Key");
+			pKey->SetColType(COL);
+			CTM->AddPersistantObject(pKey);
+		}
+
 		// if Glider
 		else if (world[i] == 'V')
 		{

@@ -56,21 +56,59 @@ void GPlayer::Update(float _deltaSeconds)
 		}
 
 		// if Target has tag Goal
-		if (m_pColTarget->GetTag() == "Goal")
+		if (m_pColTarget->GetTag() == "Goal" && m_hasKey == true)
+		{
 			// you win
 			GAME->Win();
+		}
+
+		// if Target has tag Key
+		if (m_pColTarget->GetTag() == "Key")
+		{
+			m_hasKey = true;
+			m_pColTarget->SetPosition(SVector2(10001.0f, 10000.0f));
+
+		}
 
 		// if target has tag NPC
-		if (m_pColTarget->GetTag() == "NPC")
+		if (m_pColTarget->GetTag() == "NPC1" && m_NPC1 == false)
 		{
 			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
 			// set text of npc and add to ctm
-			CText* pNPCText = new CText("Hier kommt eine Story 1 hin !", GAME->m_PGaramond,
-				SRect(SVector2(position.X - 150, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
+			CText* pNPCText = new CText("Die Prophezeiung! Wann sie wohl eintreten wird...", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 200, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
+			m_NPC1 = true;
 		}
+
+		// if target has tag NPC
+		if (m_pColTarget->GetTag() == "NPC2" && m_NPC2 == false)
+		{
+			// safe position of Target in primitive valuble
+			SVector2 position = m_pColTarget->GetPosition();
+			// set text of npc and add to ctm
+			CText* pNPCText = new CText("Wo ist nur der Schlüssel hin?", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 200, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
+			pNPCText->SetInWorld(true);
+			CTM->AddUIObject(pNPCText);
+			m_NPC2 = true;
+		}
+
+		// if target has tag Schild
+		if (m_pColTarget->GetTag() == "Tutorial" && m_Tutorial == false)
+		{
+			// safe position of Target in primitive valuble
+			SVector2 position = m_pColTarget->GetPosition();
+			// set text of npc and add to ctm
+			CText* pSchildText = new CText("Bewegen: A, D | Springen: SPACE | Gleiten: F", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 180, position.Y - 60), SVector2(440, 50)), SColor(255, 255, 255));
+			pSchildText->SetInWorld(true);
+			CTM->AddUIObject(pSchildText);
+			m_Tutorial = true;
+		}
+
 		// if target collects glider
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
@@ -410,8 +448,11 @@ void GPlayer::Update(float _deltaSeconds)
 	if (m_position.X * RENDERER->GetZoom() >= SCREEN_WIDTH / 2 &&
 		m_position.X * RENDERER->GetZoom() <= m_cameraMaxValue.X)
 	{
+		if (m_position.Y <= 415)
+			RENDERER->SetCamera(SVector2(pos.X, RENDERER->GetCamera().Y));
+
 		// if camera y in range
-		if (m_position.Y <= m_cameraMaxValue.Y  * RENDERER->GetZoom())
+		else if (m_position.Y<= m_cameraMaxValue.Y  * RENDERER->GetZoom())
 			RENDERER->SetCamera(SVector2(pos.X, pos.Y));
 
 		// if camera y not in range

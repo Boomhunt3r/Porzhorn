@@ -80,6 +80,10 @@ public:
 	SVector2 m_cameraMaxValue;
 
 	bool m_isGliding;
+	bool m_hasKey = false;
+	bool m_NPC1 = false;
+	bool m_NPC2 = false;
+	bool m_Tutorial = false;
 #pragma endregion
 	int _i;
 
