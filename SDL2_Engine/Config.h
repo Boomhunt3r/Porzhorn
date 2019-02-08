@@ -17,8 +17,8 @@
 #define BULLET_DAMAGE 100.0f
 #define BOSS_WIDTH 128.0f
 #define BOSS_HEIGHT 128.0f
-#define BOSS_SPEED 20.0f
+#define BOSS_SPEED 30.0f
 #define BOSS_HEALTH 300.0f
-#define BOSS_EVENT_TIMER 2.0f
-#define BOSS_ROLL_SPEED 50.0f
+#define BOSS_EVENT_TIMER 3.0f
+#define BOSS_ROLL_SPEED 80.0f
 #define BULLET_LENGTH 0.08f

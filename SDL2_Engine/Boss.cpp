@@ -7,6 +7,7 @@
 #include "Bullet.h"
 #include "BossBullet.h"
 #include "Animation.h"  
+#include "Texture.h"
 #pragma endregion
 
 #include <ctime>
@@ -134,12 +135,14 @@ void GBoss::Shoot()
 	if (m_mirror.X)
 	{
 		pBullet->SetMovement(SVector2(1.0f, 0.0f));
-		pBullet->SetPosition(m_position + SVector2(m_rect.w * 0.8f, 30.0f));
+		pBullet->SetPosition(m_position + SVector2(m_rect.w * 1.0f, 60.0f));
+		CTexture* pBossBullet = new CTexture("Texture/Bullet/T_Horn_R.png");
+		pBullet->SetTexture(pBossBullet);
 	}
 	else
 	{
 		pBullet->SetMovement(SVector2(-1.0f, 0.0f));
-		pBullet->SetPosition(m_position + SVector2(-m_rect.w * -0.2f, 30.0f));
+		pBullet->SetPosition(m_position + SVector2(-m_rect.w * 0.1f, 60.0f));
 	}
 }
 
@@ -176,9 +179,6 @@ void GBoss::Init()
 
 	// random between 0 and 1
 
-	if (rand() % 2)
-		m_movement.X = 1.0f;
-	else
-		m_movement.X = -1.0f;
+	m_movement = -1.0f;
 }
 #pragma endregion
