@@ -5,6 +5,7 @@
 #include "Engine.h"
 #include "ContentManagement.h"
 #include "Animation.h"
+#include "TexturedObject.h"
 #pragma endregion
 
 /// <summary>
@@ -56,7 +57,6 @@ public:
 	/// </summary>
 	void Init();
 #pragma endregion
-
 	CAnimation m_NPC;
 
 	int _i;

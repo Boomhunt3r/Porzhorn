@@ -41,7 +41,7 @@ void GNPC::Update(float _deltaSeconds)
 		// do nothing and continue
 		// until targes is not nullptr anymore
 	}
-	
+
 	// update parent
 	CTexturedObject::Update(_deltaSeconds);
 }

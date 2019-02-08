@@ -217,6 +217,29 @@ void GPlayer::Update(float _deltaSeconds)
 			_l = 0;
 		}
 
+		if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
+		{
+			m_animation.SetAnimationRect(SRect(195, 220, 0, 163));
+
+			_i = 606 / 404;
+
+			_l += _i;
+
+			if (_l >= 3 && _l <= 33)
+			{
+				m_animation.SetAnimationRect(SRect(195, 220, 195, 163));
+			}
+			if (_l >= 63 && _l <= 93)
+			{
+				m_animation.SetAnimationRect(SRect(195, 220, 390, 1630));
+			}
+
+			if (_l >= 123)
+			{
+				_l = 0;
+			}
+		}
+
 		// reset gravity when player is grounded and not swimming
 		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
 		// reset movement left right
@@ -319,27 +342,27 @@ void GPlayer::Update(float _deltaSeconds)
 	{
 
 		// Set Animation and Play
-		m_animation.SetAnimationRect(SRect(190, 223, 0, 1628));
+		m_animation.SetAnimationRect(SRect(211, 223, 0, 2094));
 
 		_i = 606 / 404;
 
 		_l += _i;
 
-		if (_l >= 3 && _l <= 33)
+		if (_l >= 0 && _l <= 200)
 		{
-			m_animation.SetAnimationRect(SRect(190, 223, 211, 1628));
+			m_animation.SetAnimationRect(SRect(211, 223, 211, 2094));
 		}
-		if (_l >= 63 && _l <= 93)
+		if (_l >= 400 && _l <= 800)
 		{
-			m_animation.SetAnimationRect(SRect(190, 223, 411, 1628));
+			m_animation.SetAnimationRect(SRect(211, 223, 422, 2094));
 		}
 
-		if (_l >= 123)
+		if (_l >= 1000)
 		{
 			_l = 0;
 		}
 
-		GBullet* pBullet = new GBullet("Texture/Bullet/T_Bullet.png", m_position, SVector2(8, 8));
+		GBullet* pBullet = new GBullet("Texture/Bullet/T_Bullet12.png", m_position, SVector2(8, 8));
 		CTM->AddPersistantObject(pBullet);
 		pBullet->SetSpeed(BULLET_SPEED);
 		pBullet->SetColType(ECollisionType::MOVE);

@@ -24,10 +24,11 @@ void GDeathScene::Load()
 	ENGINE->SetMouseVisible(true);
 	ENGINE->SetMouseCenter(SVector2());
 
-	CTexturedObject* pBackground = new CTexturedObject("Texture/Background/T_ded.png", 
-		SVector2(-SCREEN_WIDTH / 2, -SCREEN_HEIGHT / 2), SVector2(1280, 720));
+	CTexturedObject* pBackground = new CTexturedObject("Texture/Background/T_dead.png",
+		SVector2(0, 0), SVector2(1280, 720));
 	// m_MenuAnimation.SetAnimationObject(pBackgroundTexture);
 	// m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 0, 0));
+	pBackground->SetInWorld(false);
 	CTM->AddUIObject(pBackground);
 
 	// create text and add to ctm
