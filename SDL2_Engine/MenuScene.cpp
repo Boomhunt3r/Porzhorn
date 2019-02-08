@@ -17,10 +17,11 @@
 void GMenuScene::Load()
 {
 	CTexturedObject* pBackgroundTexture = new CTexturedObject("Texture/Background/T_Main_Slim.png",
-		SVector2(-SCREEN_WIDTH / 2, -SCREEN_HEIGHT / 2), SVector2(1280, 720));
+		SVector2(0, 0), SVector2(1280, 720));
 		pBackgroundTexture->SetSrcRect(SRect(1280, 720, 0, 0));
 		m_MenuAnimation.SetAnimationObject(pBackgroundTexture);
 		m_MenuAnimation.SetAnimationRect(SRect(1280, 720, 0, 0));
+		pBackgroundTexture->SetInWorld(false);
 		CTM->AddUIObject(pBackgroundTexture);
 
 	// create mouse texture

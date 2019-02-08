@@ -56,7 +56,6 @@ public:
 	/// </summary>
 	void Init();
 #pragma endregion
-
 	CAnimation m_NPC;
 
 	int _i;
