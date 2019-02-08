@@ -13,6 +13,7 @@
 #include "Boss.h"
 #include "Animation.h"
 #include "NPC.h"
+#include "Item.h"
 #pragma endregion
 
 #pragma region using
@@ -340,7 +341,7 @@ void GWorld::Init()
 		else if (world[i] == 'V')
 		{
 			// load Glider and add to ctm
-			GNPC* pGlider = new GNPC("Texture/World/T_Leaf.png",
+			GItem* pGlider = new GItem("Texture/World/T_Leaf.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(64, 64));
 			pGlider->SetTag("Gleiter");
 			pGlider->SetColType(COL);

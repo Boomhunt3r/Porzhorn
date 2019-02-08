@@ -339,7 +339,7 @@ void GPlayer::Update(float _deltaSeconds)
 			_l = 0;
 		}
 
-		GBullet* pBullet = new GBullet("Texture/Bullet/T_Bullet.png", m_position, SVector2(8, 8));
+		GBullet* pBullet = new GBullet("Texture/Bullet/T_Bullet12.png", m_position, SVector2(8, 8));
 		CTM->AddPersistantObject(pBullet);
 		pBullet->SetSpeed(BULLET_SPEED);
 		pBullet->SetColType(ECollisionType::MOVE);
