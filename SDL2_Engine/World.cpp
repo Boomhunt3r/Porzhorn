@@ -347,7 +347,6 @@ void GWorld::Init()
 			CTM->AddPersistantObject(pGlider);
 		}
 
-
 		// set source rect
 		pObj->SetSrcRect(SRect(
 			SVector2(xPosTexture, 0.0f),
