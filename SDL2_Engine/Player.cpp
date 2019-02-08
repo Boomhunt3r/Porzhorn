@@ -45,21 +45,21 @@ void GPlayer::Init()
 // update every frame
 void GPlayer::Update(float _deltaSeconds)
 {
-	
+
 	if (m_pColTarget)
 	{
 		// if Targete has tag Enemy of Fire
 		if (m_pColTarget->GetTag() == "Enemy" || m_pColTarget->GetTag() == "Fire" || m_pColTarget->GetTag() == "Boss")
-		{			
-				// You die and game is over
-				GAME->GameOver();
+		{
+			// You die and game is over
+			GAME->GameOver();
 		}
 
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal")
 			// you win
 			GAME->Win();
-		
+
 		// if target has tag NPC
 		if (m_pColTarget->GetTag() == "NPC")
 		{
@@ -75,7 +75,7 @@ void GPlayer::Update(float _deltaSeconds)
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
 			m_glider = true;
-			m_pColTarget->SetPosition(SVector2(10001.0f,10000.0f));
+			m_pColTarget->SetPosition(SVector2(10001.0f, 10000.0f));
 		}
 
 		// if target has tag water
@@ -190,16 +190,16 @@ void GPlayer::Update(float _deltaSeconds)
 	else if (!CInput::GetKey(SDL_SCANCODE_D) && !CInput::GetKey(SDL_SCANCODE_A))
 	{
 		m_animation.SetAnimationRect(SRect(197, 227, 0, 227));
-		
+
 		_i = 606 / 404;
-		
+
 		_l += _i;
-		
+
 		if (_l >= 18 && _l <= 36)
 		{
 			m_animation.SetAnimationRect(SRect(197, 227, 197, 227));
 		}
-		
+
 		if (_l >= 54 && _l <= 72)
 		{
 			m_animation.SetAnimationRect(SRect(197, 227, 394, 227));
@@ -216,7 +216,7 @@ void GPlayer::Update(float _deltaSeconds)
 		{
 			_l = 0;
 		}
-		
+
 		// reset gravity when player is grounded and not swimming
 		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
 		// reset movement left right
@@ -238,8 +238,29 @@ void GPlayer::Update(float _deltaSeconds)
 	if (CInput::GetKeyDown(SDL_SCANCODE_SPACE))
 	{
 		if (m_grounded || m_swimming)
+		{
 			// jump
 			m_fallTime = PLAYER_JUMP_FORCE;
+			// Set Animation and Play
+			m_animation.SetAnimationRect(SRect(195, 221, 0, 3004));
+
+			_i = 606 / 404;
+
+			_l += _i;
+
+			if (_l >= 3 && _l <= 63)
+			{
+				m_animation.SetAnimationRect(SRect(195, 221, 390, 3004));
+			}
+			if (_l >= 123 && _l <= 183)
+			{
+				m_animation.SetAnimationRect(SRect(195, 221, 585, 3004));
+			}
+			if (_l >= 243)
+			{
+				_l = 0;
+			}
+		}
 	}
 
 	// if key shift, more speed
@@ -251,10 +272,13 @@ void GPlayer::Update(float _deltaSeconds)
 	{
 		m_speed = 255;
 	}
+	// if not grounded
 	if (!m_grounded)
 	{
+		// if is Gliding
 		if (m_isGliding == true)
 		{
+			// Set Animation and Play
 			m_animation.SetAnimationRect(SRect(196, 227, 0, 1164));
 
 			_i = 606 / 404;
@@ -276,11 +300,12 @@ void GPlayer::Update(float _deltaSeconds)
 	{
 		m_isGliding = false;
 	}
-	LOG(m_isGliding);
 
 	// if key f pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_F) && m_glider == true)
 	{
+		// if gliding key is pressed
+		// isGliding true
 		m_isGliding = true;
 
 		if (!m_grounded)
@@ -292,6 +317,28 @@ void GPlayer::Update(float _deltaSeconds)
 
 	if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
 	{
+
+		// Set Animation and Play
+		m_animation.SetAnimationRect(SRect(190, 223, 0, 1628));
+
+		_i = 606 / 404;
+
+		_l += _i;
+
+		if (_l >= 3 && _l <= 33)
+		{
+			m_animation.SetAnimationRect(SRect(190, 223, 211, 1628));
+		}
+		if (_l >= 63 && _l <= 93)
+		{
+			m_animation.SetAnimationRect(SRect(190, 223, 411, 1628));
+		}
+
+		if (_l >= 123)
+		{
+			_l = 0;
+		}
+
 		GBullet* pBullet = new GBullet("Texture/Bullet/T_Bullet.png", m_position, SVector2(8, 8));
 		CTM->AddPersistantObject(pBullet);
 		pBullet->SetSpeed(BULLET_SPEED);
@@ -310,6 +357,23 @@ void GPlayer::Update(float _deltaSeconds)
 		}
 	}
 
+	if (m_swimming == true)
+	{
+		m_animation.SetAnimationRect(SRect(202, 221, 0, 3455));
+
+		_i = 606 / 404;
+
+		_l += _i;
+
+		if (_l >= 3 && _l <= 33)
+		{
+			m_animation.SetAnimationRect(SRect(202, 221, 202, 3455));;
+		}
+		if (_l >= 63)
+		{
+			_l = 0;
+		}
+	}
 
 	// update move object parent
 	CMoveObject::Update(_deltaSeconds);
