@@ -1,0 +1,58 @@
+﻿  Boss.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  BossBullet.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Bullet.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  ContentManagement.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  CreditScene.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  DeathScene.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Font.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\font.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_ttf.h": No such file or directory
+  Game.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Helper.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\helper.cpp(2): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  Engine.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.cpp(2): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  Input.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\input.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  Level01.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Level02.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  main.cpp
+  MainScene.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  MenuScene.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Mouse.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\mouse.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  MoveEnemy.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  MoveObject.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  NPC.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Kompilieren...
+  Physic.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Player.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  Renderer.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.cpp(2): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL.h": No such file or directory
+  Text.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\text.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_ttf.h": No such file or directory
+  TextFPS.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\text.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_ttf.h": No such file or directory
+  Texture.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\texture.cpp(2): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_image.h": No such file or directory
+  TexturedObject.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  WinScene.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
+  World.cpp
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(4): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "SDL_rect.h": No such file or directory
