@@ -56,21 +56,56 @@ void GPlayer::Update(float _deltaSeconds)
 		}
 
 		// if Target has tag Goal
-		if (m_pColTarget->GetTag() == "Goal")
+		if (m_pColTarget->GetTag() == "Goal" && m_hasKey == true)
+		{
 			// you win
 			GAME->Win();
+		}
+
+		// if Target has tag Key
+		if (m_pColTarget->GetTag() == "Key")
+		{
+			m_hasKey = true;
+			m_pColTarget->SetPosition(SVector2(10001.0f, 10000.0f));
+
+		}
 
 		// if target has tag NPC
-		if (m_pColTarget->GetTag() == "NPC")
+		if (m_pColTarget->GetTag() == "NPC1")
 		{
 			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
 			// set text of npc and add to ctm
-			CText* pNPCText = new CText("Hier kommt eine Story 1 hin !", GAME->m_PGaramond,
-				SRect(SVector2(position.X - 150, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
+			CText* pNPCText = new CText("Die Prophezeiung! Wann sie wohl eintreten wird...", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 200, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
 			pNPCText->SetInWorld(true);
 			CTM->AddUIObject(pNPCText);
 		}
+
+		// if target has tag NPC
+		if (m_pColTarget->GetTag() == "NPC2")
+		{
+			// safe position of Target in primitive valuble
+			SVector2 position = m_pColTarget->GetPosition();
+			// set text of npc and add to ctm
+			CText* pNPCText = new CText("Wo ist nur der Schlüssel hin?", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 200, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
+			pNPCText->SetInWorld(true);
+			CTM->AddUIObject(pNPCText);
+		}
+
+		// if target has tag Schild
+		if (m_pColTarget->GetTag() == "Tutorial")
+		{
+			// safe position of Target in primitive valuble
+			SVector2 position = m_pColTarget->GetPosition();
+			// set text of npc and add to ctm
+			CText* pSchildText = new CText("Bewegen: A, D | Springen: SPACE | Gleiten: F", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 180, position.Y - 60), SVector2(440, 50)), SColor(255, 255, 255));
+			pSchildText->SetInWorld(true);
+			CTM->AddUIObject(pSchildText);
+		}
+
 		// if target collects glider
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
