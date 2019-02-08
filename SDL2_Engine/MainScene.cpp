@@ -7,6 +7,7 @@
 #include "Game.h"
 #include "Config.h"
 #include "Physic.h"
+#include "Level01.h"
 #pragma endregion
 
 #pragma region public override function
@@ -14,8 +15,8 @@
 void GMainScene::Load()
 {
 	// create and initialize world
-	m_pWorld = new GWorld(nullptr);
-	m_pWorld->Init();
+	m_pLevel01 = new GLevel01(nullptr);
+	m_pLevel01->Init();
 
 	// load NPC and add to ctm
 	//CTexturedObject* pNpc = new CTexturedObject("Texture/Player/T_Player.png", SVector2(350, 550), SVector2(32, 54));
@@ -42,7 +43,7 @@ void GMainScene::Clean()
 	CTM->CleanPersistantObjects();
 
 	// delete world
-	delete m_pWorld;
+	delete m_pLevel01;
 }
 
 // update every frame
