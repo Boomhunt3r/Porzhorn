@@ -13,7 +13,6 @@
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
-<<<<<<< HEAD
     <ClCompile Include="MainScene.cpp" />
     <ClCompile Include="MenuScene.cpp" />
     <ClCompile Include="Mouse.cpp" />
@@ -33,9 +32,9 @@
     <ClCompile Include="Level01.cpp">
       <Filter>Level</Filter>
     </ClCompile>
-    <ClCompile Include="Level02.cpp">
+    <ClCompile Include="Level02.cpp ">
       <Filter>Level</Filter>
-=======
+    </ClCompile>
     <ClCompile Include="Engine.cpp">
       <Filter>Engine\Core</Filter>
     </ClCompile>
@@ -117,7 +116,6 @@
     <ClCompile Include="BossBullet.cpp">
       <Filter>Game\Object\Bullet</Filter>
       <Filter>Game\Object\Boss</Filter>
->>>>>>> 26b511a69f5b3b4494c09d8e22f8ac8e8642fe68
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -166,11 +164,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Filter Include="Level">
       <UniqueIdentifier>{b3efea2c-1b84-45b7-bf8e-c344330aeb7a}</UniqueIdentifier>
     </Filter>
-=======
     <ClInclude Include="Engine.h">
       <Filter>Engine\Core</Filter>
     </ClInclude>
@@ -283,6 +279,5 @@
       <Filter>Game\Object\Bullet</Filter>
       <Filter>Game\Object\Boss</Filter>
     </ClInclude>
->>>>>>> 26b511a69f5b3b4494c09d8e22f8ac8e8642fe68
   </ItemGroup>
 </Project>
