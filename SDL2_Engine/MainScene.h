@@ -60,5 +60,15 @@ private:
 	/// world
 	/// </summary>
 	GWorld* m_pWorld;
+
+	/// <summary>
+	/// level01
+	/// </summary>
+	GLevel01* m_pLevel01;
+
+	/// <summary>
+	/// level02
+	/// </summary>
+	GLevel02* m_pLevel02;
 #pragma endregion
 };

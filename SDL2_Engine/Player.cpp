@@ -57,10 +57,8 @@ void GPlayer::Update(float _deltaSeconds)
 
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal")
-		{
 			// you win
 			GAME->Win();
-		}
 
 		// if target has tag NPC
 		if (m_pColTarget->GetTag() == "NPC")
