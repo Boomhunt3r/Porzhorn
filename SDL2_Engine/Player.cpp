@@ -66,7 +66,7 @@ void GPlayer::Init()
 	// initialize Box animation
 	m_pBoxAnim = new CAnimation(SVector2(0.0f, PlayerBoxPositionY),
 		SVector2(PlayerBoxWidth, PlayerBoxHeight), 3);
-	m_pBoxAnim->SetAnimationTime(1.0f);
+	m_pBoxAnim->SetAnimationTime(0.5f);
 
 	// set current animation
 	m_pCurrentAnim = m_pIDLEAnim;
@@ -219,8 +219,6 @@ void GPlayer::Update(float _deltaSeconds)
 	// if not key d or a pressed
 	else if (!CInput::GetKey(SDL_SCANCODE_D) && !CInput::GetKey(SDL_SCANCODE_A))
 	{
-		if (!CInput::GetKeyDown(SDL_SCANCODE_RETURN))
-			m_pCurrentAnim = m_pIDLEAnim;
 
 		if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
 		{
