@@ -11,84 +11,15 @@
 // update every frame
 void GMoveEnemy::Update(float _deltaSeconds)
 {
-	m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 0, 0));
-	_i = 508 / 169;
-
-	_l += _i;
-
-	if (_l >= 6 && _l <= 12)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 127, 0));
-	}
-	if (_l >= 9 && _l <= 15)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 254, 0));
-	}
-	if (_l >= 18 && _l <= 24)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 381, 0));
-	}
-	if (_l >= 27 && _l <= 33)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 0, 127));
-	}
-	if (_l >= 36 && _l <= 42)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 127, 127));
-	}
-	if (_l >= 45 && _l <= 51)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 254, 127));
-	}
-	if (_l >= 54 && _l <= 60)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 381, 127));
-	}
-	if (_l >= 63 && _l <= 69)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 0, 254));
-	}
-	if (_l >= 72 && _l <= 78)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 127, 254));
-	}
-	if (_l >= 81 && _l <= 87)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 254, 254));
-	}
-	if (_l >= 90 && _l <= 96)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 381, 254));
-	}
-	if (_l >= 99 && _l <= 105)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 0, 381));
-	}
-	if (_l >= 108 && _l <= 114)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 127, 381));
-	}
-	if (_l >= 117 && _l <= 123)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 254, 381));
-	}
-	if (_l >= 126 && _l <= 132)
-	{
-		m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 381, 381));
-	}
-	if (_l >= 135)
-	{
-		_l = 0;
-	}
+	
 	// if Target is nullpointer
 	if (m_pColTarget == nullptr)
 	{
 		// do nothing and continue
-		// until targes is not nullptr anymore
+		// until target is not nullptr anymore
 	}
 	else
 	{
-			
 		// if movement is to the right, and target hits a Wall
 		if (m_movement.X == 1.0f && m_pColTarget->GetColType() == ECollisionType::WALL || m_movement.X == 1.0f && m_pColTarget->GetTag() == "Barrier")
 		{
@@ -121,7 +52,6 @@ void GMoveEnemy::Update(float _deltaSeconds)
 // render every frame
 void GMoveEnemy::Render()
 {
-	SetSrcRect(m_EnemyAnimation.GetAnimationRect());
 	// render parent
 	CMoveObject::Render();
 }

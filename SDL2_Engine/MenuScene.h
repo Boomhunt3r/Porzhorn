@@ -47,9 +47,4 @@ public:
 	/// </summary>
 	virtual void Render() override;
 #pragma endregion
-	int _i;
-	
-	int _l;
-
-	CAnimation m_MenuAnimation;
 };

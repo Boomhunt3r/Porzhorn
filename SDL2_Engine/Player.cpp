@@ -38,6 +38,39 @@ void GPlayer::Init()
 	// activate gravity
 	m_gravity = true;
 
+	// initiaize ilde animation
+	m_pIDLEAnim = new CAnimation(SVector2(0.0f, PlayerIdlePositionY),
+		SVector2(PlayerIdleWidth, PlayerIdleHeight), 5);
+	m_pIDLEAnim->SetAnimationTime(1.25f);
+
+	// initialize run animation
+	m_pRunAnim = new CAnimation(SVector2(0.0f, PlayerRunPositionY),
+		SVector2(PlayerRunWidth, PlayerRunHeight), 4);
+	m_pRunAnim->SetAnimationTime(0.5f);
+
+	// initialize Jump animation
+	m_pJumpAnim = new CAnimation(SVector2(0.0f, PlayerJumpPositionY),
+		SVector2(PlayerJumpWidth, PlayerJumpHeight), 3);
+	m_pJumpAnim->SetAnimationTime(0.5f);
+
+	// initialize Swim animation
+	m_pSwimAnim = new CAnimation(SVector2(0.0f, PlayerSwimPositionY),
+		SVector2(PlayerSwimWidth, PlayerSwimHeight), 2);
+	m_pSwimAnim->SetAnimationTime(0.5f);
+
+	// initialize Glide animation
+	m_pGlideAnim = new CAnimation(SVector2(0.0f, PlayerGlidePositionY),
+		SVector2(PlayerGlideWidth, PlayerGlideHeight), 2);
+	m_pGlideAnim->SetAnimationTime(0.5f);
+
+	// initialize Box animation
+	m_pBoxAnim = new CAnimation(SVector2(0.0f, PlayerBoxPositionY),
+		SVector2(PlayerBoxWidth, PlayerBoxHeight), 3);
+	m_pBoxAnim->SetAnimationTime(1.0f);
+
+	// set current animation
+	m_pCurrentAnim = m_pIDLEAnim;
+
 	// initialize parent
 	CMoveObject::Init();
 }
@@ -138,31 +171,11 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key d pressed
 	if (CInput::GetKey(SDL_SCANCODE_D))
 	{
-		m_animation.SetAnimationRect(SRect(202, 225, 0, 687));
-
-		_i = 606 / 404;
-
-		_l += _i;
-
-		if (_l >= 6 && _l <= 12)
-		{
-			m_animation.SetAnimationRect(SRect(202, 225, 202, 687));
-		}
-
-		if (_l >= 15 && _l <= 21)
-		{
-			m_animation.SetAnimationRect(SRect(202, 225, 404, 687));
-		}
-		if (_l >= 24 && _l <= 30)
-		{
-			m_animation.SetAnimationRect(SRect(202, 225, 606, 687));
-		}
-		if (_l >= 33)
-		{
-			_l = 0;
-		}
 		// reset gravity when player is grounded and not swimming
 		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
+
+		// set run animation
+		m_pCurrentAnim = m_pRunAnim;
 
 		// set movement right and mirror not
 		if (m_movement.X < 1.0f)
@@ -182,29 +195,8 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key a pressed
 	else if (CInput::GetKey(SDL_SCANCODE_A))
 	{
-		m_animation.SetAnimationRect(SRect(202, 225, 0, 687));
-
-		_i = 606 / 404;
-
-		_l += _i;
-
-		if (_l >= 6 && _l <= 12)
-		{
-			m_animation.SetAnimationRect(SRect(202, 225, 202, 687));
-		}
-
-		if (_l >= 15 && _l <= 21)
-		{
-			m_animation.SetAnimationRect(SRect(202, 225, 404, 687));
-		}
-		if (_l >= 24 && _l <= 30)
-		{
-			m_animation.SetAnimationRect(SRect(202, 225, 606, 687));
-		}
-		if (_l >= 33)
-		{
-			_l = 0;
-		}
+		// set run animation
+		m_pCurrentAnim = m_pRunAnim;
 
 		// reset gravity when player is grounded and not swimming
 		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
@@ -227,55 +219,12 @@ void GPlayer::Update(float _deltaSeconds)
 	// if not key d or a pressed
 	else if (!CInput::GetKey(SDL_SCANCODE_D) && !CInput::GetKey(SDL_SCANCODE_A))
 	{
-		m_animation.SetAnimationRect(SRect(197, 227, 0, 227));
-
-		_i = 606 / 404;
-
-		_l += _i;
-
-		if (_l >= 18 && _l <= 36)
-		{
-			m_animation.SetAnimationRect(SRect(197, 227, 197, 227));
-		}
-
-		if (_l >= 54 && _l <= 72)
-		{
-			m_animation.SetAnimationRect(SRect(197, 227, 394, 227));
-		}
-		if (_l >= 90 && _l <= 108)
-		{
-			m_animation.SetAnimationRect(SRect(197, 227, 591, 227));
-		}
-		if (_l >= 126 && _l <= 144)
-		{
-			m_animation.SetAnimationRect(SRect(197, 227, 788, 227));
-		}
-		if (_l >= 162)
-		{
-			_l = 0;
-		}
+		if (!CInput::GetKeyDown(SDL_SCANCODE_RETURN))
+			m_pCurrentAnim = m_pIDLEAnim;
 
 		if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
 		{
-			m_animation.SetAnimationRect(SRect(195, 220, 0, 163));
-
-			_i = 606 / 404;
-
-			_l += _i;
-
-			if (_l >= 3 && _l <= 33)
-			{
-				m_animation.SetAnimationRect(SRect(195, 220, 195, 163));
-			}
-			if (_l >= 63 && _l <= 93)
-			{
-				m_animation.SetAnimationRect(SRect(195, 220, 390, 1630));
-			}
-
-			if (_l >= 123)
-			{
-				_l = 0;
-			}
+			m_pCurrentAnim = m_pBoxAnim;
 		}
 
 		// reset gravity when player is grounded and not swimming
@@ -298,29 +247,12 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key space pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_SPACE))
 	{
+		m_pCurrentAnim = m_pJumpAnim;
+
 		if (m_grounded || m_swimming)
 		{
 			// jump
 			m_fallTime = PLAYER_JUMP_FORCE;
-			// Set Animation and Play
-			m_animation.SetAnimationRect(SRect(195, 221, 0, 3004));
-
-			_i = 606 / 404;
-
-			_l += _i;
-
-			if (_l >= 3 && _l <= 63)
-			{
-				m_animation.SetAnimationRect(SRect(195, 221, 390, 3004));
-			}
-			if (_l >= 123 && _l <= 183)
-			{
-				m_animation.SetAnimationRect(SRect(195, 221, 585, 3004));
-			}
-			if (_l >= 243)
-			{
-				_l = 0;
-			}
 		}
 	}
 
@@ -339,22 +271,7 @@ void GPlayer::Update(float _deltaSeconds)
 		// if is Gliding
 		if (m_isGliding == true)
 		{
-			// Set Animation and Play
-			m_animation.SetAnimationRect(SRect(196, 227, 0, 1164));
-
-			_i = 606 / 404;
-
-			_l += _i;
-
-			if (_l >= 18 && _l <= 36)
-			{
-				m_animation.SetAnimationRect(SRect(196, 227, 196, 1164));
-			}
-
-			if (_l >= 54)
-			{
-				_l = 0;
-			}
+			m_pCurrentAnim = m_pGlideAnim;
 		}
 	}
 	else
@@ -378,27 +295,7 @@ void GPlayer::Update(float _deltaSeconds)
 
 	if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
 	{
-
-		// Set Animation and Play
-		m_animation.SetAnimationRect(SRect(211, 223, 0, 2094));
-
-		_i = 606 / 404;
-
-		_l += _i;
-
-		if (_l >= 0 && _l <= 200)
-		{
-			m_animation.SetAnimationRect(SRect(211, 223, 211, 2094));
-		}
-		if (_l >= 400 && _l <= 800)
-		{
-			m_animation.SetAnimationRect(SRect(211, 223, 422, 2094));
-		}
-
-		if (_l >= 1000)
-		{
-			_l = 0;
-		}
+		m_pCurrentAnim = m_pBoxAnim;
 
 		GBullet* pBullet = new GBullet("Texture/Bullet/T_Bullet12.png", m_position, SVector2(8, 8));
 		CTM->AddPersistantObject(pBullet);
@@ -420,20 +317,7 @@ void GPlayer::Update(float _deltaSeconds)
 
 	if (m_swimming == true)
 	{
-		m_animation.SetAnimationRect(SRect(202, 221, 0, 3455));
-
-		_i = 606 / 404;
-
-		_l += _i;
-
-		if (_l >= 3 && _l <= 33)
-		{
-			m_animation.SetAnimationRect(SRect(202, 221, 202, 3455));;
-		}
-		if (_l >= 63)
-		{
-			_l = 0;
-		}
+		m_pCurrentAnim = m_pSwimAnim;
 	}
 
 	// update move object parent
@@ -452,7 +336,7 @@ void GPlayer::Update(float _deltaSeconds)
 			RENDERER->SetCamera(SVector2(pos.X, RENDERER->GetCamera().Y));
 
 		// if camera y in range
-		else if (m_position.Y<= m_cameraMaxValue.Y  * RENDERER->GetZoom())
+		else if (m_position.Y <= m_cameraMaxValue.Y  * RENDERER->GetZoom())
 			RENDERER->SetCamera(SVector2(pos.X, pos.Y));
 
 		// if camera y not in range
@@ -469,13 +353,20 @@ void GPlayer::Update(float _deltaSeconds)
 	// if camera x and y not in range
 	else
 		RENDERER->SetCamera(SVector2(RENDERER->GetCamera().X, RENDERER->GetCamera().Y));
+
+	// update current animation
+	m_pCurrentAnim->Update(_deltaSeconds);
+
+	// set src rect
+	m_srcRect = SRect(
+		SVector2(m_pCurrentAnim->GetCurrentTexturePosition().X, m_pCurrentAnim->GetCurrentTexturePosition().Y),
+		m_pCurrentAnim->GetSize()
+	);
 }
 
 // render every frame
 void GPlayer::Render()
 {
-	SetSrcRect(m_animation.GetAnimationRect());
-
 	// render parent
 	CMoveObject::Render();
 };

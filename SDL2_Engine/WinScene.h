@@ -47,9 +47,4 @@ public:
 	/// </summary>
 	virtual void Render() override;
 #pragma endregion
-	int _l;
-
-	int _i;
-
-	CAnimation m_WinAnimation;
 };

@@ -8,7 +8,7 @@
 /// <summary>
 /// player class
 /// </summary>
-class GPlayer :	public CMoveObject
+class GPlayer : public CMoveObject
 {
 public:
 #pragma region constructor
@@ -32,7 +32,17 @@ public:
 	/// <summary>
 	/// destructor
 	/// </summary>
-	virtual ~GPlayer() {}
+	virtual ~GPlayer() 
+	{
+		m_pCurrentAnim = nullptr;
+
+		delete m_pIDLEAnim;
+		delete m_pBoxAnim;
+		delete m_pGlideAnim;
+		delete m_pJumpAnim;
+		delete m_pSwimAnim;
+		delete m_pRunAnim;
+	}
 #pragma endregion
 
 #pragma region public inline function
@@ -85,9 +95,42 @@ public:
 	bool m_NPC2 = false;
 	bool m_Tutorial = false;
 #pragma endregion
-	int _i;
+#pragma region private pointer
 
-	int _l;
+	/// <summary>
+	/// current animation
+	/// </summary>
+	CAnimation* m_pCurrentAnim;
 
-	CAnimation m_animation;
+	/// <summary>
+	/// ilde animation
+	/// </summary>
+	CAnimation* m_pIDLEAnim;
+
+	/// <summary>
+	/// run animation
+	/// </summary>
+	CAnimation* m_pRunAnim;
+
+	/// <summary>
+	/// Box Animation
+	/// </summary>
+	CAnimation* m_pBoxAnim;
+
+	/// <summary>
+	/// Glide Animation
+	/// </summary>
+	CAnimation* m_pGlideAnim;
+
+	/// <summary>
+	/// Jump Animation
+	/// </summary>
+	CAnimation* m_pJumpAnim;
+
+	/// <summary>
+	/// Swim Animation
+	/// </summary>
+	CAnimation* m_pSwimAnim;
+
+#pragma endregion
 };

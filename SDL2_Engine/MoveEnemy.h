@@ -80,10 +80,4 @@ private:
 	/// </summary>
 	float m_health;
 #pragma endregion
-public:
-	int _i;
-
-	int _l;
-
-	CAnimation m_EnemyAnimation;
 };

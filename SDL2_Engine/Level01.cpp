@@ -198,8 +198,6 @@ void GLevel01::Init()
 			// load player, initialize and add to ctm
 			GPlayer* pPlayer = new GPlayer("Texture/Player/T_Jurgo.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(64, 64));
-			pPlayer->m_animation.SetAnimationRect(SRect(202, 225, 0, 225));
-			pPlayer->m_animation.SetAnimationObject(pPlayer);
 			pPlayer->Init();
 			pPlayer->SetTag("Player");
 			pPlayer->SetCameraMaxPosition(
@@ -214,8 +212,6 @@ void GLevel01::Init()
 			// load enemy, initialize and add to ctm
 			GMoveEnemy* pEnemy = new GMoveEnemy("Texture/Enemy/T_Panda.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(MOVE_ENEMY_WIDTH, MOVE_ENEMY_HEIGHT));
-			pEnemy->m_EnemyAnimation.SetAnimationRect(SRect(127, 127, 0, 0));
-			pEnemy->m_EnemyAnimation.SetAnimationObject(pEnemy);
 			pEnemy->Init();
 			CTM->AddPersistantObject(pEnemy);
 		}
@@ -226,8 +222,6 @@ void GLevel01::Init()
 			// load Boss, initialize and add to ctm
 			GBoss* pBoss = new GBoss("Texture/Enemy/T_King.png",
 				SVector2(width * BLOCK_WIDTH, (height - 4.5) * BLOCK_HEIGHT), SVector2(BOSS_WIDTH, BOSS_HEIGHT));
-			pBoss->m_BossAnimation.SetAnimationRect(SRect(297, 382, 0, 0));
-			pBoss->m_BossAnimation.SetAnimationObject(pBoss);
 			pBoss->Init();
 			CTM->AddPersistantObject(pBoss);
 		}

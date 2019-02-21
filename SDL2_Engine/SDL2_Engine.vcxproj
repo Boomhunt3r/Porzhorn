@@ -130,6 +130,7 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Boss.cpp" />
     <ClCompile Include="BossBullet.cpp" />
     <ClCompile Include="Bullet.cpp" />
@@ -185,6 +186,7 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="MoveEnemy.h" />
     <ClInclude Include="MoveObject.h" />
+    <ClInclude Include="Music.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Physic.h" />
@@ -192,6 +194,7 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="Sound.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="TextFPS.h" />
     <ClInclude Include="Texture.h" />

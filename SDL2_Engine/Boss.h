@@ -91,11 +91,4 @@ private:
 	/// </summary>
 	float m_health;
 #pragma endregion
-
-public:
-	int _l;
-
-	int _i;
-
-	CAnimation m_BossAnimation;
 };
