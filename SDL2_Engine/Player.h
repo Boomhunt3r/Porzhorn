@@ -3,6 +3,7 @@
 #pragma region project include
 #include "MoveObject.h"
 #include "Animation.h"
+#include "World.h"
 #pragma endregion
 
 /// <summary>
@@ -95,6 +96,7 @@ public:
 	bool m_NPC2 = false;
 	bool m_Tutorial = false;
 #pragma endregion
+
 #pragma region private pointer
 
 	/// <summary>

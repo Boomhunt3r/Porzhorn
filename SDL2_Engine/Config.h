@@ -28,7 +28,7 @@
 #define PlayerRunPositionY 689
 #define PlayerRunWidth 202
 #define PlayerRunHeight 225
-#define PlayerJumpPositionY 3005
+#define PlayerJumpPositionY 3007
 #define PlayerJumpWidth 199
 #define PlayerJumpHeight 219
 #define PlayerSwimPositionY 3455
@@ -40,3 +40,6 @@
 #define PlayerBoxPositionY 1630
 #define PlayerBoxWidth 195
 #define PlayerBoxHeight 226
+#define NpcIdlePositionY 0
+#define NpcIdleWidth 155
+#define NpcIdleHeight 246

@@ -35,10 +35,20 @@ public:
 	/// <summary>
 	/// destructor
 	/// </summary>
-	virtual ~GNPC() {}
+	virtual ~GNPC() 
+	{
+		m_pCurrentAnim = nullptr;
+
+		delete m_pIdleAnim;
+	}
 #pragma endregion
 
 #pragma region public override function
+	/// <summary>
+	/// initialize move enemy
+	/// </summary>
+	virtual void Init() override;
+	
 	/// <summary>
 	/// update every frame
 	/// </summary>
@@ -49,12 +59,20 @@ public:
 	/// render every frame
 	/// </summary>
 	virtual void Render() override;
+
 #pragma endregion
 
-#pragma region public function
+private:
+#pragma region private pointer
 	/// <summary>
-	/// initialize move enemy
+	/// current animation
 	/// </summary>
-	void Init();
+	CAnimation* m_pCurrentAnim;
+
+	/// <summary>
+	/// ilde animation
+	/// </summary>
+	CAnimation* m_pIdleAnim;
 #pragma endregion
+
 };

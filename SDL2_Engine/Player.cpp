@@ -51,7 +51,7 @@ void GPlayer::Init()
 	// initialize Jump animation
 	m_pJumpAnim = new CAnimation(SVector2(0.0f, PlayerJumpPositionY),
 		SVector2(PlayerJumpWidth, PlayerJumpHeight), 3);
-	m_pJumpAnim->SetAnimationTime(0.5f);
+	m_pJumpAnim->SetAnimationTime(1.0f);
 
 	// initialize Swim animation
 	m_pSwimAnim = new CAnimation(SVector2(0.0f, PlayerSwimPositionY),

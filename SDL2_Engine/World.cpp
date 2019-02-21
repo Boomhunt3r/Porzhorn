@@ -258,7 +258,7 @@ void GWorld::Init()
 		if (world[i] == 'T')
 		{
 			// load texture
-			CTexturedObject* pWorld01 = new CTexturedObject("Texture/World/level1.png",
+			CTexturedObject* pWorld01 = new CTexturedObject("Texture/World/T_Level1.png",
 				SVector2(0, 36), SVector2(7392, 1440));
 			CTM->AddPersistantObject(pWorld01);
 		}
@@ -276,7 +276,7 @@ void GWorld::Init()
 		if (world[i] == '4')
 		{
 			// load texture
-			CTexturedObject* pWorld01 = new CTexturedObject("Texture/World/level4.png",
+			CTexturedObject* pWorld01 = new CTexturedObject("Texture/World/T_BossLevel.png",
 				SVector2(0, 48), SVector2(7392, 1200));
 			CTM->AddPersistantObject(pWorld01);
 		}
@@ -285,7 +285,7 @@ void GWorld::Init()
 		else if (world[i] == 'Z')
 		{
 			// load goal and add to ctm
-			CTexturedObject* pGoal = new CTexturedObject("Texture/World/Door.png",
+			CTexturedObject* pGoal = new CTexturedObject("Texture/World/T_Door.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1.4f) * BLOCK_HEIGHT), SVector2(213, 157));
 			pGoal->SetTag("Goal");
 			pGoal->SetColType(COL);
@@ -296,7 +296,7 @@ void GWorld::Init()
 		else if (world[i] == 'I')
 		{
 			// load NPC and add to ctm
-			CTexturedObject* pSchild = new CTexturedObject("Texture/World/Schild.png",
+			CTexturedObject* pSchild = new CTexturedObject("Texture/World/T_Schild.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1.3f)* BLOCK_HEIGHT), SVector2(55, 64));
 			pSchild->SetTag("Tutorial");
 			pSchild->SetColType(COL);
@@ -344,6 +344,7 @@ void GWorld::Init()
 				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(55, 64));
 			pNpc1->SetTag("NPC1");
 			pNpc1->SetColType(COL);
+			pNpc1->Init();
 			CTM->AddPersistantObject(pNpc1);
 		}
 
@@ -355,6 +356,7 @@ void GWorld::Init()
 				SVector2(width * BLOCK_WIDTH, (height - 1.5f) * BLOCK_HEIGHT), SVector2(55, 64));
 			pNpc2->SetTag("NPC2");
 			pNpc2->SetColType(COL);
+			pNpc2->Init();
 			CTM->AddPersistantObject(pNpc2);
 		}
 
@@ -363,7 +365,7 @@ void GWorld::Init()
 		else if (world[i] == 'R')
 		{
 			// load key and add to ctm
-			CTexturedObject* pKey = new CTexturedObject("Texture/World/Schlussel.png",
+			CTexturedObject* pKey = new CTexturedObject("Texture/World/T_Schluessel.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1) * BLOCK_HEIGHT), SVector2(44, 21));
 			pKey->SetTag("Key");
 			pKey->SetColType(COL);
