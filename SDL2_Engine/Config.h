@@ -43,3 +43,9 @@
 #define NpcIdlePositionY 0
 #define NpcIdleWidth 155
 #define NpcIdleHeight 246
+#define BossMovePositionY 0
+#define BossMoveWidth 381
+#define BossMoveHeight 348
+#define BossShootPositionY 2150
+#define BossShootWidth 450
+#define BossShootHeight 350

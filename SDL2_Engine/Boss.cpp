@@ -10,8 +10,10 @@
 #include "Texture.h"
 #pragma endregion
 
-#include <ctime>
+#pragma region system include
+#include <ctime>  
 #pragma endregion
+
 
 #pragma region public override function
 
@@ -20,6 +22,8 @@ float bossTimer = 0.0f;
 // update every frame
 void GBoss::Update(float _deltaSeconds)
 {
+	m_pCurrentAnim = m_pMoveAnim;
+
 	bossTimer += 1.0f;
 
 	// if Target is nullpointer
@@ -65,6 +69,15 @@ void GBoss::Update(float _deltaSeconds)
 	}
 	// update parent
 	CMoveObject::Update(_deltaSeconds);
+
+	// update current animation
+	m_pCurrentAnim->Update(_deltaSeconds);
+
+	// set src rect
+	m_srcRect = SRect(
+		SVector2(m_pCurrentAnim->GetCurrentTexturePosition().X, m_pCurrentAnim->GetCurrentTexturePosition().Y),
+		m_pCurrentAnim->GetSize()
+	);
 }
 
 void GBoss::REvent()
@@ -93,6 +106,8 @@ void GBoss::REvent()
 
 void GBoss::Shoot()
 {
+	m_pCurrentAnim = m_pShootAnim;
+
 	GBossBullet* pBullet = new GBossBullet("Texture/Bullet/T_Horn.png", m_position, SVector2(32, 32));
 	CTM->AddPersistantObject(pBullet);
 	pBullet->SetSpeed(BULLET_SPEED);
@@ -125,8 +140,6 @@ void GBoss::Render()
 // initialize move enemy
 void GBoss::Init()
 {
-	
-
 	// set tag
 	m_pTag = "Boss";
 
@@ -142,8 +155,21 @@ void GBoss::Init()
 	// set health
 	m_health = BOSS_HEALTH;
 
-	// random between 0 and 1
 
+	// initiaize Move animation
+	m_pMoveAnim = new CAnimation(SVector2(0.0f, BossMovePositionY),
+		SVector2(BossMoveWidth, BossMoveHeight), 5);
+	m_pMoveAnim->SetAnimationTime(1.25f);
+
+	// initialize Shoot animation
+	m_pShootAnim = new CAnimation(SVector2(0.0f, BossShootPositionY),
+		SVector2(BossShootWidth, BossShootHeight), 4);
+	m_pShootAnim->SetAnimationTime(0.5f);
+
+	// set Current Animation to Move
+	m_pCurrentAnim = m_pMoveAnim;
+
+	// random between 0 and 1
 	m_movement = -1.0f;
 }
 #pragma endregion

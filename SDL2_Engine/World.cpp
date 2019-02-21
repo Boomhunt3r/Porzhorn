@@ -276,7 +276,7 @@ void GWorld::Init()
 		if (world[i] == '4')
 		{
 			// load texture
-			CTexturedObject* pWorld01 = new CTexturedObject("Texture/World/T_BossLevel.png",
+			CTexturedObject* pWorld01 = new CTexturedObject("Texture/World/level4.png",
 				SVector2(0, 48), SVector2(7392, 1200));
 			CTM->AddPersistantObject(pWorld01);
 		}

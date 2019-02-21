@@ -34,7 +34,13 @@ public:
 	/// <summary>
 	/// destructor
 	/// </summary>
-	virtual ~GBoss() {}
+	virtual ~GBoss() 
+	{
+		m_pCurrentAnim = nullptr;
+
+		delete m_pMoveAnim;
+		delete m_pShootAnim;
+	}
 #pragma endregion
 
 #pragma region public override function
@@ -91,4 +97,13 @@ private:
 	/// </summary>
 	float m_health;
 #pragma endregion
+
+#pragma region private pointer
+	CAnimation* m_pCurrentAnim;
+
+	CAnimation* m_pMoveAnim;
+
+	CAnimation* m_pShootAnim;
+#pragma endregion
+
 };

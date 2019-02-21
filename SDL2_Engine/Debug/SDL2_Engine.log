@@ -3,123 +3,26 @@ d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): w
 d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(21): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(29): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\boss.cpp(73): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
-  Level01.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(21): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(29): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(91): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(108): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(128): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(132): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(136): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(141): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(145): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(155): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(160): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(224): warning C4244: "Argument": Konvertierung von "double" in "float", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level01.cpp(253): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
-  Level02.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(21): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(29): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(86): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(103): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(123): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(127): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(131): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(136): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(140): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(150): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(155): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(219): warning C4244: "Argument": Konvertierung von "double" in "float", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\level02.cpp(248): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
-  MainScene.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(14): note: Siehe Deklaration von "SRect"
-  MoveEnemy.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(21): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(29): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-  NPC.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(21): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(29): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
-  Player.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(21): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(29): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(8): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(9): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(10): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(11): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\library\sdl2\include\sdl_render.h(122): note: Siehe Deklaration von "SDL_Renderer"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\renderer.h(8): note: Siehe Deklaration von "SRect"
-  World.cpp
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(21): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\player.h(29): error C2512: "GWorld": Kein geeigneter Standardkonstruktor verfügbar
-  d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.h(10): note: Siehe Deklaration von "GWorld"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(185): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(202): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(222): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(226): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(230): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(235): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(239): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(249): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(334): warning C4244: "Argument": Konvertierung von "double" in "float", möglicher Datenverlust
-d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\world.cpp(397): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
-  Code wird generiert...
+d:\studium\diploma\abgaben\zwischenschritte\porzhornv2\sdl2_engine\boss.cpp(86): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
+  SDL2_Engine.vcxproj -> D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Build\bin\x86\Debug\SDL2_Engine.exe
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2\lib\x86\SDL2.dll
+  1 Datei(en) kopiert
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libjpeg-9.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libpng16-16.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libtiff-5.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\libwebp-7.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\SDL2_image.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_image\lib\x86\zlib1.dll
+  6 Datei(en) kopiert
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_ttf\lib\x86\libfreetype-6.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_ttf\lib\x86\SDL2_ttf.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_ttf\lib\x86\zlib1.dll
+  3 Datei(en) kopiert
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libFLAC-8.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libmodplug-1.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libmpg123-0.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libogg-0.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libvorbis-0.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\libvorbisfile-3.dll
+  D:\Studium\Diploma\Abgaben\Zwischenschritte\PorzhornV2\Library\SDL2_mixer\lib\x86\SDL2_mixer.dll
+  7 Datei(en) kopiert
