@@ -11,12 +11,30 @@
 // update every frame
 void GMoveEnemy::Update(float _deltaSeconds)
 {
-	if (m_pColTarget == nullptr) {}
+	
+	// if Target is nullpointer
+	if (m_pColTarget == nullptr)
+	{
+		// do nothing and continue
+		// until target is not nullptr anymore
+	}
 	else
 	{
-		CheckBoxCollision();
+		// if movement is to the right, and target hits a Wall
+		if (m_movement.X == 1.0f && m_pColTarget->GetColType() == ECollisionType::WALL || m_movement.X == 1.0f && m_pColTarget->GetTag() == "Barrier")
+		{
+			// move left
+			m_movement = -1.0f;
+			m_mirror.X = 0.0f;
+		}
+		// if movement is to the left and target hits a wall
+		else if (m_movement.X == -1.0f && m_pColTarget->GetColType() == ECollisionType::WALL || m_movement.X == -1.0f && m_pColTarget->GetTag() == "Barrier")
+		{
+			// move right
+			m_movement.X = 1.0f;
+			m_mirror.X = 1.0f;
+		}
 	}
-
 	// if Target is true
 	if (m_pColTarget)
 	{
@@ -66,7 +84,7 @@ void GMoveEnemy::Init()
 
 	// set health
 	m_health = MOVE_ENEMY_HEALTH;
-
+	
 	// initiaize Move animation
 	m_pMoveAnim = new CAnimation(SVector2(0.0f, EnemyMovePositionY),
 		SVector2(EnemyMoveWidth, EnemyMoveHeight), 16);
@@ -80,36 +98,5 @@ void GMoveEnemy::Init()
 		m_movement.X = 1.0f;
 	else
 		m_movement.X = -1.0f;
-}
-void GMoveEnemy::CheckBoxCollision()
-{
-	// if movement is to the right, and target hits a Wall
-	if (m_movement.X == 1.0f && m_pColTarget->GetColType() == ECollisionType::WALL)
-	{
-		// move left
-		m_movement = -1.0f;
-		m_mirror.X = 0.0f;
-	}
-	// if movement is to the right and target hits a Barrier
-	else if (m_movement.X == 1.0f && m_pColTarget->GetTag() == "Barrier")
-	{
-		// move left
-		m_movement = -1.0f;
-		m_mirror.X = 0.0f;
-	}
-	// if movement is to the left and target hits a wall
-	else if (m_movement.X == -1.0f && m_pColTarget->GetColType() == ECollisionType::WALL)
-	{
-		// move right
-		m_movement.X = 1.0f;
-		m_mirror.X = 1.0f;
-	}
-	// if movement is to the left and target hits a Barrier
-	else if (m_movement.X == -1.0f && m_pColTarget->GetTag() == "Barrier")
-	{
-		// move right
-		m_movement.X = 1.0f;
-		m_mirror.X = 1.0f;
-	}
 }
 #pragma endregion

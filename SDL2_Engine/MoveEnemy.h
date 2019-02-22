@@ -76,8 +76,6 @@ public:
 	/// initialize move enemy
 	/// </summary>
 	void Init();
-
-	void CheckBoxCollision();
 #pragma endregion
 
 private:
