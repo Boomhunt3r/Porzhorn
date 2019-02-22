@@ -1,9 +1,8 @@
-﻿  Boss.cpp
+﻿  MoveEnemy.cpp
 e:\spiele\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-e:\spiele\porzhorn\sdl2_engine\boss.cpp(86): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
   SDL2_Engine.vcxproj -> E:\Spiele\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe
   E:\Spiele\Porzhorn\Library\SDL2\lib\x86\SDL2.dll
   1 Datei(en) kopiert
