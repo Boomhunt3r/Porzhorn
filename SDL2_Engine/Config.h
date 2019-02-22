@@ -49,3 +49,6 @@
 #define BossShootPositionY 2150
 #define BossShootWidth 450
 #define BossShootHeight 350
+#define EnemyMovePositionY 0
+#define EnemyMoveWidth 127
+#define EnemyMoveHeight 127

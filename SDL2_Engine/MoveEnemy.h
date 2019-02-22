@@ -34,7 +34,12 @@ public:
 	/// <summary>
 	/// destructor
 	/// </summary>
-	virtual ~GMoveEnemy() {}
+	virtual ~GMoveEnemy() 
+	{
+		m_pCurrentAnim = nullptr;
+
+		delete m_pMoveAnim;
+	}
 #pragma endregion
 
 #pragma region public override function
@@ -80,4 +85,11 @@ private:
 	/// </summary>
 	float m_health;
 #pragma endregion
+
+#pragma region private pointer
+	CAnimation* m_pCurrentAnim;
+
+	CAnimation* m_pMoveAnim;
+#pragma endregion
+
 };

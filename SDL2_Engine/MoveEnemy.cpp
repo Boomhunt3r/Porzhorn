@@ -47,6 +47,15 @@ void GMoveEnemy::Update(float _deltaSeconds)
 	}
 	// update parent
 	CMoveObject::Update(_deltaSeconds);
+
+	// update current animation
+	m_pCurrentAnim->Update(_deltaSeconds);
+
+	// set src rect
+	m_srcRect = SRect(
+		SVector2(m_pCurrentAnim->GetCurrentTexturePosition().X, m_pCurrentAnim->GetCurrentTexturePosition().Y),
+		m_pCurrentAnim->GetSize()
+	);
 }
 
 // render every frame
@@ -75,6 +84,13 @@ void GMoveEnemy::Init()
 
 	// set health
 	m_health = MOVE_ENEMY_HEALTH;
+	
+	// initiaize Move animation
+	m_pMoveAnim = new CAnimation(SVector2(0.0f, EnemyMovePositionY),
+		SVector2(EnemyMoveWidth, EnemyMoveHeight), 16);
+	m_pMoveAnim->SetAnimationTime(0.75f);
+
+	m_pCurrentAnim = m_pMoveAnim;
 
 	// random between 0 and 1
 
