@@ -1,9 +1,19 @@
-﻿  Boss.cpp
+﻿  Player.cpp
 e:\spiele\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-e:\spiele\porzhorn\sdl2_engine\boss.cpp(86): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\engine.h(8): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  e:\spiele\porzhorn\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
+e:\spiele\porzhorn\sdl2_engine\engine.h(9): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  e:\spiele\porzhorn\library\sdl2\include\sdl_surface.h(70): note: Siehe Deklaration von "SDL_Surface"
+e:\spiele\porzhorn\sdl2_engine\renderer.h(10): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  e:\spiele\porzhorn\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
+e:\spiele\porzhorn\sdl2_engine\renderer.h(11): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  e:\spiele\porzhorn\library\sdl2\include\sdl_render.h(122): note: Siehe Deklaration von "SDL_Renderer"
+e:\spiele\porzhorn\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  e:\spiele\porzhorn\sdl2_engine\renderer.h(8): note: Siehe Deklaration von "SRect"
   Code wird generiert...
   Kompilieren...
   World.cpp
@@ -21,22 +31,6 @@ e:\spiele\porzhorn\sdl2_engine\world.cpp(239): warning C4244: "=": Konvertierung
 e:\spiele\porzhorn\sdl2_engine\world.cpp(249): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\world.cpp(334): warning C4244: "Argument": Konvertierung von "double" in "float", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\world.cpp(397): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
-  Player.cpp
-e:\spiele\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-e:\spiele\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-e:\spiele\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-e:\spiele\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
-e:\spiele\porzhorn\sdl2_engine\engine.h(8): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  e:\spiele\porzhorn\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
-e:\spiele\porzhorn\sdl2_engine\engine.h(9): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  e:\spiele\porzhorn\library\sdl2\include\sdl_surface.h(70): note: Siehe Deklaration von "SDL_Surface"
-e:\spiele\porzhorn\sdl2_engine\renderer.h(10): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  e:\spiele\porzhorn\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
-e:\spiele\porzhorn\sdl2_engine\renderer.h(11): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  e:\spiele\porzhorn\library\sdl2\include\sdl_render.h(122): note: Siehe Deklaration von "SDL_Renderer"
-e:\spiele\porzhorn\sdl2_engine\color.h(16): warning C4244: "Argument": Konvertierung von "float" in "Uint8", möglicher Datenverlust
-e:\spiele\porzhorn\sdl2_engine\physic.h(4): warning C4099: "SRect": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
-  e:\spiele\porzhorn\sdl2_engine\renderer.h(8): note: Siehe Deklaration von "SRect"
   NPC.cpp
 e:\spiele\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
@@ -96,6 +90,30 @@ e:\spiele\porzhorn\sdl2_engine\level01.cpp(155): warning C4244: "=": Konvertieru
 e:\spiele\porzhorn\sdl2_engine\level01.cpp(160): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\level01.cpp(224): warning C4244: "Argument": Konvertierung von "double" in "float", möglicher Datenverlust
 e:\spiele\porzhorn\sdl2_engine\level01.cpp(253): warning C4244: "Argument": Konvertierung von "int" in "float", möglicher Datenverlust
+  Bullet.cpp
+e:\spiele\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  e:\spiele\porzhorn\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
+e:\spiele\porzhorn\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  e:\spiele\porzhorn\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
+  BossBullet.cpp
+e:\spiele\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  e:\spiele\porzhorn\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
+e:\spiele\porzhorn\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  e:\spiele\porzhorn\sdl2_engine\engine.h(8): note: Siehe Deklaration von "SDL_Window"
+  Boss.cpp
+e:\spiele\porzhorn\sdl2_engine\rect.h(24): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\rect.h(25): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\rect.h(26): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\rect.h(27): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+e:\spiele\porzhorn\sdl2_engine\boss.cpp(86): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
   Code wird generiert...
   SDL2_Engine.vcxproj -> E:\Spiele\Porzhorn\Build\bin\x86\Debug\SDL2_Engine.exe
   E:\Spiele\Porzhorn\Library\SDL2\lib\x86\SDL2.dll

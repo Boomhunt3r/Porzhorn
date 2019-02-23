@@ -219,6 +219,7 @@ void GPlayer::Update(float _deltaSeconds)
 	// if not key d or a pressed
 	else if (!CInput::GetKey(SDL_SCANCODE_D) && !CInput::GetKey(SDL_SCANCODE_A))
 	{
+		m_pCurrentAnim = m_pIDLEAnim;
 
 		if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
 		{
