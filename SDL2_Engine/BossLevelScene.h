@@ -1,32 +1,22 @@
 #pragma once
-
-#pragma region project include
 #include "Scene.h"
-#pragma endregion
+#include "Level02.h"
 
-#pragma region forwarde decleration
-class GWorld;
-class CText;
-#pragma endregion
-
-/// <summary>
-/// game main scene class
-/// </summary>
-class GMainScene : public CScene
+class GBossLevelScene :	public CScene
 {
 public:
 #pragma region contructor
 	/// <summary>
 	/// constructor
 	/// </summary>
-	GMainScene() : CScene() {}
+	GBossLevelScene() : CScene() {}
 #pragma endregion
 
 #pragma region destructor
 	/// <summary>
 	/// destructor
 	/// </summary>
-	~GMainScene() { }
+	~GBossLevelScene() { }
 #pragma endregion
 
 #pragma region public override function
@@ -57,6 +47,6 @@ private:
 	/// <summary>
 	/// world
 	/// </summary>
-	GWorld* m_pWorld;
+	GLevel02* m_pLevel;
 #pragma endregion
 };

@@ -91,8 +91,8 @@ void GPlayer::Update(float _deltaSeconds)
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal" && m_hasKey == true)
 		{
-			// you win
-			GAME->Win();
+			// Level changes to Boss Level
+			GAME->BossLevel();
 		}
 
 		// if Target has tag Key

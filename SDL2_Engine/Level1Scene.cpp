@@ -1,5 +1,5 @@
 #pragma region project include
-#include "MainScene.h"
+#include "Level1Scene.h"
 #include "Engine.h"
 #include "ContentManagement.h"
 #include "World.h"
@@ -7,16 +7,15 @@
 #include "Game.h"
 #include "Config.h"
 #include "Physic.h"
-#include "Level01.h"
+#include "Level01.h"  
 #pragma endregion
 
-#pragma region public override function
-// load scene
-void GMainScene::Load()
+// Load scene
+void GLevel1Scene::Load()
 {
 	// create and initialize world
-	m_pWorld = new GWorld(nullptr);
-	m_pWorld->Init();
+	m_pLevel = new GLevel01(nullptr);
+	m_pLevel->Init();
 
 	// create fps text and add to ctm
 	GTextFPS* pFPS = new GTextFPS("60", GAME->m_PGaramond, SRect(SVector2(0, 0), SVector2(100, 50)), SColor(255, 255, 255));
@@ -30,8 +29,8 @@ void GMainScene::Load()
 	CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
 }
 
-// clean up scene
-void GMainScene::Clean()
+// clean scene
+void GLevel1Scene::Clean()
 {
 	// delete all objects
 	CTM->CleanSceneObjects();
@@ -39,18 +38,16 @@ void GMainScene::Clean()
 	CTM->CleanPersistantObjects();
 
 	// delete world
-	delete m_pWorld;
+	delete m_pLevel;
 }
-
 // update every frame
-void GMainScene::Update(float _deltaTime)
+void GLevel1Scene::Update(float _deltaTime)
 {
-	
+
 }
 
 // render every frame
-void GMainScene::Render()
+void GLevel1Scene::Render()
 {
-	
+
 }
-#pragma endregion
