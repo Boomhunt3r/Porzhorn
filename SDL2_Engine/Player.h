@@ -90,10 +90,33 @@ public:
 	/// </summary>
 	SVector2 m_cameraMaxValue;
 
+
+#pragma endregion
+
+#pragma region public primitave bools
+	/// <summary>
+	/// if player is Gliding
+	/// </summary>
 	bool m_isGliding;
+
+	/// <summary>
+	/// if Player has Key
+	/// </summary>
 	bool m_hasKey = false;
+
+	/// <summary>
+	/// 
+	/// </summary>
 	bool m_NPC1 = false;
+
+	/// <summary>
+	/// 
+	/// </summary>
 	bool m_NPC2 = false;
+
+	/// <summary>
+	/// 
+	/// </summary>
 	bool m_Tutorial = false;
 #pragma endregion
 
@@ -133,6 +156,5 @@ public:
 	/// Swim Animation
 	/// </summary>
 	CAnimation* m_pSwimAnim;
-
 #pragma endregion
 };
