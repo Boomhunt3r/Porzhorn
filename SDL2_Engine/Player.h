@@ -4,6 +4,7 @@
 #include "MoveObject.h"
 #include "Animation.h"
 #include "World.h"
+#include "Sound.h"
 #pragma endregion
 
 /// <summary>
@@ -35,6 +36,10 @@ public:
 	/// </summary>
 	virtual ~GPlayer() 
 	{
+
+		delete m_pPunch;
+		delete m_pJump;
+
 		m_pCurrentAnim = nullptr;
 
 		delete m_pIDLEAnim;
@@ -121,6 +126,16 @@ public:
 #pragma endregion
 
 #pragma region private pointer
+
+	/// <summary>
+	/// Punch Sound
+	/// </summary>
+	CSound* m_pPunch;
+
+	/// <summary>
+	/// Jump sound
+	/// </summary>
+	CSound* m_pJump;
 
 	/// <summary>
 	/// current animation

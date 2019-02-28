@@ -11,6 +11,7 @@
 #include "CreditScene.h"
 #include "Macro.h"
 #include "Animation.h"
+#include "BossLevelScene.h"
 #pragma endregion
 
 #pragma region public function
@@ -48,7 +49,7 @@ void GMenuScene::Update(float _deltaSeconds)
 		CInput::GetMousePos().X >= (SCREEN_WIDTH / 2 - 560) && CInput::GetMousePos().X <= (SCREEN_WIDTH / 2 - 380) &&
 		CInput::GetMousePos().Y >= 300 && CInput::GetMousePos().Y <= 415)
 	{
-		ENGINE->ChangeScene(new GLevel1Scene());
+		ENGINE->ChangeScene(new GBossLevelScene());
 	}
 	// if mouse position in start game button
 	if (CInput::GetMouseButtonDown(0) &&

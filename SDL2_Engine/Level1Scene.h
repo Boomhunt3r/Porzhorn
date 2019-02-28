@@ -5,6 +5,8 @@
 #include "Level01.h"
 #pragma endregion
 
+class CMusic;
+
 #pragma region forwarde decleration
 class CText;
 #pragma endregion
@@ -58,5 +60,7 @@ private:
 	/// world
 	/// </summary>
 	GLevel01* m_pLevel;
+
+	CMusic* m_pBackground;
 #pragma endregion
 };

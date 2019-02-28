@@ -14,6 +14,7 @@
 #include "Physic.h"
 #include "World.h"
 #include "Animation.h"
+#include "Sound.h"
 #pragma endregion
 
 #pragma region public override function
@@ -37,6 +38,10 @@ void GPlayer::Init()
 
 	// activate gravity
 	m_gravity = true;
+
+	m_pPunch = new CSound("Audio/S_Punch.wav");
+
+	m_pJump = new CSound("Audio/S_Jump.wav");
 
 	// initiaize ilde animation
 	m_pIDLEAnim = new CAnimation(SVector2(0.0f, PlayerIdlePositionY),
@@ -247,6 +252,7 @@ void GPlayer::Update(float _deltaSeconds)
 	if (CInput::GetKeyDown(SDL_SCANCODE_SPACE))
 	{
 		m_pCurrentAnim = m_pJumpAnim;
+		m_pJump->Play();
 
 		if (m_grounded || m_swimming)
 		{
@@ -301,6 +307,7 @@ void GPlayer::Update(float _deltaSeconds)
 		pBullet->SetSpeed(BULLET_SPEED);
 		pBullet->SetColType(ECollisionType::MOVE);
 		pBullet->SetTag("Bullet");
+		m_pPunch->Play();
 
 		if (m_mirror.X)
 		{
