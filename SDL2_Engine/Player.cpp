@@ -14,7 +14,6 @@
 #include "Physic.h"
 #include "World.h"
 #include "Animation.h"
-#include "Sound.h"
 #pragma endregion
 
 #pragma region public override function
@@ -38,10 +37,6 @@ void GPlayer::Init()
 
 	// activate gravity
 	m_gravity = true;
-
-	m_pPunch = new CSound("Audio/S_Punch.wav");
-
-	m_pJump = new CSound("Audio/S_Jump.wav");
 
 	// initiaize ilde animation
 	m_pIDLEAnim = new CAnimation(SVector2(0.0f, PlayerIdlePositionY),
@@ -108,7 +103,7 @@ void GPlayer::Update(float _deltaSeconds)
 
 		}
 
-		// if target has tag NPC
+		// if target has tag NPC1
 		if (m_pColTarget->GetTag() == "NPC1" && m_NPC1 == false)
 		{
 			// safe position of Target in primitive valuble
@@ -121,7 +116,7 @@ void GPlayer::Update(float _deltaSeconds)
 			m_NPC1 = true;
 		}
 
-		// if target has tag NPC
+		// if target has tag NPC2
 		if (m_pColTarget->GetTag() == "NPC2" && m_NPC2 == false)
 		{
 			// safe position of Target in primitive valuble
@@ -134,14 +129,27 @@ void GPlayer::Update(float _deltaSeconds)
 			m_NPC2 = true;
 		}
 
+		// if target has tag NPC3
+		if (m_pColTarget->GetTag() == "NPC3" && m_NPC3 == false)
+		{
+			// safe position of Target in primitive valuble
+			SVector2 position = m_pColTarget->GetPosition();
+			// set text of npc and add to ctm
+			CText* pNPCText = new CText("Pass auf! Da hinten ist der Pengking! Er hat sicher dein Knubbelhorn.", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 200, position.Y - 50), SVector2(650, 60)), SColor(0, 0, 0));
+			pNPCText->SetInWorld(true);
+			CTM->AddUIObject(pNPCText);
+			m_NPC2 = true;
+		}
+
 		// if target has tag Schild
 		if (m_pColTarget->GetTag() == "Tutorial" && m_Tutorial == false)
 		{
 			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
 			// set text of npc and add to ctm
-			CText* pSchildText = new CText("Bewegen: A, D | Springen: SPACE | Gleiten: F", GAME->m_PGaramond,
-				SRect(SVector2(position.X - 180, position.Y - 60), SVector2(440, 50)), SColor(255, 255, 255));
+			CText* pSchildText = new CText("Bewegen: A, D | Springen: SPACE | Schlagen: ENTER | Gleiten: F", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 200, position.Y - 60), SVector2(740, 50)), SColor(255, 255, 255));
 			pSchildText->SetInWorld(true);
 			CTM->AddUIObject(pSchildText);
 			m_Tutorial = true;
@@ -252,7 +260,6 @@ void GPlayer::Update(float _deltaSeconds)
 	if (CInput::GetKeyDown(SDL_SCANCODE_SPACE))
 	{
 		m_pCurrentAnim = m_pJumpAnim;
-		m_pJump->Play();
 
 		if (m_grounded || m_swimming)
 		{
@@ -298,6 +305,7 @@ void GPlayer::Update(float _deltaSeconds)
 		}
 	}
 
+	// if key enter pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
 	{
 		m_pCurrentAnim = m_pBoxAnim;
@@ -307,7 +315,6 @@ void GPlayer::Update(float _deltaSeconds)
 		pBullet->SetSpeed(BULLET_SPEED);
 		pBullet->SetColType(ECollisionType::MOVE);
 		pBullet->SetTag("Bullet");
-		m_pPunch->Play();
 
 		if (m_mirror.X)
 		{

@@ -49,7 +49,7 @@ void GMenuScene::Update(float _deltaSeconds)
 		CInput::GetMousePos().X >= (SCREEN_WIDTH / 2 - 560) && CInput::GetMousePos().X <= (SCREEN_WIDTH / 2 - 380) &&
 		CInput::GetMousePos().Y >= 300 && CInput::GetMousePos().Y <= 415)
 	{
-		ENGINE->ChangeScene(new GBossLevelScene());
+		ENGINE->ChangeScene(new GLevel1Scene());
 	}
 	// if mouse position in start game button
 	if (CInput::GetMouseButtonDown(0) &&

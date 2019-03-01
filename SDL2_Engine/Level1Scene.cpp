@@ -14,7 +14,7 @@
 // Load scene
 void GLevel1Scene::Load()
 {
-	m_pBackground = new CMusic("Audio/S_Background.mp3");
+	m_pBackground = new CMusic("Audio/M_Background.wav");
 	m_pBackground->SetVolume(50);
 	m_pBackground->Play(true);
 
