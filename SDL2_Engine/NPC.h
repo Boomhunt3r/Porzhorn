@@ -37,8 +37,10 @@ public:
 	/// </summary>
 	virtual ~GNPC() 
 	{
+		// set current animation to null pointer
 		m_pCurrentAnim = nullptr;
 
+		// delete IDLE animation and pointer
 		delete m_pIdleAnim;
 	}
 #pragma endregion

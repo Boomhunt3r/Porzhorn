@@ -12,6 +12,8 @@
 #include "Macro.h"
 #pragma endregion
 
+#pragma region public override function
+// Load Scene
 void GCreditScene::Load()
 {
 	// create mouse texture
@@ -33,12 +35,14 @@ void GCreditScene::Load()
 	CTM->AddUIObject(pCreditText);
 }
 
+// clean scene
 void GCreditScene::Clean()
 {
 	// clean ui objects
 	CTM->CleanUIObjects();
 }
 
+// update every frame
 void GCreditScene::Update(float _deltaSeconds)
 {
 	// if mouse position in start game button
@@ -46,11 +50,14 @@ void GCreditScene::Update(float _deltaSeconds)
 		CInput::GetMousePos().X >= (SCREEN_WIDTH / 2 - 50) && CInput::GetMousePos().X <= (SCREEN_WIDTH / 2 - 50) + 100 &&
 		CInput::GetMousePos().Y >= SCREEN_HEIGHT - 50 && CInput::GetMousePos().Y <= SCREEN_HEIGHT)
 	{
+		// Change Scene to Menu Scene
 		ENGINE->ChangeScene(new GMenuScene());
 	}
 }
 
+// render every frame
 void GCreditScene::Render()
 {
 
 }
+#pragma endregion

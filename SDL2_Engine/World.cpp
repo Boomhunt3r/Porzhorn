@@ -296,7 +296,7 @@ void GWorld::Init()
 		else if (world[i] == 'I')
 		{
 			// load NPC and add to ctm
-			CTexturedObject* pSchild = new CTexturedObject("Texture/World/T_Schild.png",
+			CTexturedObject* pSchild = new CTexturedObject("Texture/World/T_Sign.png",
 				SVector2(width * BLOCK_WIDTH, (height - 1.3f)* BLOCK_HEIGHT), SVector2(55, 64));
 			pSchild->SetTag("Tutorial");
 			pSchild->SetColType(COL);

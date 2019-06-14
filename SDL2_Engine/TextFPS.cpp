@@ -19,7 +19,7 @@ void GTextFPS::Update(float _deltaTime)
 	// get char*
 	m_pText = fps.c_str();
 
-	// random color
+	// set color
 	m_color = SColor(
 		255,
 		255,
@@ -34,6 +34,7 @@ void GTextFPS::Update(float _deltaTime)
 // render every frame
 void GTextFPS::Render()
 {
+	// render parent
 	CText::Render();
 }
 #pragma endregion

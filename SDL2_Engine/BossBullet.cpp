@@ -14,14 +14,18 @@
 // update every frame
 void GBossBullet::Update(float _deltaSeconds)
 {
+	// if collision target
 	if (m_pColTarget)
 	{
+		// remove Object
 		CTM->RemoveObject(this);
 
+		// if collision target is Player
 		if (m_pColTarget->GetTag() == "Player")
-			GAME->GameOver();
+			GAME->GameOver(); // Player dies and Game is lost
 	}
 
+	// update parent
 	CMoveObject::Update(_deltaSeconds);
 
 }
@@ -29,6 +33,7 @@ void GBossBullet::Update(float _deltaSeconds)
 // render every frame
 void GBossBullet::Render()
 {
+	// render parent
 	CMoveObject::Render();
 }
 #pragma endregion

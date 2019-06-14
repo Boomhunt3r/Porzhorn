@@ -15,6 +15,12 @@
 // load scene
 void GWinScene::Load()
 {
+	// initzialize background music
+	m_pBackground = new CMusic("Audio/M_VictoryBackground.mp3");
+	m_pBackground->SetVolume(50);
+	m_pBackground->Play(true);
+
+	// initialize background image and add to ctm
 	CTexturedObject* pBackground = new CTexturedObject("Texture/Background/T_Win.png",
 		SVector2(0, 0), SVector2(1280, 720));
 	pBackground->SetSrcRect((SRect(1280, 720, 0, 0)));
@@ -44,6 +50,7 @@ void GWinScene::Update(float _deltaSeconds)
 		CInput::GetMousePos().X >= 525 && CInput::GetMousePos().X <= 750 &&
 		CInput::GetMousePos().Y >= 600 && CInput::GetMousePos().Y <= 690)
 	{
+		// change scene to Menu
 		ENGINE->ChangeScene(new GMenuScene());
 	}
 }

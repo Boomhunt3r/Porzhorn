@@ -1,6 +1,7 @@
 #pragma region project include
 #include "MenuScene.h"
 #include "MainScene.h"
+#include "Level1Scene.h"
 #include "Engine.h"
 #include "ContentManagement.h"
 #include "Texture.h"
@@ -10,12 +11,21 @@
 #include "CreditScene.h"
 #include "Macro.h"
 #include "Animation.h"
+#include "Music.h"
 #pragma endregion
 
-#pragma region public function
+#pragma region public override function
 // load scene
 void GMenuScene::Load()
 {
+	// initalize Menu Background Music
+	m_pBackground = new CMusic("Audio/M_MenuBackground.mp3");
+	// set volume
+	m_pBackground->SetVolume(50);
+	// play
+	m_pBackground->Play(true);
+
+	// initialize Menu Background and add to ctm
 	CTexturedObject* pBackgroundTexture = new CTexturedObject("Texture/Background/T_Menu.png",
 		SVector2(0, 0), SVector2(1280, 720));
 		pBackgroundTexture->SetSrcRect(SRect(1280, 720, 0, 0));
@@ -47,13 +57,15 @@ void GMenuScene::Update(float _deltaSeconds)
 		CInput::GetMousePos().X >= (SCREEN_WIDTH / 2 - 560) && CInput::GetMousePos().X <= (SCREEN_WIDTH / 2 - 380) &&
 		CInput::GetMousePos().Y >= 300 && CInput::GetMousePos().Y <= 415)
 	{
-		ENGINE->ChangeScene(new GMainScene());
+		// Change to Level 1
+		ENGINE->ChangeScene(new GLevel1Scene());
 	}
 	// if mouse position in start game button
 	if (CInput::GetMouseButtonDown(0) &&
 		CInput::GetMousePos().X >= (SCREEN_WIDTH / 2 - 610) && CInput::GetMousePos().X <= (SCREEN_WIDTH / 2 - 415) &&
 		CInput::GetMousePos().Y >= 540 && CInput::GetMousePos().Y <= 700)
 	{
+		// Change to Credit Scene
 		ENGINE->ChangeScene(new GCreditScene());
 	}
 }

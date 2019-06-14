@@ -40,7 +40,7 @@ public:
 	/// <summary>
 	/// level
 	/// </summary>
-protected:
+public:
 	int m_level = 1;
 #pragma endregion
 };

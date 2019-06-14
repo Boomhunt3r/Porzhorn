@@ -18,10 +18,6 @@ void GMainScene::Load()
 	m_pWorld = new GWorld(nullptr);
 	m_pWorld->Init();
 
-	// load NPC and add to ctm
-	//CTexturedObject* pNpc = new CTexturedObject("Texture/Player/T_Player.png", SVector2(350, 550), SVector2(32, 54));
-	//CTM->AddSceneObject(pNpc);
-
 	// create fps text and add to ctm
 	GTextFPS* pFPS = new GTextFPS("60", GAME->m_PGaramond, SRect(SVector2(0, 0), SVector2(100, 50)), SColor(255, 255, 255));
 	pFPS->SetInWorld(false);

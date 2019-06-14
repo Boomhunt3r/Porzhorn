@@ -21,7 +21,7 @@ public:
 	virtual ~GCreditScene() { }
 #pragma endregion
 
-#pragma region public function
+#pragma region public override function
 	/// <summary>
 	/// load scene
 	/// </summary>

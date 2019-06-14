@@ -1,6 +1,7 @@
 #pragma region system include
 #include <SDL.h>
 #include <SDL_ttf.h>
+#include <SDL_mixer.h>
 #pragma endregion
 
 #pragma region project include
@@ -44,6 +45,9 @@ int CEngine::Init()
 
 	// initialize sdl font
 	LOG_SDL_ERROR(TTF_Init(), 104);
+
+	// initialize audio
+	LOG_SDL_ERROR(Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096), 105);
 
 	// create renderer
 	m_pRenderer = new CRenderer(m_pWindow);
@@ -148,6 +152,9 @@ void CEngine::Clean()
 
 	// delete renderer
 	delete m_pRenderer;
+	
+	// close audio
+	Mix_CloseAudio();
 
 	// free surface
 	SDL_FreeSurface(m_pSurface);
@@ -162,18 +169,21 @@ void CEngine::Clean()
 // set mouse visible
 void CEngine::SetMouseVisible(bool _visible)
 {
+	// set mouse visible
 	m_pMouse->SetVisible(_visible);
 }
 
 // set center of mouse
 void CEngine::SetMouseCenter(SVector2 _center)
 {
+	// set mouse center
 	m_pMouse->SetCenter(_center);
 }
 
 // set mouse texture
 void CEngine::SetMouseTexture(CTexture* _pTexture)
 {
+	// set mouse texture
 	m_pMouse->SetTexture(_pTexture);
 }
 #pragma endregion

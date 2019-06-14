@@ -8,6 +8,8 @@
 #include "CreditScene.h"
 #include "DeathScene.h"
 #include "MainScene.h"
+#include "World.h"
+#include "BossLevelScene.h"
 #pragma endregion
 
 #pragma region public function
@@ -50,6 +52,12 @@ void GGame::Update(float _deltaSeconds)
 		break;
 	case DEATHSCENE:
 		break;
+	case BOSSLEVEL:
+		ENGINE->ChangeScene(new GBossLevelScene());
+		m_state = EGameState::BOSSSCENE;
+		break;
+	case BOSSSCENE:
+		break;
 	default:
 		break;
 	}
@@ -65,5 +73,11 @@ void GGame::GameOver()
 void GGame::Win()
 {
 	m_state = EGameState::WIN;
+}
+
+// if player goes trough the Door
+void GGame::BossLevel()
+{
+	m_state = EGameState::BOSSLEVEL;
 }
 #pragma endregion

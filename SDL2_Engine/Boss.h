@@ -5,6 +5,7 @@
 #include "Engine.h"
 #include "ContentManagement.h"
 #include "Animation.h"
+#include "TexturedObject.h"
 #pragma endregion
 
 /// <summary>
@@ -34,16 +35,24 @@ public:
 	/// <summary>
 	/// destructor
 	/// </summary>
-	virtual ~GBoss() 
+	virtual ~GBoss()
 	{
+		// set current animation to null pointer
 		m_pCurrentAnim = nullptr;
 
+		// delete Move animation and pointer
 		delete m_pMoveAnim;
+		// delete Shoot animation and pointer
 		delete m_pShootAnim;
 	}
 #pragma endregion
 
 #pragma region public override function
+	/// <summary>
+	/// initialize move enemy
+	/// </summary>
+	virtual void Init() override;
+
 	/// <summary>
 	/// update every frame
 	/// </summary>
@@ -66,6 +75,7 @@ public:
 		// decrease health and if under 0
 		if ((m_health -= _damage) <= 0.0f)
 		{
+			Death();
 			// remove me
 			CTM->RemoveObject(this);
 		}
@@ -74,35 +84,44 @@ public:
 
 #pragma region public function
 	/// <summary>
-	/// initialize move enemy
-	/// </summary>
-	void Init();
-
-	/// <summary>
 	/// Random Event
 	/// </summary>
 	void REvent();
 
 	/// <summary>
-	/// Random Event
+	/// Shoot function from Random Event
 	/// </summary>
 	void Shoot();
 
+	/// <summary>
+	/// Death function
+	/// </summary>
+	void Death();
+
 #pragma endregion
 
-private:
+public:
 #pragma region private primitive variable
 	/// <summary>
 	/// health of Boss
 	/// </summary>
 	float m_health;
 #pragma endregion
-
+private:
 #pragma region private pointer
+	/// <summary>
+	/// Current Animation
+	/// </summary>
 	CAnimation* m_pCurrentAnim;
 
+	/// <summary>
+	/// Move Animatiom
+	/// </summary>
 	CAnimation* m_pMoveAnim;
 
+	/// <summary>
+	/// shoot animation
+	/// </summary>
 	CAnimation* m_pShootAnim;
 #pragma endregion
 

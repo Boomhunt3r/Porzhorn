@@ -25,15 +25,6 @@ void GNPC::Init()
 // update every frame
 void GNPC::Update(float _deltaSeconds)
 {
-	m_pCurrentAnim = m_pIdleAnim;
-
-	// if Target is nullpointer
-	if (m_pColTarget == nullptr)
-	{
-		// do nothing and continue
-		// until targes is not nullptr anymore
-	}
-
 	// update parent
 	CTexturedObject::Update(_deltaSeconds);
 
@@ -50,6 +41,7 @@ void GNPC::Update(float _deltaSeconds)
 // render every frame
 void GNPC::Render()
 {
+	// render parent
 	CTexturedObject::Render();
 }
 #pragma endregion

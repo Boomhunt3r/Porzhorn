@@ -34,15 +34,22 @@ public:
 	/// <summary>
 	/// destructor
 	/// </summary>
-	virtual ~GMoveEnemy() 
+	virtual ~GMoveEnemy()
 	{
+		// set current animation to null pointer
 		m_pCurrentAnim = nullptr;
 
+		// delete Move animation and pointer
 		delete m_pMoveAnim;
 	}
 #pragma endregion
 
 #pragma region public override function
+	/// <summary>
+	/// initialize move enemy
+	/// </summary>
+	virtual void Init() override;
+
 	/// <summary>
 	/// update every frame
 	/// </summary>
@@ -73,10 +80,8 @@ public:
 
 #pragma region public function
 	/// <summary>
-	/// initialize move enemy
+	/// check collison function
 	/// </summary>
-	void Init();
-
 	void CheckBoxCollision();
 #pragma endregion
 
@@ -89,8 +94,14 @@ private:
 #pragma endregion
 
 #pragma region private pointer
+	/// <summary>
+	/// current animation
+	/// </summary>
 	CAnimation* m_pCurrentAnim;
 
+	/// <summary>
+	/// move animation
+	/// </summary>
 	CAnimation* m_pMoveAnim;
 #pragma endregion
 

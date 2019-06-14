@@ -19,6 +19,41 @@
 
 float bossTimer = 0.0f;
 
+// initialize move enemy
+void GBoss::Init()
+{
+	// set tag
+	m_pTag = "Boss";
+
+	// activate gravity
+	m_gravity = true;
+
+	// set speed
+	m_speed = BOSS_SPEED;
+
+	// set collision type
+	m_colType = ECollisionType::ENEMY;
+
+	// set health
+	m_health = BOSS_HEALTH;
+
+	// initiaize Move animation
+	m_pMoveAnim = new CAnimation(SVector2(0.0f, BossMovePositionY),
+		SVector2(BossMoveWidth, BossMoveHeight), 5);
+	m_pMoveAnim->SetAnimationTime(1.25f);
+
+	// initialize Shoot animation
+	m_pShootAnim = new CAnimation(SVector2(0.0f, BossShootPositionY),
+		SVector2(BossShootWidth, BossShootHeight), 4);
+	m_pShootAnim->SetAnimationTime(0.5f);
+
+	// set Current Animation to Move
+	m_pCurrentAnim = m_pMoveAnim;
+
+	// random between 0 and 1
+	m_movement = -1.0f;
+}
+
 // update every frame
 void GBoss::Update(float _deltaSeconds)
 {
@@ -50,8 +85,10 @@ void GBoss::Update(float _deltaSeconds)
 		}
 	}
 
+	// if Bosstimer * deltaseconds Higer or as Boss Event Timer
 	if (bossTimer * _deltaSeconds >= BOSS_EVENT_TIMER)
 	{
+		// open random event function
 		REvent();
 		// reset timer
 		bossTimer = 0.0f;
@@ -67,6 +104,7 @@ void GBoss::Update(float _deltaSeconds)
 			GAME->GameOver();
 		}
 	}
+
 	// update parent
 	CMoveObject::Update(_deltaSeconds);
 
@@ -80,6 +118,7 @@ void GBoss::Update(float _deltaSeconds)
 	);
 }
 
+// Random Event Function
 void GBoss::REvent()
 {
 	int random;
@@ -104,6 +143,7 @@ void GBoss::REvent()
 	}
 }
 
+// shoot event function
 void GBoss::Shoot()
 {
 	m_pCurrentAnim = m_pShootAnim;
@@ -128,48 +168,16 @@ void GBoss::Shoot()
 	}
 }
 
+// death function
+void GBoss::Death()
+{
+	GAME->Win();
+}
+
 // render every frame
 void GBoss::Render()
 {
 	// render parent
 	CMoveObject::Render();
-}
-#pragma endregion
-
-#pragma region public function
-// initialize move enemy
-void GBoss::Init()
-{
-	// set tag
-	m_pTag = "Boss";
-
-	// activate gravity
-	m_gravity = true;
-
-	// set speed
-	m_speed = BOSS_SPEED;
-
-	// set collision type
-	m_colType = ECollisionType::ENEMY;
-
-	// set health
-	m_health = BOSS_HEALTH;
-
-
-	// initiaize Move animation
-	m_pMoveAnim = new CAnimation(SVector2(0.0f, BossMovePositionY),
-		SVector2(BossMoveWidth, BossMoveHeight), 5);
-	m_pMoveAnim->SetAnimationTime(1.25f);
-
-	// initialize Shoot animation
-	m_pShootAnim = new CAnimation(SVector2(0.0f, BossShootPositionY),
-		SVector2(BossShootWidth, BossShootHeight), 4);
-	m_pShootAnim->SetAnimationTime(0.5f);
-
-	// set Current Animation to Move
-	m_pCurrentAnim = m_pMoveAnim;
-
-	// random between 0 and 1
-	m_movement = -1.0f;
 }
 #pragma endregion

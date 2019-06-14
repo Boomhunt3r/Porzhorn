@@ -3,6 +3,7 @@
 #pragma region project include
 #include "Scene.h"
 #include "Animation.h"
+#include "Music.h"
 #pragma endregion
 
 /// <summary>
@@ -46,5 +47,12 @@ public:
 	/// render every frame
 	/// </summary>
 	virtual void Render() override;
+#pragma endregion
+private:
+#pragma region private pointer
+	/// <summary>
+	/// background music
+	/// </summary>
+	CMusic* m_pBackground;
 #pragma endregion
 };

@@ -38,7 +38,19 @@ void GPlayer::Init()
 	// activate gravity
 	m_gravity = true;
 
-	// initiaize ilde animation
+	// initialize Punch sound
+	m_pPunch = new CSound("Audio/S_Punch.wav");
+	
+	// initialize Jump sound
+	m_pJump = new CSound("Audio/S_Jump.wav");
+
+	// initialize Glide sound
+	m_pGlide = new CSound("Audio/S_Glide.wav");
+
+	// initialize collect sound
+	m_pCollect = new CSound("Audio/S_Collect.wav");
+
+	// initialize ilde animation
 	m_pIDLEAnim = new CAnimation(SVector2(0.0f, PlayerIdlePositionY),
 		SVector2(PlayerIdleWidth, PlayerIdleHeight), 5);
 	m_pIDLEAnim->SetAnimationTime(1.25f);
@@ -78,7 +90,7 @@ void GPlayer::Init()
 // update every frame
 void GPlayer::Update(float _deltaSeconds)
 {
-
+	// if collision target
 	if (m_pColTarget)
 	{
 		// if Targete has tag Enemy of Fire
@@ -91,19 +103,23 @@ void GPlayer::Update(float _deltaSeconds)
 		// if Target has tag Goal
 		if (m_pColTarget->GetTag() == "Goal" && m_hasKey == true)
 		{
-			// you win
-			GAME->Win();
+			// Level changes to Boss Level
+			GAME->BossLevel();
 		}
 
 		// if Target has tag Key
 		if (m_pColTarget->GetTag() == "Key")
 		{
+			// bool haskey true
 			m_hasKey = true;
+			// set target collsion position
 			m_pColTarget->SetPosition(SVector2(10001.0f, 10000.0f));
+			// play Collect Sound
+			m_pCollect->Play();
 
 		}
 
-		// if target has tag NPC
+		// if target has tag NPC1
 		if (m_pColTarget->GetTag() == "NPC1" && m_NPC1 == false)
 		{
 			// safe position of Target in primitive valuble
@@ -111,12 +127,15 @@ void GPlayer::Update(float _deltaSeconds)
 			// set text of npc and add to ctm
 			CText* pNPCText = new CText("Die Prophezeiung! Wann sie wohl eintreten wird...", GAME->m_PGaramond,
 				SRect(SVector2(position.X - 200, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
+			// set in world true
 			pNPCText->SetInWorld(true);
+			// add to CTM
 			CTM->AddUIObject(pNPCText);
+			// m_NPC1 true
 			m_NPC1 = true;
 		}
 
-		// if target has tag NPC
+		// if target has tag NPC2
 		if (m_pColTarget->GetTag() == "NPC2" && m_NPC2 == false)
 		{
 			// safe position of Target in primitive valuble
@@ -124,8 +143,27 @@ void GPlayer::Update(float _deltaSeconds)
 			// set text of npc and add to ctm
 			CText* pNPCText = new CText("Wo ist nur der Schlüssel hin?", GAME->m_PGaramond,
 				SRect(SVector2(position.X - 200, position.Y - 50), SVector2(500, 50)), SColor(255, 255, 255));
+			// set in World
 			pNPCText->SetInWorld(true);
+			// add to CTM
 			CTM->AddUIObject(pNPCText);
+			// m_NPC2 true
+			m_NPC2 = true;
+		}
+
+		// if target has tag NPC3
+		if (m_pColTarget->GetTag() == "NPC3" && m_NPC3 == false)
+		{
+			// safe position of Target in primitive valuble
+			SVector2 position = m_pColTarget->GetPosition();
+			// set text of npc and add to ctm
+			CText* pNPCText = new CText("Pass auf! Da hinten ist der Pengking! Er hat sicher dein Knubbelhorn.", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 200, position.Y - 50), SVector2(650, 60)), SColor(0, 0, 0));
+			// set in World
+			pNPCText->SetInWorld(true);
+			// Add to CTM
+			CTM->AddUIObject(pNPCText);
+			// variable true
 			m_NPC2 = true;
 		}
 
@@ -135,17 +173,22 @@ void GPlayer::Update(float _deltaSeconds)
 			// safe position of Target in primitive valuble
 			SVector2 position = m_pColTarget->GetPosition();
 			// set text of npc and add to ctm
-			CText* pSchildText = new CText("Bewegen: A, D | Springen: SPACE | Gleiten: F", GAME->m_PGaramond,
-				SRect(SVector2(position.X - 180, position.Y - 60), SVector2(440, 50)), SColor(255, 255, 255));
-			pSchildText->SetInWorld(true);
-			CTM->AddUIObject(pSchildText);
+			CText* pSignText = new CText("Bewegen: A, D | Springen: SPACE | Schlagen: ENTER | Gleiten: F", GAME->m_PGaramond,
+				SRect(SVector2(position.X - 200, position.Y - 60), SVector2(740, 50)), SColor(255, 255, 255));
+			// set in World
+			pSignText->SetInWorld(true);
+			// add to CTM
+			CTM->AddUIObject(pSignText);
+			// variable true
 			m_Tutorial = true;
 		}
 
 		// if target collects glider
 		if (m_pColTarget->GetTag() == "Gleiter")
 		{
+			// set glider true
 			m_glider = true;
+			//set target collision position
 			m_pColTarget->SetPosition(SVector2(10001.0f, 10000.0f));
 		}
 
@@ -164,6 +207,7 @@ void GPlayer::Update(float _deltaSeconds)
 
 		// if target has tag gleiter, m_glider is true
 		if (m_pColTarget->GetTag() == "Gleiter") m_glider = true;
+		// if collision target has tag Nowater, swimming false
 		if (m_pColTarget->GetTag() == "NoWater")
 			m_swimming = false;
 	}
@@ -199,8 +243,11 @@ void GPlayer::Update(float _deltaSeconds)
 		m_pCurrentAnim = m_pRunAnim;
 
 		// reset gravity when player is grounded and not swimming
-		if (m_grounded) CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
-
+		if (m_grounded)
+		{
+			CPhysic::s_Gravity = EARTH_GRAVITY * BLOCK_HEIGHT;
+			m_pGlide->Stop();
+		}
 		// set movement left and mirror horizontal
 		if (m_movement.X > -1.0f)
 		{
@@ -219,10 +266,13 @@ void GPlayer::Update(float _deltaSeconds)
 	// if not key d or a pressed
 	else if (!CInput::GetKey(SDL_SCANCODE_D) && !CInput::GetKey(SDL_SCANCODE_A))
 	{
+		//set idle animation
 		m_pCurrentAnim = m_pIDLEAnim;
 
+		// if return pressed
 		if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
 		{
+			// set box animation
 			m_pCurrentAnim = m_pBoxAnim;
 		}
 
@@ -246,38 +296,35 @@ void GPlayer::Update(float _deltaSeconds)
 	// if key space pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_SPACE))
 	{
+		// set jump animation
 		m_pCurrentAnim = m_pJumpAnim;
+		// Play Jump sound
+		m_pJump->Play();
 
 		if (m_grounded || m_swimming)
 		{
-			// jump
+			// jump with Player Force
 			m_fallTime = PLAYER_JUMP_FORCE;
 		}
 	}
 
-	// if key shift, more speed
-	if (CInput::GetKeyDown(SDL_SCANCODE_LSHIFT) && m_grounded)
-	{
-		m_speed = 355;
-	}
-	if (CInput::GetKeyUp(SDL_SCANCODE_LSHIFT))
-	{
-		m_speed = 255;
-	}
 	// if not grounded
 	if (!m_grounded)
 	{
 		// if is Gliding
 		if (m_isGliding == true)
 		{
+			// set glide animation
 			m_pCurrentAnim = m_pGlideAnim;
+			// play Glide sound
+			m_pGlide->Play();
 		}
 	}
 	else
 	{
+		// if grounded, gliding false
 		m_isGliding = false;
 	}
-
 	// if key f pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_F) && m_glider == true)
 	{
@@ -285,6 +332,7 @@ void GPlayer::Update(float _deltaSeconds)
 		// isGliding true
 		m_isGliding = true;
 
+		// if not grounded
 		if (!m_grounded)
 		{
 			// glide
@@ -292,30 +340,45 @@ void GPlayer::Update(float _deltaSeconds)
 		}
 	}
 
+	// if key enter pressed down
 	if (CInput::GetKeyDown(SDL_SCANCODE_RETURN))
 	{
+		// set box animation
 		m_pCurrentAnim = m_pBoxAnim;
 
+		// initialize bullet and add to ctm
 		GBullet* pBullet = new GBullet("Texture/Bullet/T_Bullet12.png", m_position, SVector2(8, 8));
 		CTM->AddPersistantObject(pBullet);
+		// set bullet speed
 		pBullet->SetSpeed(BULLET_SPEED);
+		// set bullet collsion type
 		pBullet->SetColType(ECollisionType::MOVE);
+		// set bullet tag
 		pBullet->SetTag("Bullet");
+		// play Punch sound
+		m_pPunch->Play();
 
+		// if mirror
 		if (m_mirror.X)
 		{
+			// set bullet movement left
 			pBullet->SetMovement(SVector2(-1.0f, 0.0f));
+			// set bullet position left
 			pBullet->SetPosition(m_position + SVector2(-m_rect.w * -0.2f, 30.0f));
 		}
 		else
 		{
+			// set bullet movement right
 			pBullet->SetMovement(SVector2(1.0f, 0.0f));
+			// set bullet position right
 			pBullet->SetPosition(m_position + SVector2(m_rect.w * 0.8f, 30.0f));
 		}
 	}
 
+	// if player is swimming
 	if (m_swimming == true)
 	{
+		// set swim animation
 		m_pCurrentAnim = m_pSwimAnim;
 	}
 

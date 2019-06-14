@@ -133,6 +133,7 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Boss.cpp" />
     <ClCompile Include="BossBullet.cpp" />
+    <ClCompile Include="BossLevelScene.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="ContentManagement.cpp" />
     <ClCompile Include="CreditScene.cpp" />
@@ -144,8 +145,8 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Level01.cpp" />
     <ClCompile Include="Level02.cpp" />
+    <ClCompile Include="Level1Scene.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainScene.cpp" />
     <ClCompile Include="MenuScene.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="MoveEnemy.cpp" />
@@ -160,12 +161,12 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClCompile Include="TexturedObject.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="WinScene.cpp" />
-    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Boss.h" />
     <ClInclude Include="BossBullet.h" />
+    <ClInclude Include="BossLevelScene.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Config.h" />
@@ -180,8 +181,8 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClInclude Include="Input.h" />
     <ClInclude Include="Level01.h" />
     <ClInclude Include="Level02.h" />
+    <ClInclude Include="Level1Scene.h" />
     <ClInclude Include="Macro.h" />
-    <ClInclude Include="MainScene.h" />
     <ClInclude Include="MenuScene.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="MoveEnemy.h" />
@@ -203,7 +204,6 @@ xcopy "$(SolutionDir)Library\SDL2_mixer\lib\$(PlatformShortName)\*.dll" "$(Solut
     <ClInclude Include="Time.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="WinScene.h" />
-    <ClInclude Include="World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

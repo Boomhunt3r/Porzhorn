@@ -3,7 +3,7 @@
 #pragma region project include
 #include "MoveObject.h"
 #include "Animation.h"
-#include "World.h"
+#include "Sound.h"
 #pragma endregion
 
 /// <summary>
@@ -35,13 +35,29 @@ public:
 	/// </summary>
 	virtual ~GPlayer() 
 	{
+		// delete Punch sound
+		delete m_pPunch;
+		// delete Jump Sound
+		delete m_pJump;
+		// delete Glide Sound
+		delete m_pGlide;
+		// delete Collect Sound
+		delete m_pCollect;
+
+		// set current animation to null pointer
 		m_pCurrentAnim = nullptr;
 
+		// delete IDLE animation and pointer
 		delete m_pIDLEAnim;
+		// delete Box animation and pointer
 		delete m_pBoxAnim;
+		// delete Glide animation and pointer
 		delete m_pGlideAnim;
+		// delete Jump animation and pointer
 		delete m_pJumpAnim;
+		// delete Swim animation and pointer
 		delete m_pSwimAnim;
+		// delete Run animation and pointer
 		delete m_pRunAnim;
 	}
 #pragma endregion
@@ -89,15 +105,65 @@ public:
 	/// y = down
 	/// </summary>
 	SVector2 m_cameraMaxValue;
+#pragma endregion
 
+#pragma region public primitave bools
+	/// <summary>
+	/// if player is Gliding
+	/// </summary>
 	bool m_isGliding;
+
+	/// <summary>
+	/// if Player has Key
+	/// </summary>
 	bool m_hasKey = false;
+
+	/// <summary>
+	/// 
+	/// </summary>
 	bool m_NPC1 = false;
+
+	/// <summary>
+	/// 
+	/// </summary>
 	bool m_NPC2 = false;
+
+	/// <summary>
+	/// 
+	/// </summary>
+	bool m_NPC3 = false;
+
+	/// <summary>
+	/// 
+	/// </summary>
 	bool m_Tutorial = false;
+
+	/// <summary>
+	/// if player is jumping
+	/// </summary>
+	bool m_isJumping = false;
 #pragma endregion
 
 #pragma region private pointer
+	/// <summary>
+	/// Punch Spund
+	/// </summary>
+	CSound* m_pPunch;
+
+	/// <summary>
+	/// Jump Sound
+	/// </summary>
+	CSound* m_pJump;
+	
+	/// <summary>
+	/// Glide Sound
+	/// </summary>
+	CSound* m_pGlide;
+
+	/// <summary>
+	/// collect sound
+	/// </summary>
+	CSound* m_pCollect;
 
 	/// <summary>
 	/// current animation
@@ -133,6 +199,5 @@ public:
 	/// Swim Animation
 	/// </summary>
 	CAnimation* m_pSwimAnim;
-
 #pragma endregion
 };

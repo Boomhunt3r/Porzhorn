@@ -5,9 +5,6 @@
     <ClCompile Include="Engine.cpp">
       <Filter>Engine\Core</Filter>
     </ClCompile>
-    <ClCompile Include="MainScene.cpp">
-      <Filter>Game\Scene</Filter>
-    </ClCompile>
     <ClCompile Include="Helper.cpp">
       <Filter>Engine\Helper</Filter>
     </ClCompile>
@@ -37,9 +34,6 @@
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Game\Object\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>Game\World</Filter>
     </ClCompile>
     <ClCompile Include="Font.cpp">
       <Filter>Engine\Font</Filter>
@@ -92,6 +86,12 @@
     <ClCompile Include="Animation.cpp">
       <Filter>Engine\Animation</Filter>
     </ClCompile>
+    <ClCompile Include="Level1Scene.cpp">
+      <Filter>Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="BossLevelScene.cpp">
+      <Filter>Game\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -105,9 +105,6 @@
     </Filter>
     <Filter Include="Engine\Scene">
       <UniqueIdentifier>{67ca0ac2-dde2-4f36-ae6e-fbf6d9ef6409}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Scene">
-      <UniqueIdentifier>{4235ab5a-adc3-49ca-9302-3d5c8963727c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Helper">
       <UniqueIdentifier>{2e921cf9-6d8f-4a05-a5ea-f0e218f6eba9}</UniqueIdentifier>
@@ -141,9 +138,6 @@
     </Filter>
     <Filter Include="Game\Object\Player">
       <UniqueIdentifier>{ecde8126-1a03-4267-ad01-5ea2d2b1e1ee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\World">
-      <UniqueIdentifier>{f1a7aaff-b82d-46fd-b86a-5a1cbf757b13}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game\Config">
       <UniqueIdentifier>{933580b6-62f9-46ae-a0e3-bceca3777cff}</UniqueIdentifier>
@@ -184,6 +178,9 @@
     <Filter Include="Engine\Animation">
       <UniqueIdentifier>{d566825b-9cde-4623-9d19-9f60918a2d58}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Scene">
+      <UniqueIdentifier>{4235ab5a-adc3-49ca-9302-3d5c8963727c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -191,9 +188,6 @@
     </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>Engine\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="MainScene.h">
-      <Filter>Game\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Helper.h">
       <Filter>Engine\Helper</Filter>
@@ -234,9 +228,6 @@
     <ClInclude Include="Player.h">
       <Filter>Game\Object\Player</Filter>
     </ClInclude>
-    <ClInclude Include="World.h">
-      <Filter>Game\World</Filter>
-    </ClInclude>
     <ClInclude Include="Config.h">
       <Filter>Game\Config</Filter>
     </ClInclude>
@@ -251,9 +242,6 @@
     </ClInclude>
     <ClInclude Include="Text.h">
       <Filter>Engine\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="TextFPS.h">
-      <Filter>Game\Object\UI</Filter>
     </ClInclude>
     <ClInclude Include="Mouse.h">
       <Filter>Engine\Mouse</Filter>
@@ -308,6 +296,15 @@
     </ClInclude>
     <ClInclude Include="Music.h">
       <Filter>Engine\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Level1Scene.h">
+      <Filter>Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="BossLevelScene.h">
+      <Filter>Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="TextFPS.h">
+      <Filter>Game\Object\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

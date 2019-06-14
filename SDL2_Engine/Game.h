@@ -21,7 +21,9 @@ enum EGameState
 	CREDIT,
 	CREDITSCENE,
 	DEAD,
-	DEATHSCENE
+	DEATHSCENE,
+	BOSSLEVEL,
+	BOSSSCENE
 };
 
 /// <summary>
@@ -87,6 +89,11 @@ public:
 	/// if player wins
 	/// </summary>
 	void Win();
+
+	/// <summary>
+	/// if player goes to Boss Level
+	/// </summary>
+	void BossLevel();
 #pragma endregion
 
 private:

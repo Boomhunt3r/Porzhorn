@@ -3,6 +3,7 @@
 #pragma region project include
 #include "Scene.h"  
 #include "Animation.h"
+#include "Music.h"
 #pragma endregion
 
 /// <summary>
@@ -25,7 +26,7 @@ public:
 	virtual ~GMenuScene() { }
 #pragma endregion
 
-#pragma region public function
+#pragma region public override function
 	/// <summary>
 	/// load scene
 	/// </summary>
@@ -47,4 +48,12 @@ public:
 	/// </summary>
 	virtual void Render() override;
 #pragma endregion
+private:
+#pragma region private pointer
+	/// <summary>
+	/// background music
+	/// </summary>
+	CMusic* m_pBackground;
+#pragma endregion
+
 };
